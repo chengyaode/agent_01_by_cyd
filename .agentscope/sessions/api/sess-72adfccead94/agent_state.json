@@ -1,0 +1,201 @@
+{
+  "session_id" : "sess-72adfccead94",
+  "user_id" : "api",
+  "summary" : "",
+  "context" : [ {
+    "id" : "437710cf-08fb-4b36-a20e-d10d535dd2dc",
+    "name" : null,
+    "content" : [ {
+      "type" : "text",
+      "text" : "?? workspace ????? hitl_check ????,??????"
+    } ],
+    "metadata" : { },
+    "timestamp" : "2026-11-04 17:19:10.690",
+    "usage" : null,
+    "role" : "USER"
+  }, {
+    "id" : "00fa4b66-9b33-4c01-9d69-83036c2bd312",
+    "name" : "default",
+    "content" : [ {
+      "type" : "text",
+      "text" : "为了更好地帮助您，能否详细说明一下“workspace”和“hitl_check”的具体含义？您是想在工作区内查找与hitl_check相关的文件或目录吗？还是有其他特定的需求？请您提供更多信息。"
+    } ],
+    "metadata" : {
+      "_chat_usage" : {
+        "inputTokens" : 2492,
+        "outputTokens" : 49,
+        "cachedTokens" : 0,
+        "cacheCreationTokens" : 0,
+        "reasoningTokens" : 0,
+        "toolUsePromptTokens" : 0,
+        "time" : 0.640178769,
+        "totalTokens" : 2541
+      },
+      "prompt_eval_duration" : 27520475,
+      "load_duration" : 176880176,
+      "total_duration" : 640178769,
+      "prompt_eval_count" : 2492,
+      "eval_count" : 49,
+      "eval_duration" : 311734388,
+      "created_at" : "2026-11-04T09:19:11.160538504Z",
+      "model" : "qwen2.5:7b",
+      "done" : true
+    },
+    "timestamp" : "2026-11-04 17:19:11.342",
+    "usage" : {
+      "inputTokens" : 2492,
+      "outputTokens" : 49,
+      "cachedTokens" : 0,
+      "cacheCreationTokens" : 0,
+      "reasoningTokens" : 0,
+      "toolUsePromptTokens" : 0,
+      "time" : 0.640178769,
+      "totalTokens" : 2541
+    },
+    "role" : "ASSISTANT"
+  }, {
+    "id" : "8807b2e6-d52b-4090-9b8c-684e5080e387",
+    "name" : null,
+    "content" : [ {
+      "type" : "text",
+      "text" : "????? create_directory ??,?? path ? D:\\demo\\agent_01\\workspace\\hitl_check,?????????"
+    } ],
+    "metadata" : { },
+    "timestamp" : "2026-11-04 17:21:25.994",
+    "usage" : null,
+    "role" : "USER"
+  }, {
+    "id" : "11992b8d-b13d-439d-8f7d-bf5f66b7abed",
+    "name" : "default",
+    "role" : "ASSISTANT",
+    "content" : [ {
+      "type" : "tool_use",
+      "id" : "c95490bb-f045-4ed0-a947-b874e9e0757d",
+      "name" : "create_directory",
+      "input" : {
+        "path" : "D:\\demo\\agent_01\\workspace\\hitl_check"
+      },
+      "content" : "{\"path\":\"D:\\\\demo\\\\agent_01\\\\workspace\\\\hitl_check\"}",
+      "metadata" : { },
+      "state" : "allowed"
+    } ],
+    "metadata" : {
+      "_chat_usage" : {
+        "inputTokens" : 2577,
+        "outputTokens" : 33,
+        "cachedTokens" : 0,
+        "cacheCreationTokens" : 0,
+        "reasoningTokens" : 0,
+        "toolUsePromptTokens" : 0,
+        "time" : 0.511134872,
+        "totalTokens" : 2610
+      },
+      "prompt_eval_duration" : 21730625,
+      "load_duration" : 167041695,
+      "total_duration" : 511134872,
+      "prompt_eval_count" : 2577,
+      "eval_count" : 33,
+      "eval_duration" : 194372702,
+      "created_at" : "2026-11-04T09:21:26.43599375Z",
+      "model" : "qwen2.5:7b",
+      "done" : true
+    },
+    "timestamp" : "2026-11-04 17:21:26.621",
+    "usage" : {
+      "inputTokens" : 2577,
+      "outputTokens" : 33,
+      "cachedTokens" : 0,
+      "cacheCreationTokens" : 0,
+      "reasoningTokens" : 0,
+      "toolUsePromptTokens" : 0,
+      "time" : 0.511134872,
+      "totalTokens" : 2610
+    }
+  }, {
+    "id" : "94ec16bd-c5d2-4b40-80f8-d435b24dbac4",
+    "name" : "default",
+    "role" : "TOOL",
+    "content" : [ {
+      "type" : "tool_result",
+      "id" : "c95490bb-f045-4ed0-a947-b874e9e0757d",
+      "name" : "create_directory",
+      "output" : [ {
+        "type" : "text",
+        "text" : "Successfully created directory D:\\demo\\agent_01\\workspace\\hitl_check"
+      } ],
+      "metadata" : { },
+      "state" : "success"
+    } ],
+    "metadata" : { },
+    "timestamp" : "2026-11-04 17:21:26.699",
+    "usage" : null
+  }, {
+    "id" : "3946f4ed-704d-4996-b7fc-a0efbf4e0c13",
+    "name" : "default",
+    "content" : [ {
+      "type" : "text",
+      "text" : "已经成功在工作区创建了 `hitl_check` 目录。如果您需要进一步的操作或有其他需求，请告诉我！"
+    } ],
+    "metadata" : {
+      "_chat_usage" : {
+        "inputTokens" : 2644,
+        "outputTokens" : 28,
+        "cachedTokens" : 0,
+        "cacheCreationTokens" : 0,
+        "reasoningTokens" : 0,
+        "toolUsePromptTokens" : 0,
+        "time" : 0.498640896,
+        "totalTokens" : 2672
+      },
+      "prompt_eval_duration" : 14098914,
+      "load_duration" : 166286873,
+      "total_duration" : 498640896,
+      "prompt_eval_count" : 2644,
+      "eval_count" : 28,
+      "eval_duration" : 159334550,
+      "created_at" : "2026-11-04T09:21:27.020079246Z",
+      "model" : "qwen2.5:7b",
+      "done" : true
+    },
+    "timestamp" : "2026-11-04 17:21:27.205",
+    "usage" : {
+      "inputTokens" : 2644,
+      "outputTokens" : 28,
+      "cachedTokens" : 0,
+      "cacheCreationTokens" : 0,
+      "reasoningTokens" : 0,
+      "toolUsePromptTokens" : 0,
+      "time" : 0.498640896,
+      "totalTokens" : 2672
+    },
+    "role" : "ASSISTANT"
+  } ],
+  "reply_id" : "32a71eff2bf04003a8ee6db69ea5fa64",
+  "cur_iter" : 0,
+  "shutdown_interrupted" : false,
+  "permission_context" : {
+    "mode" : "bypass",
+    "working_directories" : {
+      "D:\\demo\\agent_01\\workspace" : {
+        "path" : "D:\\demo\\agent_01\\workspace",
+        "source" : "userSettings"
+      }
+    },
+    "allow_rules" : { },
+    "deny_rules" : { },
+    "ask_rules" : { }
+  },
+  "tool_context" : {
+    "max_cache_files" : 100,
+    "max_cache_bytes" : 25000.0,
+    "activated_groups" : [ ],
+    "spawn_registry" : { }
+  },
+  "tasks_context" : {
+    "tasks" : [ ]
+  },
+  "plan_mode_context" : {
+    "plan_active" : false,
+    "current_plan_file" : null
+  }
+}

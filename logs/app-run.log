@@ -1,0 +1,70 @@
+﻿[config] �Ѽ����ⲿ����: D:\demo\agent_01\agent.properties
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.6)
+
+2026-11-05T11:24:55.241+08:00  INFO 54764 --- [agentscope-agent-server] [           main] com.demo.agent.AgentApplication          : Starting AgentApplication v1.0.0-SNAPSHOT using Java 21.0.9 with PID 54764 (D:\demo\agent_01\target\agent.jar started by A in D:\demo\agent_01)
+2026-11-05T11:24:55.246+08:00  INFO 54764 --- [agentscope-agent-server] [           main] com.demo.agent.AgentApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-11-05T11:24:56.299+08:00  INFO 54764 --- [agentscope-agent-server] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-11-05T11:24:56.311+08:00  INFO 54764 --- [agentscope-agent-server] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-05T11:24:56.311+08:00  INFO 54764 --- [agentscope-agent-server] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2026-11-05T11:24:56.346+08:00  INFO 54764 --- [agentscope-agent-server] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-11-05T11:24:56.346+08:00  INFO 54764 --- [agentscope-agent-server] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1040 ms
+2026-11-05T11:24:56.973+08:00  INFO 54764 --- [agentscope-agent-server] [           main] io.agentscope.core.tool.Toolkit          : Registered tool 'get_current_time' in group 'ungrouped'
+2026-11-05T11:24:56.976+08:00  INFO 54764 --- [agentscope-agent-server] [           main] io.agentscope.core.tool.Toolkit          : Registered tool 'calc_text_stats' in group 'ungrouped'
+2026-11-05T11:24:56.976+08:00  INFO 54764 --- [agentscope-agent-server] [           main] io.agentscope.core.tool.Toolkit          : Registered tool 'get_workspace_info' in group 'ungrouped'
+2026-11-05T11:24:57.428+08:00  INFO 54764 --- [agentscope-agent-server] [           main] io.agentscope.core.tool.Toolkit          : Registered tool 'list_context_files' in group 'ungrouped'
+2026-11-05T11:24:57.430+08:00  INFO 54764 --- [agentscope-agent-server] [           main] io.agentscope.core.tool.Toolkit          : Registered tool 'read_document' in group 'ungrouped'
+[context][default] �ο��ĵ�Ŀ¼: D:\demo\agent_01\context-default, Ŀ¼ע��ģʽ(������ģ�Ͱ�����ù��߻�ȡ)
+2026-11-05T11:24:57.431+08:00  INFO 54764 --- [agentscope-agent-server] [           main] io.agentscope.core.tool.Toolkit          : Registered tool 'query_weather' in group 'ungrouped'
+2026-11-05T11:24:57.433+08:00  INFO 54764 --- [agentscope-agent-server] [           main] io.agentscope.core.tool.Toolkit          : Registered tool 'query_express' in group 'ungrouped'
+[livelihood][default] ����/��ݹ�����ע��, qweather.key ������, showapi.appkey ������
+2026-11-05T11:24:57.556+08:00  INFO 54764 --- [agentscope-agent-server] [           main] i.agentscope.core.tool.McpClientManager  : Registering MCP client: filesystem
+2026-11-05T11:24:57.556+08:00  INFO 54764 --- [agentscope-agent-server] [           main] i.a.core.tool.mcp.McpAsyncClientWrapper  : Initializing MCP async client: filesystem
+2026-11-05T11:24:57.578+08:00  INFO 54764 --- [agentscope-agent-server] [oundedElastic-1] i.m.c.transport.StdioClientTransport     : MCP server starting.
+2026-11-05T11:24:57.621+08:00  INFO 54764 --- [agentscope-agent-server] [oundedElastic-1] i.m.c.transport.StdioClientTransport     : MCP server started
+2026-11-05T11:24:58.893+08:00  INFO 54764 --- [agentscope-agent-server] [pool-5-thread-1] i.m.c.transport.StdioClientTransport     : STDERR Message received: npm notice run npx
+2026-11-05T11:24:58.893+08:00  INFO 54764 --- [agentscope-agent-server] [pool-5-thread-1] i.m.c.transport.StdioClientTransport     : STDERR Message received: npm notice run mcp-server-filesystem D:\demo\agent_01\workspace
+2026-11-05T11:24:59.353+08:00  INFO 54764 --- [agentscope-agent-server] [pool-5-thread-1] i.m.c.transport.StdioClientTransport     : STDERR Message received: Secure MCP Filesystem Server running on stdio
+2026-11-05T11:24:59.388+08:00  INFO 54764 --- [agentscope-agent-server] [pool-2-thread-1] i.m.client.LifecycleInitializer          : Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental=null, logging=null, prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], Info: Implementation[name=secure-filesystem-server, title=null, version=0.2.0] and Instructions null
+2026-11-05T11:24:59.398+08:00  INFO 54764 --- [agentscope-agent-server] [pool-5-thread-1] i.m.c.transport.StdioClientTransport     : STDERR Message received: Client does not support MCP Roots, using allowed directories set from server args: [ 'D:\\demo\\agent_01\\workspace' ]
+2026-11-05T11:24:59.428+08:00  INFO 54764 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'read_file' in group 'ungrouped'
+2026-11-05T11:24:59.428+08:00  INFO 54764 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'read_text_file' in group 'ungrouped'
+2026-11-05T11:24:59.428+08:00  INFO 54764 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'read_media_file' in group 'ungrouped'
+2026-11-05T11:24:59.428+08:00  INFO 54764 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'read_multiple_files' in group 'ungrouped'
+2026-11-05T11:24:59.428+08:00  INFO 54764 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'write_file' in group 'ungrouped'
+2026-11-05T11:24:59.429+08:00  INFO 54764 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'edit_file' in group 'ungrouped'
+2026-11-05T11:24:59.429+08:00  INFO 54764 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'create_directory' in group 'ungrouped'
+2026-11-05T11:24:59.429+08:00  INFO 54764 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'list_directory' in group 'ungrouped'
+2026-11-05T11:24:59.429+08:00  INFO 54764 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'list_directory_with_sizes' in group 'ungrouped'
+2026-11-05T11:24:59.429+08:00  INFO 54764 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'directory_tree' in group 'ungrouped'
+2026-11-05T11:24:59.429+08:00  INFO 54764 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'move_file' in group 'ungrouped'
+2026-11-05T11:24:59.429+08:00  INFO 54764 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'search_files' in group 'ungrouped'
+2026-11-05T11:24:59.429+08:00  INFO 54764 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'get_file_info' in group 'ungrouped'
+2026-11-05T11:24:59.429+08:00  INFO 54764 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'list_allowed_directories' in group 'ungrouped'
+2026-11-05T11:24:59.429+08:00  INFO 54764 --- [agentscope-agent-server] [pool-2-thread-1] i.agentscope.core.tool.McpClientManager  : MCP client 'filesystem' registered successfully
+[mcp][default] �ѽ���: filesystem (stdio)
+[permission][default] ����Ȩ��ģʽ: bypass (����Ŀ¼ D:\demo\agent_01\workspace)
+[model][default] ʹ�����õķ����ַ: http://192.168.0.235:11435
+2026-11-05T11:24:59.458+08:00  INFO 54764 --- [agentscope-agent-server] [           main] i.a.c.s.r.FileSystemSkillRepository      : FileSystemSkillRepository initialized [baseDir=D:\demo\agent_01\skills, lazy=false]
+[skill][default] ����Ŀ¼: D:\demo\agent_01\skills
+2026-11-05T11:24:59.462+08:00  INFO 54764 --- [agentscope-agent-server] [           main] io.agentscope.core.tool.Toolkit          : Registered tool 'load_skill_through_path' in group 'ungrouped'
+2026-11-05T11:24:59.466+08:00  INFO 54764 --- [agentscope-agent-server] [           main] com.demo.agent.agent.AgentRegistry       : [agent] 构建完成: default (model=ollama:qwen3:4b, workspace=D:\demo\agent_01\workspace)
+2026-11-05T11:24:59.466+08:00  INFO 54764 --- [agentscope-agent-server] [           main] com.demo.agent.agent.AgentRegistry       : [agent] 就绪,共 1 个: [default]
+2026-11-05T11:24:59.741+08:00  INFO 54764 --- [agentscope-agent-server] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-11-05T11:24:59.753+08:00  INFO 54764 --- [agentscope-agent-server] [           main] com.demo.agent.AgentApplication          : Started AgentApplication in 4.99 seconds (process running for 5.428)
+2026-11-05T11:25:31.001+08:00  INFO 54764 --- [agentscope-agent-server] [omcat-handler-0] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-05T11:25:31.001+08:00  INFO 54764 --- [agentscope-agent-server] [omcat-handler-0] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-05T11:25:31.002+08:00  INFO 54764 --- [agentscope-agent-server] [omcat-handler-0] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-11-05T11:25:31.139+08:00  INFO 54764 --- [agentscope-agent-server] [omcat-handler-0] com.demo.agent.web.ChatController        : [context] session=e2e-host-001 自动注入文档目录 (fp=5ee02bc6aa741857)
+2026-11-05T11:25:31.250+08:00  INFO 54764 --- [agentscope-agent-server] [omcat-handler-0] io.agentscope.core.skill.SkillBox        : Registered skill 'livelihood-query_filesystem-agent_01_skills'
+2026-11-05T11:25:31.250+08:00  INFO 54764 --- [agentscope-agent-server] [omcat-handler-0] io.agentscope.core.skill.SkillBox        : Registered skill 'weekly-report_filesystem-agent_01_skills'
+2026-11-05T11:25:31.250+08:00  INFO 54764 --- [agentscope-agent-server] [omcat-handler-0] io.agentscope.core.skill.SkillBox        : Created upload directory: C:\Users\A\AppData\Local\Temp\agentscope-skill-workdir-3581844267707821023\b9dc8c81f5e6937c20a84f4cd3cf860023a63306bd8bf7f3c3b303a37b915633-16088486501139396747\skills
+2026-11-05T11:25:31.251+08:00  INFO 54764 --- [agentscope-agent-server] [omcat-handler-0] io.agentscope.core.skill.SkillBox        : Uploaded 0 skill files to: C:\Users\A\AppData\Local\Temp\agentscope-skill-workdir-3581844267707821023\b9dc8c81f5e6937c20a84f4cd3cf860023a63306bd8bf7f3c3b303a37b915633-16088486501139396747\skills
+2026-11-05T11:29:04.020+08:00  INFO 54764 --- [agentscope-agent-server] [omcat-handler-2] com.demo.agent.web.ChatController        : [context] session=e2e-w-2004543599 自动注入文档目录 (fp=5ee02bc6aa741857)

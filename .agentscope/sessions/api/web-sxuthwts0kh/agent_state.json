@@ -1,0 +1,486 @@
+{
+  "session_id" : "web-sxuthwts0kh",
+  "user_id" : "api",
+  "summary" : "",
+  "context" : [ {
+    "id" : "4ae4ab81-da3c-484a-83cc-de3d72933065",
+    "name" : null,
+    "content" : [ {
+      "type" : "text",
+      "text" : "帮我看看工作区里有什么文件"
+    } ],
+    "metadata" : { },
+    "timestamp" : "2026-11-04 14:54:30.714",
+    "usage" : null,
+    "role" : "USER"
+  }, {
+    "id" : "f3b31833-0163-4d3b-8fb6-665212b4e8e0",
+    "name" : "default",
+    "content" : [ {
+      "type" : "text",
+      "text" : "为了更好地帮助您查看工作区中的文件，我将先获取当前允许访问的目录列表。这有助于确保我们只在授权范围内操作。\n\n我们将执行 `list_allowed_directories` 函数来列出这些目录。\n"
+    }, {
+      "type" : "tool_use",
+      "id" : "76bb8c05-b9a6-4069-b909-f3902bca603f",
+      "name" : "list_allowed_directories",
+      "input" : { },
+      "content" : "{}",
+      "metadata" : { },
+      "state" : "allowed"
+    } ],
+    "metadata" : {
+      "_chat_usage" : {
+        "inputTokens" : 2260,
+        "outputTokens" : 64,
+        "cachedTokens" : 0,
+        "cacheCreationTokens" : 0,
+        "reasoningTokens" : 0,
+        "toolUsePromptTokens" : 0,
+        "time" : 0.764463845,
+        "totalTokens" : 2324
+      },
+      "prompt_eval_duration" : 30779051,
+      "load_duration" : 183043778,
+      "total_duration" : 764463845,
+      "prompt_eval_count" : 2260,
+      "eval_count" : 64,
+      "eval_duration" : 410737679,
+      "created_at" : "2026-11-04T06:54:31.433926654Z",
+      "model" : "qwen2.5:7b",
+      "done" : true
+    },
+    "timestamp" : "2026-11-04 14:54:31.487",
+    "usage" : {
+      "inputTokens" : 2260,
+      "outputTokens" : 64,
+      "cachedTokens" : 0,
+      "cacheCreationTokens" : 0,
+      "reasoningTokens" : 0,
+      "toolUsePromptTokens" : 0,
+      "time" : 0.764463845,
+      "totalTokens" : 2324
+    },
+    "role" : "ASSISTANT"
+  }, {
+    "id" : "cec4429a-94ae-4c0a-8641-9d8a469981cd",
+    "name" : "default",
+    "content" : [ {
+      "type" : "tool_result",
+      "id" : "76bb8c05-b9a6-4069-b909-f3902bca603f",
+      "name" : "list_allowed_directories",
+      "output" : [ {
+        "type" : "text",
+        "text" : "Allowed directories:\nD:\\demo\\agent_01\\workspace"
+      } ],
+      "metadata" : { },
+      "state" : "success"
+    } ],
+    "metadata" : { },
+    "timestamp" : "2026-11-04 14:54:31.540",
+    "usage" : null,
+    "role" : "TOOL"
+  }, {
+    "id" : "b0bdb552-ce46-4050-9167-1989514ead7a",
+    "name" : "default",
+    "content" : [ {
+      "type" : "text",
+      "text" : "根据提供的信息，您有权访问的工作区路径为 `D:\\demo\\agent_01\\workspace`。接下来，我将获取并列出该目录下的所有文件和子目录。\n\n我们将执行 `list_directory` 函数来查看工作区内的内容。\n"
+    }, {
+      "type" : "tool_use",
+      "id" : "76531089-73e7-4ecf-900a-0cac065b3c71",
+      "name" : "list_directory",
+      "input" : {
+        "path" : "D:\\demo\\agent_01\\workspace"
+      },
+      "content" : "{\"path\":\"D:\\\\demo\\\\agent_01\\\\workspace\"}",
+      "metadata" : { },
+      "state" : "allowed"
+    } ],
+    "metadata" : {
+      "_chat_usage" : {
+        "inputTokens" : 2338,
+        "outputTokens" : 84,
+        "cachedTokens" : 0,
+        "cacheCreationTokens" : 0,
+        "reasoningTokens" : 0,
+        "toolUsePromptTokens" : 0,
+        "time" : 0.8915077,
+        "totalTokens" : 2422
+      },
+      "prompt_eval_duration" : 35601141,
+      "load_duration" : 167089429,
+      "total_duration" : 891507700,
+      "prompt_eval_count" : 2338,
+      "eval_count" : 84,
+      "eval_duration" : 491052742,
+      "created_at" : "2026-11-04T06:54:32.380911138Z",
+      "model" : "qwen2.5:7b",
+      "done" : true
+    },
+    "timestamp" : "2026-11-04 14:54:32.435",
+    "usage" : {
+      "inputTokens" : 2338,
+      "outputTokens" : 84,
+      "cachedTokens" : 0,
+      "cacheCreationTokens" : 0,
+      "reasoningTokens" : 0,
+      "toolUsePromptTokens" : 0,
+      "time" : 0.8915077,
+      "totalTokens" : 2422
+    },
+    "role" : "ASSISTANT"
+  }, {
+    "id" : "5c916947-278b-4078-9d95-195f0a0e1578",
+    "name" : "default",
+    "content" : [ {
+      "type" : "tool_result",
+      "id" : "76531089-73e7-4ecf-900a-0cac065b3c71",
+      "name" : "list_directory",
+      "output" : [ {
+        "type" : "text",
+        "text" : "[FILE] 点名部署信息.txt"
+      } ],
+      "metadata" : { },
+      "state" : "success"
+    } ],
+    "metadata" : { },
+    "timestamp" : "2026-11-04 14:54:32.443",
+    "usage" : null,
+    "role" : "TOOL"
+  }, {
+    "id" : "b84fcfb1-2ff1-4458-8c1c-498947bc514c",
+    "name" : "default",
+    "content" : [ {
+      "type" : "text",
+      "text" : "在您的工作区 `D:\\demo\\agent_01\\workspace` 中，目前只发现一个文件：`点名部署信息.txt`。如果您需要查看该文件的内容或其他相关信息，请告诉我！"
+    } ],
+    "metadata" : {
+      "_chat_usage" : {
+        "inputTokens" : 2421,
+        "outputTokens" : 44,
+        "cachedTokens" : 0,
+        "cacheCreationTokens" : 0,
+        "reasoningTokens" : 0,
+        "toolUsePromptTokens" : 0,
+        "time" : 0.64458546,
+        "totalTokens" : 2465
+      },
+      "prompt_eval_duration" : 39601267,
+      "load_duration" : 165304214,
+      "total_duration" : 644585460,
+      "prompt_eval_count" : 2421,
+      "eval_count" : 44,
+      "eval_duration" : 257035351,
+      "created_at" : "2026-11-04T06:54:33.038948951Z",
+      "model" : "qwen2.5:7b",
+      "done" : true
+    },
+    "timestamp" : "2026-11-04 14:54:33.091",
+    "usage" : {
+      "inputTokens" : 2421,
+      "outputTokens" : 44,
+      "cachedTokens" : 0,
+      "cacheCreationTokens" : 0,
+      "reasoningTokens" : 0,
+      "toolUsePromptTokens" : 0,
+      "time" : 0.64458546,
+      "totalTokens" : 2465
+    },
+    "role" : "ASSISTANT"
+  }, {
+    "id" : "7d26fbc9-2b03-4f0d-8d30-29bcfde632d2",
+    "name" : null,
+    "content" : [ {
+      "type" : "text",
+      "text" : "帮我阅读这个文件 看看都是什么内容 做一个总结"
+    } ],
+    "metadata" : { },
+    "timestamp" : "2026-11-04 14:54:50.290",
+    "usage" : null,
+    "role" : "USER"
+  }, {
+    "id" : "ba05e692-ced0-48ed-954c-60f61a72a31c",
+    "name" : "default",
+    "content" : [ {
+      "type" : "text",
+      "text" : "为了更好地帮助您理解文件内容，我将读取 `D:\\demo\\agent_01\\workspace\\点名部署信息.txt` 文件的内容，并为您提供一个简要的总结。\n\n我们将执行 `read_text_file` 函数来读取该文件。\n"
+    }, {
+      "type" : "tool_use",
+      "id" : "40e42915-a8ae-4f63-9ec1-878acf7c23ad",
+      "name" : "read_text_file",
+      "input" : {
+        "path" : "D:\\demo\\agent_01\\workspace\\点名部署信息.txt"
+      },
+      "content" : "{\"path\":\"D:\\\\demo\\\\agent_01\\\\workspace\\\\点名部署信息.txt\"}",
+      "metadata" : { },
+      "state" : "allowed"
+    } ],
+    "metadata" : {
+      "_chat_usage" : {
+        "inputTokens" : 2490,
+        "outputTokens" : 91,
+        "cachedTokens" : 0,
+        "cacheCreationTokens" : 0,
+        "reasoningTokens" : 0,
+        "toolUsePromptTokens" : 0,
+        "time" : 1.026621334,
+        "totalTokens" : 2581
+      },
+      "prompt_eval_duration" : 20027913,
+      "load_duration" : 163909228,
+      "total_duration" : 1026621334,
+      "prompt_eval_count" : 2490,
+      "eval_count" : 91,
+      "eval_duration" : 544022638,
+      "created_at" : "2026-11-04T06:54:51.270791189Z",
+      "model" : "qwen2.5:7b",
+      "done" : true
+    },
+    "timestamp" : "2026-11-04 14:54:51.324",
+    "usage" : {
+      "inputTokens" : 2490,
+      "outputTokens" : 91,
+      "cachedTokens" : 0,
+      "cacheCreationTokens" : 0,
+      "reasoningTokens" : 0,
+      "toolUsePromptTokens" : 0,
+      "time" : 1.026621334,
+      "totalTokens" : 2581
+    },
+    "role" : "ASSISTANT"
+  }, {
+    "id" : "da6c4797-7959-4dd0-825d-d6c623097bae",
+    "name" : "default",
+    "content" : [ {
+      "type" : "tool_result",
+      "id" : "40e42915-a8ae-4f63-9ec1-878acf7c23ad",
+      "name" : "read_text_file",
+      "output" : [ {
+        "type" : "text",
+        "text" : "192.168.1.101\r\n\r\n地址 192.168.1.101：19009\r\ndocker部署\r\nmysql 101 3406  root 123456                 guanwei_cloud_msq_v3_1\r\npg 101 5532     postgres Train_20166        guanwei_cloud_v3_1    gisdb\r\nnacos 192.168.1.101:8848/nacos   nacos nacos\r\n/home/guanwei/server/guanwei_cloud\r\nmq 192.168.1.101:15773   guest   guest\r\ngeoserver_url: http://192.168.1.101:9700/geoserver    admin      geoserver\r\nmacroserver:    http://192.168.1.48:10061/macroserver   http://192.168.1.48:8077/#/servicemanagement   admin  a123456\r\n打包  server-addr : 192.168.1.101:8846\r\n地形 http://192.168.1.200:8787/map/terrain/global/layer.json\r\nwebsocket用的是后端端口    没有代理\r\ncontentFontSize: 4.7\r\n\r\n未有算法  \r\n光学：战场环境要素变化检测所有   \r\nsar：  固定目标变化检测（DDZD变化）      战场环境要素变化检测所有                                                                                                                      \r\n\r\n\r\n\r\n\r\n192.168.1.30\r\n地址 192.168.1.30：19009        202.85.214.27:19009\r\ndocker 部署\r\n/data/dianming:9700\r\nmq http://192.168.1.30:15673/     rabbit rabbit\r\nmysql数据库 3366   root   root   guanwei_cloud_msq_v3\r\npq数据库5422   postgres  postgres    guanwei_cloud_v3_1    gisdb_2\r\nnacos http://192.168.1.30:8846/nacos     nacos Guanwei0607.\r\n后端打包  server-addr : 192.168.1.30:8846\r\ngeoserver_url:      http://192.168.1.30:9705/geoserver/web/   admin  Guanwei0607.      \r\n                    http://202.85.214.27:9705/geoserver/web/    \r\nmacroserver:    192.168.1.30:89访问   admin  a123456    数据库用的是30的mysql3366 macroserverdb\r\n         macroserver后端是202.85.214.27:10061\r\nredis   192.168.1.30 6379  123zxc\r\n如果变化创建任务服务会崩溃的话可以把在nacos里面的rollcall里contentFontSize: 4.8调小一点 4.9  5.0 都不行，最大限度是4.8\r\n\r\n给前端的话\r\nVUE_APP_URL_MACROSERVER=\"\"192.168.1.30:10061\"\r\nVUE_APP_URL_GEOSERVER=\"192.168.1.30:9705\"\r\nwebsocket 192.168.1.30:19009/ws/websocket/3\r\n地形用http://192.168.1.30:10061/macroserver/terrain/global/layer.json    10061这个端口的\r\n\r\n\r\n192.168.1.31\r\n账号：xfusion\r\n密码：www.163.com\r\n服务文件路径：/data/soft/server/dianming/"
+      } ],
+      "metadata" : { },
+      "state" : "success"
+    } ],
+    "metadata" : { },
+    "timestamp" : "2026-11-04 14:54:51.335",
+    "usage" : null,
+    "role" : "TOOL"
+  }, {
+    "id" : "80043870-03c6-4326-b549-519db34ca927",
+    "name" : "default",
+    "content" : [ {
+      "type" : "text",
+      "text" : "文件 `点名部署信息.txt` 包含了多个服务器的部署和配置信息。以下是主要内容总结：\n\n1. **服务器地址及其端口**：\n   - 192.168.1.101:19009 (docker部署)\n   - 192.168.1.30:19009, 202.85.214.27:19009 (docker部署)\n   - 192.168.1.31\n\n2. **数据库配置**：\n   - MySQL：192.168.1.101:3406, 192.168.1.30:3366\n   - PostgreSQL：192.168.1.101:5532, 192.168.1.30:5422\n\n3. **服务部署**：\n   - Nacos：192.168.1.101:8848/nacos\n   - MQ：192.168.1.101:15773, 192.168.1.30:15673\n   - GeoServer：http://192.168.1.101:9700/geoserver，http://192.168.1.30:9705/geoserver/web/\n   - MacroServer：http://192.168.1.48:10061/macroserver, http://192.168.1.30:89\n   - Redis：192.168.1.30 6379\n\n4. **环境变量配置**：\n   - VUE_APP_URL_MACROSERVER=\"192.168.1.30:10061\"\n   - VUE_APP_URL_GEOSERVER=\"192.168.1.30:9705\"\n\n5. **其他信息**：\n   - 地形数据：http://192.168.1.200:8787/map/terrain/global/layer.json\n   - 光学和SAR检测算法相关配置\n\n总结来看，文件主要记录了不同服务器的部署地址、端口以及一些服务的具体配置信息。这些信息对于后续的运维工作非常有用。\n\n如果您有特定的需求或需要进一步处理这些内容，请告诉我！"
+    } ],
+    "metadata" : {
+      "_chat_usage" : {
+        "inputTokens" : 3534,
+        "outputTokens" : 577,
+        "cachedTokens" : 0,
+        "cacheCreationTokens" : 0,
+        "reasoningTokens" : 0,
+        "toolUsePromptTokens" : 0,
+        "time" : 5.136512552,
+        "totalTokens" : 4111
+      },
+      "prompt_eval_duration" : 410014639,
+      "load_duration" : 168945059,
+      "total_duration" : 5136512552,
+      "prompt_eval_count" : 3534,
+      "eval_count" : 577,
+      "eval_duration" : 3542613780,
+      "created_at" : "2026-11-04T06:54:56.421731002Z",
+      "model" : "qwen2.5:7b",
+      "done" : true
+    },
+    "timestamp" : "2026-11-04 14:54:56.476",
+    "usage" : {
+      "inputTokens" : 3534,
+      "outputTokens" : 577,
+      "cachedTokens" : 0,
+      "cacheCreationTokens" : 0,
+      "reasoningTokens" : 0,
+      "toolUsePromptTokens" : 0,
+      "time" : 5.136512552,
+      "totalTokens" : 4111
+    },
+    "role" : "ASSISTANT"
+  }, {
+    "id" : "e9a65e11-575c-4057-97de-9f033d85c3b3",
+    "name" : null,
+    "content" : [ {
+      "type" : "text",
+      "text" : "帮我根据这个文件的内容总结一份报告"
+    } ],
+    "metadata" : { },
+    "timestamp" : "2026-11-04 14:55:19.148",
+    "usage" : null,
+    "role" : "USER"
+  }, {
+    "id" : "8fdbf26e-46ed-4747-95ba-fe444046b060",
+    "name" : "default",
+    "content" : [ {
+      "type" : "text",
+      "text" : "好的，我将根据 `点名部署信息.txt` 文件的内容生成一份简洁的工作汇报报告。以下是报告草稿：\n\n---\n\n# 点名系统部署及配置信息报告\n\n## 1. 概述\n本报告总结了当前点名系统的部署和配置信息，包括服务器地址、数据库配置、服务部署以及其他相关信息。\n\n## 2. 服务器部署信息\n### 2.1 主机1: 192.168.1.101\n- **端口**: 19009 (docker部署)\n- **服务**:\n  - Nacos: `http://192.168.1.101:8848/nacos`\n  - MQ: `http://192.168.1.101:15773`\n  - GeoServer: `http://192.168.1.101:9700/geoserver/web/`\n- **数据库**:\n  - MySQL: `root` 用户，密码为 `123456`, 端口 `3406`\n  - PostgreSQL: `postgres` 用户，密码为 `Train_20166`, 端口 `5532`\n\n### 2.2 主机2: 192.168.1.30\n- **端口**: 19009, 202.85.214.27:19009 (docker部署)\n- **服务**:\n  - Nacos: `http://192.168.1.30:8846/nacos`\n  - MQ: `http://192.168.1.30:15673/`\n  - GeoServer: `http://192.168.1.30:9705/geoserver/web/`, `http://202.85.214.27:9705/geoserver/web/`\n- **数据库**:\n  - MySQL: `root` 用户，密码为 `root`, 端口 `3366`\n  - PostgreSQL: `postgres` 用户，密码为 `postgres`, 端口 `5422`\n\n### 2.3 主机3: 192.168.1.31\n- **账号**: xfusion, 密码: www.163.com\n- **服务文件路径**: `/data/soft/server/dianming/`\n\n## 3. 算法配置信息\n- 光学：战场环境要素变化检测所有\n- SAR：固定目标变化检测（DDZD变化），战场环境要素变化检测所有\n\n## 4. 其他相关信息\n- **内容字体大小**: `contentFontSize: 4.7`，最大值为 `4.8`\n- 其他配置信息参见文件原文。\n\n---\n\n请根据需要进一步修改和完善这份报告。如果有任何特定格式或细节要求，请告知！"
+    } ],
+    "metadata" : {
+      "_chat_usage" : {
+        "inputTokens" : 4065,
+        "outputTokens" : 671,
+        "cachedTokens" : 0,
+        "cacheCreationTokens" : 0,
+        "reasoningTokens" : 0,
+        "toolUsePromptTokens" : 0,
+        "time" : 6.282305624,
+        "totalTokens" : 4736
+      },
+      "prompt_eval_duration" : 797496634,
+      "load_duration" : 174689444,
+      "total_duration" : 6282305624,
+      "prompt_eval_count" : 4065,
+      "eval_count" : 671,
+      "eval_duration" : 4130048401,
+      "created_at" : "2026-11-04T06:55:25.386638826Z",
+      "model" : "qwen2.5:7b",
+      "done" : true
+    },
+    "timestamp" : "2026-11-04 14:55:25.440",
+    "usage" : {
+      "inputTokens" : 4065,
+      "outputTokens" : 671,
+      "cachedTokens" : 0,
+      "cacheCreationTokens" : 0,
+      "reasoningTokens" : 0,
+      "toolUsePromptTokens" : 0,
+      "time" : 6.282305624,
+      "totalTokens" : 4736
+    },
+    "role" : "ASSISTANT"
+  }, {
+    "id" : "413c2c6a-f7ca-48ab-9487-29b49f98403e",
+    "name" : null,
+    "content" : [ {
+      "type" : "text",
+      "text" : "你在哪个服务器"
+    } ],
+    "metadata" : { },
+    "timestamp" : "2026-11-04 15:00:39.378",
+    "usage" : null,
+    "role" : "USER"
+  }, {
+    "id" : "b0e9407a-5822-4987-81a4-1024e229aeaf",
+    "name" : "default",
+    "content" : [ {
+      "type" : "text",
+      "text" : "我是运行在您的环境中的智能助手，并没有实际的物理位置。不过，我可以帮助您处理与不同服务器相关的信息和任务。如果您有任何关于这些服务器的具体操作需求或需要进一步分析相关信息，请告诉我，我会尽力协助您。\n\n比如，您可以告诉我是否需要生成一个针对某个特定服务器的报告、检查文件内容、修改配置信息等具体任务。请提供更详细的需求，我将根据您的要求进行操作。"
+    } ],
+    "metadata" : {
+      "_chat_usage" : {
+        "inputTokens" : 3525,
+        "outputTokens" : 91,
+        "cachedTokens" : 0,
+        "cacheCreationTokens" : 0,
+        "reasoningTokens" : 0,
+        "toolUsePromptTokens" : 0,
+        "time" : 1.326607377,
+        "totalTokens" : 3616
+      },
+      "prompt_eval_duration" : 321791103,
+      "load_duration" : 189271445,
+      "total_duration" : 1326607377,
+      "prompt_eval_count" : 3525,
+      "eval_count" : 91,
+      "eval_duration" : 556387333,
+      "created_at" : "2026-11-04T07:00:40.7186762Z",
+      "model" : "qwen2.5:7b",
+      "done" : true
+    },
+    "timestamp" : "2026-11-04 15:00:40.774",
+    "usage" : {
+      "inputTokens" : 3525,
+      "outputTokens" : 91,
+      "cachedTokens" : 0,
+      "cacheCreationTokens" : 0,
+      "reasoningTokens" : 0,
+      "toolUsePromptTokens" : 0,
+      "time" : 1.326607377,
+      "totalTokens" : 3616
+    },
+    "role" : "ASSISTANT"
+  }, {
+    "id" : "2a937342-0fba-4e50-afb0-b42ed11a05c7",
+    "name" : null,
+    "content" : [ {
+      "type" : "text",
+      "text" : "vue的启动命令是什么"
+    } ],
+    "metadata" : { },
+    "timestamp" : "2026-11-04 15:00:59.925",
+    "usage" : null,
+    "role" : "USER"
+  }, {
+    "id" : "d1e291e1-9fe9-4a32-9c71-89ed1b0d1eb6",
+    "name" : "default",
+    "content" : [ {
+      "type" : "text",
+      "text" : "Vue 项目的启动命令通常在项目根目录下的 `package.json` 文件中定义。标准的启动命令通常是：\n\n```sh\nnpm run serve\n```\n\n或者\n\n```sh\nyarn serve\n```\n\n具体命令取决于您使用的包管理器（`npm` 或 `yarn`）。\n\n如果您需要进一步的操作指导，可以参考以下步骤：\n\n1. **确保安装了 Node.js 和 npm**：\n   您可以通过运行以下命令来检查是否已安装 Node.js 和 npm：\n   ```sh\n   node -v\n   npm -v\n   ```\n\n2. **进入项目目录**：\n   使用 `cd` 命令切换到您的 Vue 项目目录。\n\n3. **安装依赖**（如果还没有安装）：\n   运行以下命令来安装项目的依赖项：\n   ```sh\n   npm install\n   ```\n   或者使用 Yarn 安装：\n   ```sh\n   yarn install\n   ```\n\n4. **启动开发服务器**：\n   使用 `npm run serve` 命令启动开发服务器：\n   ```sh\n   npm run serve\n   ```\n   或者使用 Yarn 命令：\n   ```sh\n   yarn serve\n   ```\n\n运行上述命令后，Vue 开发服务器通常会在 `http://localhost:8080/`（默认端口）上启动，并在浏览器中打开应用。\n\n如果您有具体的项目路径或其他配置需求，请提供更多信息，我可以帮助您进一步操作。"
+    } ],
+    "metadata" : {
+      "_chat_usage" : {
+        "inputTokens" : 3630,
+        "outputTokens" : 312,
+        "cachedTokens" : 0,
+        "cacheCreationTokens" : 0,
+        "reasoningTokens" : 0,
+        "toolUsePromptTokens" : 0,
+        "time" : 2.756822204,
+        "totalTokens" : 3942
+      },
+      "prompt_eval_duration" : 19688457,
+      "load_duration" : 176006666,
+      "total_duration" : 2756822204,
+      "prompt_eval_count" : 3630,
+      "eval_count" : 312,
+      "eval_duration" : 1940516853,
+      "created_at" : "2026-11-04T07:01:02.635513359Z",
+      "model" : "qwen2.5:7b",
+      "done" : true
+    },
+    "timestamp" : "2026-11-04 15:01:02.692",
+    "usage" : {
+      "inputTokens" : 3630,
+      "outputTokens" : 312,
+      "cachedTokens" : 0,
+      "cacheCreationTokens" : 0,
+      "reasoningTokens" : 0,
+      "toolUsePromptTokens" : 0,
+      "time" : 2.756822204,
+      "totalTokens" : 3942
+    },
+    "role" : "ASSISTANT"
+  } ],
+  "reply_id" : "dba581dd034e4b88a3d01e2684bf4367",
+  "cur_iter" : 0,
+  "shutdown_interrupted" : false,
+  "permission_context" : {
+    "mode" : "default",
+    "working_directories" : { },
+    "allow_rules" : { },
+    "deny_rules" : { },
+    "ask_rules" : { }
+  },
+  "tool_context" : {
+    "max_cache_files" : 100,
+    "max_cache_bytes" : 25000.0,
+    "activated_groups" : [ ],
+    "spawn_registry" : { }
+  },
+  "tasks_context" : {
+    "tasks" : [ ]
+  },
+  "plan_mode_context" : {
+    "plan_active" : false,
+    "current_plan_file" : null
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "session_id" : "web-co91qrrfr4",
+  "user_id" : "api",
+  "summary" : "",
+  "context" : [ {
+    "id" : "e29eb09b-c44b-4179-afa5-ebbe8054aa4a",
+    "name" : null,
+    "content" : [ {
+      "type" : "text",
+      "text" : "你好"
+    } ],
+    "metadata" : { },
+    "timestamp" : "2026-11-04 14:49:02.265",
+    "usage" : null,
+    "role" : "USER"
+  }, {
+    "id" : "9131d3df-aa71-4dae-99ff-ae145dc9dec7",
+    "name" : "default",
+    "content" : [ {
+      "type" : "text",
+      "text" : "你好！有什么可以帮助你的吗？你可以告诉我你需要生成周报，或者需要执行其他任务。"
+    } ],
+    "metadata" : {
+      "_chat_usage" : {
+        "inputTokens" : 2254,
+        "outputTokens" : 21,
+        "cachedTokens" : 0,
+        "cacheCreationTokens" : 0,
+        "reasoningTokens" : 0,
+        "toolUsePromptTokens" : 0,
+        "time" : 0.390077921,
+        "totalTokens" : 2275
+      },
+      "prompt_eval_duration" : 18362264,
+      "load_duration" : 179713367,
+      "total_duration" : 390077921,
+      "prompt_eval_count" : 2254,
+      "eval_count" : 21,
+      "eval_duration" : 117960835,
+      "created_at" : "2026-11-04T06:49:02.610394616Z",
+      "model" : "qwen2.5:7b",
+      "done" : true
+    },
+    "timestamp" : "2026-11-04 14:49:02.662",
+    "usage" : {
+      "inputTokens" : 2254,
+      "outputTokens" : 21,
+      "cachedTokens" : 0,
+      "cacheCreationTokens" : 0,
+      "reasoningTokens" : 0,
+      "toolUsePromptTokens" : 0,
+      "time" : 0.390077921,
+      "totalTokens" : 2275
+    },
+    "role" : "ASSISTANT"
+  }, {
+    "id" : "ace27c00-1549-4e3c-b204-5035b53bbdf6",
+    "name" : null,
+    "content" : [ {
+      "type" : "text",
+      "text" : "你能帮我做什么"
+    } ],
+    "metadata" : { },
+    "timestamp" : "2026-11-04 14:49:31.730",
+    "usage" : null,
+    "role" : "USER"
+  }, {
+    "id" : "9ffad936-44de-47ca-90f9-b2cff24e2e91",
+    "name" : "default",
+    "content" : [ {
+      "type" : "text",
+      "text" : "我可以帮助你完成多种任务，比如：\n\n1. **生成周报**：根据工作区内的日志或笔记文件，为你汇总产出结构化的中文周报。\n2. **文件操作**：\n   - 移动和重命名文件/目录。\n   - 获取指定路径下的文件系统树视图。\n   - 创建新文件、读取和写入文件内容。\n3. **查看文件信息**：获取文件或目录的详细元数据，如大小、创建时间和修改时间等。\n4. **其他辅助任务**：\n   - 列出允许访问的目录列表。\n   - 查找符合指定模式的文件。\n   - 创建新目录。\n\n请问你需要我执行哪项任务呢？或者你有具体的文件操作需求吗？"
+    } ],
+    "metadata" : {
+      "_chat_usage" : {
+        "inputTokens" : 2287,
+        "outputTokens" : 161,
+        "cachedTokens" : 0,
+        "cacheCreationTokens" : 0,
+        "reasoningTokens" : 0,
+        "toolUsePromptTokens" : 0,
+        "time" : 1.473378591,
+        "totalTokens" : 2448
+      },
+      "prompt_eval_duration" : 19256381,
+      "load_duration" : 158792517,
+      "total_duration" : 1473378591,
+      "prompt_eval_count" : 2287,
+      "eval_count" : 161,
+      "eval_duration" : 979255803,
+      "created_at" : "2026-11-04T06:49:33.1580598Z",
+      "model" : "qwen2.5:7b",
+      "done" : true
+    },
+    "timestamp" : "2026-11-04 14:49:33.209",
+    "usage" : {
+      "inputTokens" : 2287,
+      "outputTokens" : 161,
+      "cachedTokens" : 0,
+      "cacheCreationTokens" : 0,
+      "reasoningTokens" : 0,
+      "toolUsePromptTokens" : 0,
+      "time" : 1.473378591,
+      "totalTokens" : 2448
+    },
+    "role" : "ASSISTANT"
+  } ],
+  "reply_id" : "2b42f25c810c4a168184998d40673440",
+  "cur_iter" : 0,
+  "shutdown_interrupted" : false,
+  "permission_context" : {
+    "mode" : "default",
+    "working_directories" : { },
+    "allow_rules" : { },
+    "deny_rules" : { },
+    "ask_rules" : { }
+  },
+  "tool_context" : {
+    "max_cache_files" : 100,
+    "max_cache_bytes" : 25000.0,
+    "activated_groups" : [ ],
+    "spawn_registry" : { }
+  },
+  "tasks_context" : {
+    "tasks" : [ ]
+  },
+  "plan_mode_context" : {
+    "plan_active" : false,
+    "current_plan_file" : null
+  }
+}

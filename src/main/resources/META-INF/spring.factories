@@ -1,0 +1,4 @@
+# EnvironmentPostProcessor 必须经 spring.factories 注册(.imports 仅适用于 AutoConfiguration)
+# 作用: 把工作目录外部 agent.properties 注入 Environment, 优先级高于 jar 内置配置
+org.springframework.boot.env.EnvironmentPostProcessor=\
+com.demo.agent.config.AgentPropertiesEnvironmentPostProcessor

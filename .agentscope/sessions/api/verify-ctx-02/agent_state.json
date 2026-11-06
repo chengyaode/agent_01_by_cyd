@@ -1,0 +1,136 @@
+{
+  "session_id" : "verify-ctx-02",
+  "user_id" : "api",
+  "summary" : "",
+  "context" : [ {
+    "id" : "a4514da1-03d5-4789-8d12-054e83a683fe",
+    "name" : null,
+    "content" : [ {
+      "type" : "text",
+      "text" : "【参考文档·系统自动注入】以下 1 个文档由用户上传到本 agent 的参考文档目录,正文已随本条消息一并提供。\n请直接基于这些正文作答:不要再向用户索要文件名、不要让用户先上传、也不要输出 list_context_files / read_document 的调用文本(只有在正文被截断且确需完整内容时才可真正调用工具)。\n标记: ctx-fingerprint:710013743a9b67e8\n\n===== 文件: CDC.md (12.5 KB) =====\n## 一、CDC 任务是什么\n\n**CDC（Change Data Capture）** = **变更数据捕获**\n\n简单说：实时监听数据库的数据变化（INSERT/UPDATE/DELETE），把变化的数据实时同步到另一个地方。\n\nPlain Text\n\n```\n┌─────────────┐      变更监听       ┌─────────────┐\n│   MySQL     │  ───────────────→   │   Kafka     │\n│  业务数据库  │   实时捕获binlog     │  消息队列    │\n└─────────────┘                     └─────────────┘\n      ↓                                    ↓\n  用户新增订单                           实时分析\n  商家修改商品信息                        数据同步\n  系统删除过期记录                        数据备份\n```\n\n**任务** = 一条 CDC 数据同步规则。比如：\n\n| 任务名称       | 描述                               |\n| :------------- | :--------------------------------- |\n| 用户表实时同步 | 监听 `user` 表变化 → 发送到 Kafka  |\n| 订单数据同步   | 监听 `order` 表变化 → 发送到 Kafka |\n\n------\n\n## 二、接口功能详解\n\n### 1. 任务列表查询\n\nBash\n\n```bash\nGET /cdc/job/list\n```\n\n**功能**：分页查询所有 CDC 任务\n\n**参数**：\n\n| 参数名     | 类型   | 必填 | 说明                             |\n| :--------- | :----- | :--- | :------------------------------- |\n| pageNum    | int    | 否   | 页码，默认1                      |\n| pageSize   | int    | 否   | 每页条数，默认10                 |\n| jobName    | string | 否   | 按任务名称模糊搜索               |\n| sourceType | string | 否   | 按源类型过滤：mysql/postgresql   |\n| sinkType   | string | 否   | 按目标类型过滤：kafka            |\n| jobStatus  | string | 否   | 按状态过滤：0停止/1运行中/-1失败 |\n\n**示例**：\n\nBash\n\n```bash\ncurl -X GET \"http://localhost:9302/cdc/job/list?pageNum=1&pageSize=10&jobName= 用户&jobStatus=0\"\n```\n\n**返回值**：\n\nJSON\n\n```json\n{\n  \"code\": 200,\n  \"msg\": \"查询成功\",\n  \"data\": {\n    \"total\": 15,\n    \"rows\": [\n      {\n        \"jobId\": 1,\n        \"jobName\": \"MySQL用户表实时同步\",\n        \"jobCode\": \"cdc_user_sync\",\n        \"sourceType\": \"mysql\",\n        \"sourceHost\": \"localhost\",\n        \"sourcePort\": 3306,\n        \"sourceDatabase\": \"tourism_db\",\n        \"sourceTable\": \"tourism_db.user_info\",\n        \"sinkType\": \"kafka\",\n        \"sinkHost\": \"localhost\",\n        \"sinkPort\": 9092,\n        \"sinkTable\": \"cdc_user_info\",\n        \"jobStatus\": \"1\",\n        \"createTime\": \"2026-07-15 10:30:00\"\n      }\n    ]\n  }\n}\n```\n\n------\n\n### 2. 查询单个任务详情\n\nBash\n\n```bash\nGET /cdc/job/{jobId}\n```\n\n**功能**：查看某个任务的完整配置\n\n**参数**：\n\n| 参数名 | 类型 | 必填 | 说明   |\n| :----- | :--- | :--- | :----- |\n| jobId  | long | 是   | 任务ID |\n\n**示例**：\n\nBash\n\n```bash\ncurl -X GET \"http://localhost:9302/cdc/job/1\"\n```\n\n**返回值**：\n\nJSON\n\n```json\n{\n  \"code\": 200,\n  \"msg\": \"查询成功\",\n  \"data\": {\n    \"jobId\": 1,\n    \"jobName\": \"MySQL用户表实时同步\",\n    \"sourceHost\": \"localhost\",\n    \"sourcePort\": 3306,\n    \"sourceUsername\": \"root\",\n    \"sourcePassword\": \"******\",\n    \"sourceDatabase\": \"tourism_db\",\n    \"sourceTable\": \"tourism_db.user_info\",\n    \"sinkType\": \"kafka\",\n    \"sinkHost\": \"localhost\",\n    \"sinkPort\": 9092,\n    \"sinkTable\": \"cdc_user_info\",\n    \"startupMode\": \"initial\",\n    \"parallelism\": 1,\n    \"jobStatus\": \"0\"\n  }\n}\n```\n\n------\n\n### 3. 新增任务\n\nBash\n\n```bash\nPOST /cdc/job\n```\n\n**功能**：创建一个新的 CDC 同步任务\n\n**参数**（Body JSON）：\n\n| 参数名         | 类型   | 必填 | 说明                                                 |\n| :------------- | :----- | :--- | :--------------------------------------------------- |\n| jobName        | string | 是   | 任务名称，如\"用户表实时同步\"                         |\n| jobCode        | string | 否   | 任务编码，唯一标识                                   |\n| sourceType     | string | 是   | 数据源类型，目前支持：mysql                          |\n| sourceHost     | string | 是   | 源数据库IP                                           |\n| sourcePort     | int    | 否   | 源数据库端口，默认3306                               |\n| sourceUsername | string | 是   | 源数据库用户名                                       |\n| sourcePassword | string | 是   | 源数据库密码                                         |\n| sourceDatabase | string | 否   | 源数据库名，如\"tourism_db\"                           |\n| sourceTable    | string | 否   | 源表名，格式\"库名.表名\"                              |\n| sinkType       | string | 是   | 目标类型，目前支持：kafka                            |\n| sinkHost       | string | 是   | 目标主机IP                                           |\n| sinkPort       | int    | 否   | 目标端口，Kafka默认9092                              |\n| sinkTable      | string | 否   | Kafka Topic名称                                      |\n| startupMode    | string | 否   | 启动模式：initial(全量+增量)/latest(只增量)/earliest |\n| parallelism    | int    | 否   | 并行度，默认1                                        |\n| description    | string | 否   | 任务描述                                             |\n\n**示例**：\n\nBash\n\n```bash\ncurl -X POST \"http://localhost:9302/cdc/job\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"jobName\": \"文旅用户表实时同步\",\n    \"jobCode\": \"cdc_tourism_user\",\n    \"sourceType\": \"mysql\",\n    \"sourceHost\": \"192.168.1.100\",\n    \"sourcePort\": 3306,\n    \"sourceUsername\": \"cdc_user\",\n    \"sourcePassword\": \"Cdc@123456\",\n    \"sourceDatabase\": \"tourism_db\",\n    \"sourceTable\": \"tourism_db.user_info,tourism_db.user_order\",\n    \"sinkType\": \"kafka\",\n    \"sinkHost\": \"192.168.1.101\",\n    \"sinkPort\": 9092,\n    \"sinkTable\": \"cdc_tourism_data\",\n    \"startupMode\": \"initial\",\n    \"parallelism\": 2,\n    \"description\": \"实时同步文旅平台用户表和订单表数据到Kafka\"\n  }'\n```\n\n**返回值**：\n\nJSON\n\n```json\n{\n  \"code\": 200,\n  \"msg\": \"新增成功\",\n  \"data\": 1\n}\n```\n\n------\n\n### 4. 修改任务\n\nBash\n\n```bash\nPUT /cdc/job\n```\n\n**功能**：修改已有任务的配置（任务停止时才能修改）\n\n**参数**：同\"新增任务\"，必须传 `jobId`\n\n**示例**：\n\nBash\n\n```bash\ncurl -X PUT \"http://localhost:9302/cdc/job\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"jobId\": 1,\n    \"jobName\": \"文旅用户表实时同步-修改后\",\n    \"sourceHost\": \"192.168.1.200\",\n    \"sourceTable\": \"tourism_db.user_info\"\n  }'\n```\n\n------\n\n### 5. 删除任务\n\nBash\n\n```bash\nDELETE /cdc/job/{jobIds}\n```\n\n**功能**：删除任务（运行中的任务会先自动停止）\n\n**参数**：\n\n| 参数名 | 类型   | 必填 | 说明                         |\n| :----- | :----- | :--- | :--------------------------- |\n| jobIds | string | 是   | 任务ID，支持逗号分隔批量删除 |\n\n**示例**：\n\nBash\n\n```bash\n# 删除单个\ncurl -X DELETE \"http://localhost:9302/cdc/job/1\"\n\n# 批量删除\ncurl -X DELETE \"http://localhost:9302/cdc/job/1,2,3\"\n```\n\n------\n\n### 6. 启动任务\n\nBash\n\n```bash\nPOST /cdc/job/start/{jobId}\n```\n\n**功能**：启动 CDC 实时同步任务\n\n**参数**：\n\n| 参数名 | 类型 | 必填 | 说明   |\n| :----- | :--- | :--- | :----- |\n| jobId  | long | 是   | 任务ID |\n\n**示例**：\n\nBash\n\n```bash\ncurl -X POST \"http://localhost:9302/cdc/job/start/1\"\n```\n\n**返回值**：\n\nJSON\n\n```json\n{\n  \"code\": 200,\n  \"msg\": \"任务启动成功\"\n}\n```\n\n**此时后台会做什么**：\n\nPlain Text\n\n```\n1. 读取任务配置（MySQL连接信息、表名、Kafka地址等）\n\n2. 连接 MySQL，读取 binlog\n\n3. 启动 Flink CDC 流处理\n\n4. 实时捕获数据变化\n\n5. 发送到 Kafka Topic\n```\n\n------\n\n### 7. 停止任务\n\nBash\n\n```bash\nPOST /cdc/job/stop/{jobId}\n```\n\n**功能**：停止 CDC 同步任务\n\n**示例**：\n\nBash\n\n```bash\ncurl -X POST \"http://localhost:9302/cdc/job/stop/1\"\n```\n\n------\n\n### 8. 查询任务状态\n\nBash\n\n```bash\nGET /cdc/job/status/{jobId}\n```\n\n**功能**：查看任务当前运行状态\n\n**示例**：\n\nBash\n\n```bash\ncurl -X GET \"http://localhost:9302/cdc/job/status/1\"\n```\n\n**返回值**：\n\nJSON\n\n```json\n{\n  \"code\": 200,\n  \"msg\": \"查询成功\",\n  \"data\": \"RUNNING\"\n}\n```\n\n状态说明：\n\n| 状态     | 含义     |\n| :------- | :------- |\n| STOPPED  | 已停止   |\n| RUNNING  | 运行中   |\n| STARTING | 正在启动 |\n| STOPPING | 正在停止 |\n| FAILED   | 失败     |\n| FINISHED | 已完成   |\n\n------\n\n### 9. 导出任务\n\nBash\n\n```bash\nPOST /cdc/job/export\n```\n\n**功能**：导出所有任务到 Excel 文件\n\n**示例**：\n\nBash\n\n```bash\ncurl -X POST \"http://localhost:9302/cdc/job/export\" -o cdc_jobs.xlsx\n```\n\n------\n\n### 10. 数据源连接测试\n\nBash\n\n```bash\nPOST /cdc/datasource/test\n```\n\n**功能**：测试 MySQL 数据库是否能正常连接\n\n**参数**（Body JSON）：\n\n| 参数名         | 类型   | 必填 | 说明              |\n| :------------- | :----- | :--- | :---------------- |\n| sourceType     | string | 是   | 数据库类型：mysql |\n| sourceHost     | string | 是   | 数据库IP          |\n| sourcePort     | int    | 否   | 端口，默认3306    |\n| sourceDatabase | string | 否   | 数据库名          |\n| sourceUsername | string | 是   | 用户名            |\n| sourcePassword | string | 是   | 密码              |\n\n**示例**：\n\nBash\n\n```bash\ncurl -X POST \"http://localhost:9302/cdc/datasource/test\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"sourceType\": \"mysql\",\n    \"sourceHost\": \"192.168.1.100\",\n    \"sourcePort\": 3306,\n    \"sourceDatabase\": \"tourism_db\",\n    \"sourceUsername\": \"cdc_user\",\n    \"sourcePassword\": \"Cdc@123456\"\n  }'\n```\n\n**返回值**：\n\nJSON\n\n```json\n// 成功\n{\n  \"code\": 200,\n  \"msg\": \"连接测试成功\"\n}\n\n// 失败\n{\n  \"code\": 500,\n  \"msg\": \"连接测试失败\"\n}\n```\n\n------\n\n## 三、完整使用流程（从创建到运行）\n\nPlain Text\n\n```\n步骤1: 测试数据库连接\n  POST /cdc/datasource/test\n  → 确认 MySQL 能连上\n\n步骤2: 创建 CDC 任务\n  POST /cdc/job\n  → 得到 jobId = 1\n\n步骤3: 启动任务\n  POST /cdc/job/start/1\n  → 开始实时同步\n\n步骤4: 查看状态\n  GET /cdc/job/status/1\n  → RUNNING（运行中）\n\n步骤5: 验证效果\n  → 修改 MySQL 表数据\n  → 到 Kafka 查看是否收到消息\n\n步骤6: 停止任务\n  POST /cdc/job/stop/1\n```\n\n------\n\n## 四、实际应用场景\n\n### 场景1：文旅平台订单实时分析\n\nPlain Text\n\n```\n源: tourism_db.order_info 表\n    ↓ CDC实时捕获\n目标: Kafka Topic: realtime_orders\n    ↓ 消费\n用途: 实时统计今日订单量、热门景点\n```\n\n### 场景2：用户行为数据同步\n\nPlain Text\n\n```\n源: tourism_db.user_behavior 表\n    ↓ CDC实时捕获\n目标: Kafka Topic: user_behavior\n    ↓ 消费\n用途: 实时推荐系统、用户画像更新\n```\n\n### 场景3：数据备份到数仓\n\nPlain Text\n\n```\n源: 多个业务库（用户库、订单库、支付库）\n    ↓ CDC实时捕获\n目标: Kafka Topic: dwd_* 层\n    ↓ 消费\n用途: 实时数仓建设\n```\n\n------\n\n## 五、Kafka 中收到的数据格式\n\nCDC 发送到 Kafka 的数据是 JSON 格式，包含完整的变更信息：\n\nJSON\n\n```json\n{\n  \"before\": null,\n  \"after\": {\n    \"id\": 1001,\n    \"username\": \"张三\",\n    \"phone\": \"13800138000\",\n    \"created_at\": \"2026-07-15 10:30:00\"\n  },\n  \"source\": {\n    \"db\": \"tourism_db\",\n    \"table\": \"user_info\",\n    \"ts_ms\": 1721017800000\n  },\n  \"op\": \"c\"\n}\n```\n\n| 字段           | 含义                             |\n| :------------- | :------------------------------- |\n| `before`       | 变更前的数据（INSERT时为null）   |\n| `after`        | 变更后的数据                     |\n| `source.db`    | 来源数据库                       |\n| `source.table` | 来源表                           |\n| `op`           | 操作类型：c=创建, u=更新, d=删除 |\n\n这样后端系统消费 Kafka 消息就能知道数据发生了什么变化，实现实时数据处理。\n\n【用户本轮提问】\n我的文档说了什么 帮我总结"
+    } ],
+    "metadata" : { },
+    "timestamp" : "2026-11-05 09:28:04.950",
+    "usage" : null,
+    "role" : "USER"
+  }, {
+    "id" : "f6aa7b42-20a1-4806-a442-632ef69ede6d",
+    "name" : "default",
+    "content" : [ {
+      "type" : "text",
+      "text" : "您提供的文档详细描述了CDC（Change Data Capture）在旅游平台中的应用及相关操作流程。主要内容可以概括如下：\n\n1. **概述**：\n   - 文档主要围绕CDC技术及其应用场景展开，介绍了如何通过配置和管理实时数据同步任务来支持实际业务需求。\n\n2. **功能介绍**：\n   - **创建、修改与删除任务**：包括新增、修改（需在任务停止时进行）和删除任务。\n   - **启动与停止任务**：描述了如何启动和停止CDC任务，以及其背后的处理流程。\n   - **数据测试**：提供了数据库连接的测试接口，确保配置正确。\n   - **状态查询**：允许获取任务当前的状态信息。\n   - **导出任务**：将所有任务导出到Excel文件中以便于管理。\n\n3. **操作步骤**：\n   - 从测试数据库连接开始，经过创建CDC任务、启动任务及验证效果等几个关键步骤来完成整个过程。\n\n4. **实际应用场景**：\n   - 描述了不同业务场景下的数据同步需求，如订单实时分析、用户行为数据同步和数据备份至数据仓库等具体实例。\n\n5. **Kafka中接收的数据格式**：\n   - 提供了从MySQL到Kafka传输的数据结构说明及其意义，特别是变更信息的表示方式。\n\n6. **示例请求及响应**：\n   - 为每个主要功能提供了HTTP请求的例子，并展示了相应的预期响应结果或状态码。\n\n总之，这份文档详细介绍了如何利用CDC技术实现高效、实时的数据同步解决方案，在实际项目中具有较高的参考价值。"
+    } ],
+    "metadata" : {
+      "_chat_usage" : {
+        "inputTokens" : 4096,
+        "outputTokens" : 338,
+        "cachedTokens" : 0,
+        "cacheCreationTokens" : 0,
+        "reasoningTokens" : 0,
+        "toolUsePromptTokens" : 0,
+        "time" : 3.637323691,
+        "totalTokens" : 4434
+      },
+      "prompt_eval_duration" : 885100224,
+      "load_duration" : 161531079,
+      "total_duration" : 3637323691,
+      "prompt_eval_count" : 4096,
+      "eval_count" : 338,
+      "eval_duration" : 2054735632,
+      "created_at" : "2026-11-05T01:28:07.822885012Z",
+      "model" : "qwen2.5:7b",
+      "done" : true
+    },
+    "timestamp" : "2026-11-05 09:28:08.748",
+    "usage" : {
+      "inputTokens" : 4096,
+      "outputTokens" : 338,
+      "cachedTokens" : 0,
+      "cacheCreationTokens" : 0,
+      "reasoningTokens" : 0,
+      "toolUsePromptTokens" : 0,
+      "time" : 3.637323691,
+      "totalTokens" : 4434
+    },
+    "role" : "ASSISTANT"
+  }, {
+    "id" : "77def63b-4b18-43ab-80bb-413e00c95a9d",
+    "name" : null,
+    "content" : [ {
+      "type" : "text",
+      "text" : "那文档里启动任务的前提条件是什么？"
+    } ],
+    "metadata" : { },
+    "timestamp" : "2026-11-05 09:28:23.710",
+    "usage" : null,
+    "role" : "USER"
+  }, {
+    "id" : "3bc1e86c-0ef4-4d34-afbe-9f3a5db9226c",
+    "name" : "default",
+    "content" : [ {
+      "type" : "text",
+      "text" : "根据您提供的文档内容，启动CDC（Change Data Capture）任务的前提条件主要包括以下几点：\n\n1. **数据库连接测试**：\n   - 在创建或修改任务之前，需要确保源数据库和目标数据库的连接信息配置正确，并且可以通过文档中提到的数据测试接口进行验证。只有当数据库连接成功时，才能进一步执行其他操作。\n\n2. **任务状态有效**：\n   - 如果任务已经处于“停止”状态，则可以启动它；如果任务正在运行或不存在，启动操作将无法执行。\n\n3. **配置完整且正确**：\n   - 需要确保CDC任务的所有相关配置（如源表、目标表、数据字段等）都已正确设置。这包括但不限于以下方面：\n     - 源数据库和目标数据库的相关信息。\n     - 要同步的具体数据表及其字段选择。\n     - 任何必要的认证信息或安全设置。\n\n4. **资源可用性**：\n   - 确保相关系统（如Kafka集群）的资源充足，没有因其他因素导致的服务中断或限制。\n\n5. **权限检查**：\n   - 操作用户需要具有足够的权限来启动CDC任务。这通常涉及数据库和系统的访问权限设置。\n\n具体操作步骤中可能会有更详细的前置条件说明，请参考文档中的详细描述或直接联系技术支持获取进一步的帮助。如果有特定的任务配置细节或其他疑问，可以提供更多信息以便进行更精确的指导。"
+    } ],
+    "metadata" : {
+      "_chat_usage" : {
+        "inputTokens" : 2833,
+        "outputTokens" : 301,
+        "cachedTokens" : 0,
+        "cacheCreationTokens" : 0,
+        "reasoningTokens" : 0,
+        "toolUsePromptTokens" : 0,
+        "time" : 2.757581033,
+        "totalTokens" : 3134
+      },
+      "prompt_eval_duration" : 253966506,
+      "load_duration" : 174387955,
+      "total_duration" : 2757581033,
+      "prompt_eval_count" : 2833,
+      "eval_count" : 301,
+      "eval_duration" : 1800356801,
+      "created_at" : "2026-11-05T01:28:25.56576846Z",
+      "model" : "qwen2.5:7b",
+      "done" : true
+    },
+    "timestamp" : "2026-11-05 09:28:26.485",
+    "usage" : {
+      "inputTokens" : 2833,
+      "outputTokens" : 301,
+      "cachedTokens" : 0,
+      "cacheCreationTokens" : 0,
+      "reasoningTokens" : 0,
+      "toolUsePromptTokens" : 0,
+      "time" : 2.757581033,
+      "totalTokens" : 3134
+    },
+    "role" : "ASSISTANT"
+  } ],
+  "reply_id" : "cf46e532429a4dbbbc56dccc2eb7f4b7",
+  "cur_iter" : 0,
+  "shutdown_interrupted" : false,
+  "permission_context" : {
+    "mode" : "bypass",
+    "working_directories" : {
+      "D:\\demo\\agent_01\\workspace" : {
+        "path" : "D:\\demo\\agent_01\\workspace",
+        "source" : "userSettings"
+      }
+    },
+    "allow_rules" : { },
+    "deny_rules" : { },
+    "ask_rules" : { }
+  },
+  "tool_context" : {
+    "max_cache_files" : 100,
+    "max_cache_bytes" : 25000.0,
+    "activated_groups" : [ ],
+    "spawn_registry" : { }
+  },
+  "tasks_context" : {
+    "tasks" : [ ]
+  },
+  "plan_mode_context" : {
+    "plan_active" : false,
+    "current_plan_file" : null
+  }
+}

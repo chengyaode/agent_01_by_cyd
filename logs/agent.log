@@ -1,0 +1,844 @@
+2026-11-06T10:36:38.794+08:00  INFO 31016 --- [agentscope-agent-server] [main] com.demo.agent.AgentApplication          : Starting AgentApplication v1.0.0-SNAPSHOT using Java 21.0.9 with PID 31016 (D:\demo\agent_01\target\agent.jar started by A in D:\demo\agent_01)
+2026-11-06T10:36:38.803+08:00  INFO 31016 --- [agentscope-agent-server] [main] com.demo.agent.AgentApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-11-06T10:36:40.092+08:00  INFO 31016 --- [agentscope-agent-server] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-11-06T10:36:40.109+08:00  INFO 31016 --- [agentscope-agent-server] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-06T10:36:40.110+08:00  INFO 31016 --- [agentscope-agent-server] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2026-11-06T10:36:40.155+08:00  INFO 31016 --- [agentscope-agent-server] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-11-06T10:36:40.155+08:00  INFO 31016 --- [agentscope-agent-server] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1276 ms
+2026-11-06T10:36:40.794+08:00  INFO 31016 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'get_current_time' in group 'ungrouped'
+2026-11-06T10:36:40.796+08:00  INFO 31016 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'calc_text_stats' in group 'ungrouped'
+2026-11-06T10:36:40.797+08:00  INFO 31016 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'get_workspace_info' in group 'ungrouped'
+2026-11-06T10:36:41.470+08:00  INFO 31016 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'list_context_files' in group 'ungrouped'
+2026-11-06T10:36:41.471+08:00  INFO 31016 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'read_document' in group 'ungrouped'
+2026-11-06T10:36:41.474+08:00  INFO 31016 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'query_weather' in group 'ungrouped'
+2026-11-06T10:36:41.476+08:00  INFO 31016 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'query_express' in group 'ungrouped'
+2026-11-06T10:36:41.665+08:00  INFO 31016 --- [agentscope-agent-server] [main] i.agentscope.core.tool.McpClientManager  : Registering MCP client: filesystem
+2026-11-06T10:36:41.665+08:00  INFO 31016 --- [agentscope-agent-server] [main] i.a.core.tool.mcp.McpAsyncClientWrapper  : Initializing MCP async client: filesystem
+2026-11-06T10:36:41.690+08:00  INFO 31016 --- [agentscope-agent-server] [loomBoundedElastic-1] i.m.c.transport.StdioClientTransport     : MCP server starting.
+2026-11-06T10:36:41.732+08:00  INFO 31016 --- [agentscope-agent-server] [loomBoundedElastic-1] i.m.c.transport.StdioClientTransport     : MCP server started
+2026-11-06T10:36:57.356+08:00  INFO 31016 --- [agentscope-agent-server] [pool-5-thread-1] i.m.c.transport.StdioClientTransport     : STDERR Message received: npm notice run npx
+2026-11-06T10:36:57.357+08:00  INFO 31016 --- [agentscope-agent-server] [pool-5-thread-1] i.m.c.transport.StdioClientTransport     : STDERR Message received: npm notice run mcp-server-filesystem D:\demo\agent_01\workspace
+2026-11-06T10:37:02.185+08:00  INFO 31016 --- [agentscope-agent-server] [pool-5-thread-1] i.m.c.transport.StdioClientTransport     : STDERR Message received: Secure MCP Filesystem Server running on stdio
+2026-11-06T10:37:02.224+08:00  INFO 31016 --- [agentscope-agent-server] [pool-2-thread-1] i.m.client.LifecycleInitializer          : Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental=null, logging=null, prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], Info: Implementation[name=secure-filesystem-server, title=null, version=0.2.0] and Instructions null
+2026-11-06T10:37:02.236+08:00  INFO 31016 --- [agentscope-agent-server] [pool-5-thread-1] i.m.c.transport.StdioClientTransport     : STDERR Message received: Client does not support MCP Roots, using allowed directories set from server args: [ 'D:\\demo\\agent_01\\workspace' ]
+2026-11-06T10:37:02.266+08:00  INFO 31016 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'read_file' in group 'ungrouped'
+2026-11-06T10:37:02.266+08:00  INFO 31016 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'read_text_file' in group 'ungrouped'
+2026-11-06T10:37:02.266+08:00  INFO 31016 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'read_media_file' in group 'ungrouped'
+2026-11-06T10:37:02.266+08:00  INFO 31016 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'read_multiple_files' in group 'ungrouped'
+2026-11-06T10:37:02.266+08:00  INFO 31016 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'write_file' in group 'ungrouped'
+2026-11-06T10:37:02.267+08:00  INFO 31016 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'edit_file' in group 'ungrouped'
+2026-11-06T10:37:02.267+08:00  INFO 31016 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'create_directory' in group 'ungrouped'
+2026-11-06T10:37:02.267+08:00  INFO 31016 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'list_directory' in group 'ungrouped'
+2026-11-06T10:37:02.267+08:00  INFO 31016 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'list_directory_with_sizes' in group 'ungrouped'
+2026-11-06T10:37:02.267+08:00  INFO 31016 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'directory_tree' in group 'ungrouped'
+2026-11-06T10:37:02.267+08:00  INFO 31016 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'move_file' in group 'ungrouped'
+2026-11-06T10:37:02.267+08:00  INFO 31016 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'search_files' in group 'ungrouped'
+2026-11-06T10:37:02.268+08:00  INFO 31016 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'get_file_info' in group 'ungrouped'
+2026-11-06T10:37:02.268+08:00  INFO 31016 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'list_allowed_directories' in group 'ungrouped'
+2026-11-06T10:37:02.268+08:00  INFO 31016 --- [agentscope-agent-server] [pool-2-thread-1] i.agentscope.core.tool.McpClientManager  : MCP client 'filesystem' registered successfully
+2026-11-06T10:37:02.276+08:00  INFO 31016 --- [agentscope-agent-server] [main] i.agentscope.core.tool.McpClientManager  : Registering MCP client: agent-mcp
+2026-11-06T10:37:02.276+08:00  INFO 31016 --- [agentscope-agent-server] [main] i.a.core.tool.mcp.McpAsyncClientWrapper  : Initializing MCP async client: agent-mcp
+2026-11-06T10:37:02.474+08:00  INFO 31016 --- [agentscope-agent-server] [HttpClient-3-Worker-2] i.m.client.LifecycleInitializer          : Server response with Protocol: 2025-06-18, Capabilities: ServerCapabilities[completions=null, experimental=null, logging=LoggingCapabilities[], prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], Info: Implementation[name=agent-mcp, title=null, version=1.0.0] and Instructions 数据库只读查询(MySQL/PostgreSQL)与 Qdrant 向量库工具。写操作前必须先向用户确认。
+2026-11-06T10:37:02.520+08:00  INFO 31016 --- [agentscope-agent-server] [HttpClient-3-Worker-2] io.agentscope.core.tool.Toolkit          : Registered tool 'db_list_tables' in group 'ungrouped'
+2026-11-06T10:37:02.520+08:00  INFO 31016 --- [agentscope-agent-server] [HttpClient-3-Worker-2] io.agentscope.core.tool.Toolkit          : Registered tool 'db_describe_table' in group 'ungrouped'
+2026-11-06T10:37:02.520+08:00  INFO 31016 --- [agentscope-agent-server] [HttpClient-3-Worker-2] io.agentscope.core.tool.Toolkit          : Registered tool 'db_query' in group 'ungrouped'
+2026-11-06T10:37:02.520+08:00  INFO 31016 --- [agentscope-agent-server] [HttpClient-3-Worker-2] io.agentscope.core.tool.Toolkit          : Registered tool 'qdrant_list_collections' in group 'ungrouped'
+2026-11-06T10:37:02.520+08:00  INFO 31016 --- [agentscope-agent-server] [HttpClient-3-Worker-2] io.agentscope.core.tool.Toolkit          : Registered tool 'qdrant_collection_info' in group 'ungrouped'
+2026-11-06T10:37:02.520+08:00  INFO 31016 --- [agentscope-agent-server] [HttpClient-3-Worker-2] io.agentscope.core.tool.Toolkit          : Registered tool 'qdrant_search' in group 'ungrouped'
+2026-11-06T10:37:02.521+08:00  INFO 31016 --- [agentscope-agent-server] [HttpClient-3-Worker-2] io.agentscope.core.tool.Toolkit          : Registered tool 'qdrant_upsert' in group 'ungrouped'
+2026-11-06T10:37:02.521+08:00  INFO 31016 --- [agentscope-agent-server] [HttpClient-3-Worker-2] io.agentscope.core.tool.Toolkit          : Registered tool 'qdrant_scroll' in group 'ungrouped'
+2026-11-06T10:37:02.521+08:00  INFO 31016 --- [agentscope-agent-server] [HttpClient-3-Worker-2] i.agentscope.core.tool.McpClientManager  : MCP client 'agent-mcp' registered successfully
+2026-11-06T10:37:02.563+08:00  INFO 31016 --- [agentscope-agent-server] [main] i.a.c.s.r.FileSystemSkillRepository      : FileSystemSkillRepository initialized [baseDir=D:\demo\agent_01\skills, lazy=false]
+2026-11-06T10:37:02.569+08:00  INFO 31016 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'load_skill_through_path' in group 'ungrouped'
+2026-11-06T10:37:02.573+08:00  INFO 31016 --- [agentscope-agent-server] [main] com.demo.agent.agent.AgentRegistry       : [agent] 构建完成: default (model=ollama:qwen3:14b, workspace=D:\demo\agent_01\workspace)
+2026-11-06T10:37:02.573+08:00  INFO 31016 --- [agentscope-agent-server] [main] com.demo.agent.agent.AgentRegistry       : [agent] 就绪,共 1 个: [default]
+2026-11-06T10:37:02.882+08:00  INFO 31016 --- [agentscope-agent-server] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-11-06T10:37:02.900+08:00  INFO 31016 --- [agentscope-agent-server] [main] com.demo.agent.AgentApplication          : Started AgentApplication in 24.631 seconds (process running for 25.287)
+2026-11-06T10:37:21.155+08:00  INFO 31016 --- [agentscope-agent-server] [tomcat-handler-0] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-06T10:37:21.155+08:00  INFO 31016 --- [agentscope-agent-server] [tomcat-handler-0] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-06T10:37:21.156+08:00  INFO 31016 --- [agentscope-agent-server] [tomcat-handler-0] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-11-06T10:37:21.307+08:00  INFO 31016 --- [agentscope-agent-server] [tomcat-handler-0] com.demo.agent.web.ChatController        : [context] session=mcp-verify-1 自动注入文档目录 (fp=5ee02bc6aa741857)
+2026-11-06T10:37:21.492+08:00  INFO 31016 --- [agentscope-agent-server] [tomcat-handler-0] io.agentscope.core.skill.SkillBox        : Registered skill 'livelihood-query_filesystem-agent_01_skills'
+2026-11-06T10:37:21.492+08:00  INFO 31016 --- [agentscope-agent-server] [tomcat-handler-0] io.agentscope.core.skill.SkillBox        : Registered skill 'weekly-report_filesystem-agent_01_skills'
+2026-11-06T10:37:21.493+08:00  INFO 31016 --- [agentscope-agent-server] [tomcat-handler-0] io.agentscope.core.skill.SkillBox        : Created upload directory: C:\Users\A\AppData\Local\Temp\agentscope-skill-workdir-11329887030173943900\b9dc8c81f5e6937c20a84f4cd3cf860023a63306bd8bf7f3c3b303a37b915633-17956262081466845400\skills
+2026-11-06T10:37:21.494+08:00  INFO 31016 --- [agentscope-agent-server] [tomcat-handler-0] io.agentscope.core.skill.SkillBox        : Uploaded 0 skill files to: C:\Users\A\AppData\Local\Temp\agentscope-skill-workdir-11329887030173943900\b9dc8c81f5e6937c20a84f4cd3cf860023a63306bd8bf7f3c3b303a37b915633-17956262081466845400\skills
+2026-11-06T10:37:27.213+08:00  WARN 31016 --- [agentscope-agent-server] [HttpClient-3-Worker-1] i.a.core.tool.mcp.McpAsyncClientWrapper  : MCP tool 'db_list_tables' returned error: [TextContent[annotations=null, text=调用失败: 数据库未配置:请在 agent-mcp 的配置里设置 mcp.db.url / username / password, meta=null]]
+2026-11-06T10:43:45.829+08:00  INFO 19736 --- [agentscope-agent-server] [main] com.demo.agent.AgentApplication          : Starting AgentApplication v1.0.0-SNAPSHOT using Java 21.0.9 with PID 19736 (D:\demo\agent_01\target\agent.jar started by A in D:\demo\agent_01)
+2026-11-06T10:43:45.832+08:00  INFO 19736 --- [agentscope-agent-server] [main] com.demo.agent.AgentApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-11-06T10:43:46.838+08:00  INFO 19736 --- [agentscope-agent-server] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-11-06T10:43:46.852+08:00  INFO 19736 --- [agentscope-agent-server] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-06T10:43:46.853+08:00  INFO 19736 --- [agentscope-agent-server] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2026-11-06T10:43:46.897+08:00  INFO 19736 --- [agentscope-agent-server] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-11-06T10:43:46.898+08:00  INFO 19736 --- [agentscope-agent-server] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1005 ms
+2026-11-06T10:43:47.479+08:00  INFO 19736 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'get_current_time' in group 'ungrouped'
+2026-11-06T10:43:47.480+08:00  INFO 19736 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'get_workspace_info' in group 'ungrouped'
+2026-11-06T10:43:47.481+08:00  INFO 19736 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'calc_text_stats' in group 'ungrouped'
+2026-11-06T10:43:48.080+08:00  INFO 19736 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'list_context_files' in group 'ungrouped'
+2026-11-06T10:43:48.081+08:00  INFO 19736 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'read_document' in group 'ungrouped'
+2026-11-06T10:43:48.084+08:00  INFO 19736 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'query_weather' in group 'ungrouped'
+2026-11-06T10:43:48.086+08:00  INFO 19736 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'query_express' in group 'ungrouped'
+2026-11-06T10:43:48.224+08:00  INFO 19736 --- [agentscope-agent-server] [main] i.agentscope.core.tool.McpClientManager  : Registering MCP client: filesystem
+2026-11-06T10:43:48.224+08:00  INFO 19736 --- [agentscope-agent-server] [main] i.a.core.tool.mcp.McpAsyncClientWrapper  : Initializing MCP async client: filesystem
+2026-11-06T10:43:48.259+08:00  INFO 19736 --- [agentscope-agent-server] [loomBoundedElastic-1] i.m.c.transport.StdioClientTransport     : MCP server starting.
+2026-11-06T10:43:48.318+08:00  INFO 19736 --- [agentscope-agent-server] [loomBoundedElastic-1] i.m.c.transport.StdioClientTransport     : MCP server started
+2026-11-06T10:43:50.462+08:00  INFO 19736 --- [agentscope-agent-server] [pool-5-thread-1] i.m.c.transport.StdioClientTransport     : STDERR Message received: npm notice run npx
+2026-11-06T10:43:50.463+08:00  INFO 19736 --- [agentscope-agent-server] [pool-5-thread-1] i.m.c.transport.StdioClientTransport     : STDERR Message received: npm notice run mcp-server-filesystem D:\demo\agent_01\workspace
+2026-11-06T10:43:51.261+08:00  INFO 19736 --- [agentscope-agent-server] [pool-5-thread-1] i.m.c.transport.StdioClientTransport     : STDERR Message received: Secure MCP Filesystem Server running on stdio
+2026-11-06T10:43:51.298+08:00  INFO 19736 --- [agentscope-agent-server] [pool-2-thread-1] i.m.client.LifecycleInitializer          : Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental=null, logging=null, prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], Info: Implementation[name=secure-filesystem-server, title=null, version=0.2.0] and Instructions null
+2026-11-06T10:43:51.308+08:00  INFO 19736 --- [agentscope-agent-server] [pool-5-thread-1] i.m.c.transport.StdioClientTransport     : STDERR Message received: Client does not support MCP Roots, using allowed directories set from server args: [ 'D:\\demo\\agent_01\\workspace' ]
+2026-11-06T10:43:51.335+08:00  INFO 19736 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'read_file' in group 'ungrouped'
+2026-11-06T10:43:51.336+08:00  INFO 19736 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'read_text_file' in group 'ungrouped'
+2026-11-06T10:43:51.336+08:00  INFO 19736 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'read_media_file' in group 'ungrouped'
+2026-11-06T10:43:51.336+08:00  INFO 19736 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'read_multiple_files' in group 'ungrouped'
+2026-11-06T10:43:51.336+08:00  INFO 19736 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'write_file' in group 'ungrouped'
+2026-11-06T10:43:51.336+08:00  INFO 19736 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'edit_file' in group 'ungrouped'
+2026-11-06T10:43:51.336+08:00  INFO 19736 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'create_directory' in group 'ungrouped'
+2026-11-06T10:43:51.336+08:00  INFO 19736 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'list_directory' in group 'ungrouped'
+2026-11-06T10:43:51.336+08:00  INFO 19736 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'list_directory_with_sizes' in group 'ungrouped'
+2026-11-06T10:43:51.336+08:00  INFO 19736 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'directory_tree' in group 'ungrouped'
+2026-11-06T10:43:51.336+08:00  INFO 19736 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'move_file' in group 'ungrouped'
+2026-11-06T10:43:51.336+08:00  INFO 19736 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'search_files' in group 'ungrouped'
+2026-11-06T10:43:51.336+08:00  INFO 19736 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'get_file_info' in group 'ungrouped'
+2026-11-06T10:43:51.337+08:00  INFO 19736 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'list_allowed_directories' in group 'ungrouped'
+2026-11-06T10:43:51.337+08:00  INFO 19736 --- [agentscope-agent-server] [pool-2-thread-1] i.agentscope.core.tool.McpClientManager  : MCP client 'filesystem' registered successfully
+2026-11-06T10:43:51.343+08:00  INFO 19736 --- [agentscope-agent-server] [main] i.agentscope.core.tool.McpClientManager  : Registering MCP client: agent-mcp
+2026-11-06T10:43:51.343+08:00  INFO 19736 --- [agentscope-agent-server] [main] i.a.core.tool.mcp.McpAsyncClientWrapper  : Initializing MCP async client: agent-mcp
+2026-11-06T10:43:51.368+08:00  INFO 19736 --- [agentscope-agent-server] [HttpClient-3-Worker-2] i.m.client.LifecycleInitializer          : Server response with Protocol: 2025-06-18, Capabilities: ServerCapabilities[completions=null, experimental=null, logging=LoggingCapabilities[], prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], Info: Implementation[name=agent-mcp, title=null, version=1.0.0] and Instructions 数据库只读查询(MySQL/PostgreSQL)与 Qdrant 向量库工具。写操作前必须先向用户确认。
+2026-11-06T10:43:51.400+08:00  INFO 19736 --- [agentscope-agent-server] [HttpClient-3-Worker-3] io.agentscope.core.tool.Toolkit          : Registered tool 'db_list_tables' in group 'ungrouped'
+2026-11-06T10:43:51.401+08:00  INFO 19736 --- [agentscope-agent-server] [HttpClient-3-Worker-3] io.agentscope.core.tool.Toolkit          : Registered tool 'db_describe_table' in group 'ungrouped'
+2026-11-06T10:43:51.401+08:00  INFO 19736 --- [agentscope-agent-server] [HttpClient-3-Worker-3] io.agentscope.core.tool.Toolkit          : Registered tool 'db_query' in group 'ungrouped'
+2026-11-06T10:43:51.401+08:00  INFO 19736 --- [agentscope-agent-server] [HttpClient-3-Worker-3] io.agentscope.core.tool.Toolkit          : Registered tool 'qdrant_list_collections' in group 'ungrouped'
+2026-11-06T10:43:51.401+08:00  INFO 19736 --- [agentscope-agent-server] [HttpClient-3-Worker-3] io.agentscope.core.tool.Toolkit          : Registered tool 'qdrant_collection_info' in group 'ungrouped'
+2026-11-06T10:43:51.401+08:00  INFO 19736 --- [agentscope-agent-server] [HttpClient-3-Worker-3] io.agentscope.core.tool.Toolkit          : Registered tool 'qdrant_search' in group 'ungrouped'
+2026-11-06T10:43:51.401+08:00  INFO 19736 --- [agentscope-agent-server] [HttpClient-3-Worker-3] io.agentscope.core.tool.Toolkit          : Registered tool 'qdrant_upsert' in group 'ungrouped'
+2026-11-06T10:43:51.401+08:00  INFO 19736 --- [agentscope-agent-server] [HttpClient-3-Worker-3] io.agentscope.core.tool.Toolkit          : Registered tool 'qdrant_scroll' in group 'ungrouped'
+2026-11-06T10:43:51.402+08:00  INFO 19736 --- [agentscope-agent-server] [HttpClient-3-Worker-3] i.agentscope.core.tool.McpClientManager  : MCP client 'agent-mcp' registered successfully
+2026-11-06T10:43:51.432+08:00  INFO 19736 --- [agentscope-agent-server] [main] i.a.c.s.r.FileSystemSkillRepository      : FileSystemSkillRepository initialized [baseDir=D:\demo\agent_01\skills, lazy=false]
+2026-11-06T10:43:51.436+08:00  INFO 19736 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'load_skill_through_path' in group 'ungrouped'
+2026-11-06T10:43:51.440+08:00  INFO 19736 --- [agentscope-agent-server] [main] com.demo.agent.agent.AgentRegistry       : [agent] 构建完成: default (model=ollama:qwen3:14b, workspace=D:\demo\agent_01\workspace)
+2026-11-06T10:43:51.440+08:00  INFO 19736 --- [agentscope-agent-server] [main] com.demo.agent.agent.AgentRegistry       : [agent] 就绪,共 1 个: [default]
+2026-11-06T10:43:51.717+08:00  INFO 19736 --- [agentscope-agent-server] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-11-06T10:43:51.740+08:00  INFO 19736 --- [agentscope-agent-server] [main] com.demo.agent.AgentApplication          : Started AgentApplication in 6.39 seconds (process running for 6.963)
+2026-11-06T10:44:29.677+08:00  INFO 19736 --- [agentscope-agent-server] [tomcat-handler-0] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-06T10:44:29.677+08:00  INFO 19736 --- [agentscope-agent-server] [tomcat-handler-0] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-06T10:44:29.678+08:00  INFO 19736 --- [agentscope-agent-server] [tomcat-handler-0] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-11-06T10:44:29.809+08:00  INFO 19736 --- [agentscope-agent-server] [tomcat-handler-0] com.demo.agent.web.ChatController        : [context] session=mcp-verify-2 自动注入文档目录 (fp=5ee02bc6aa741857)
+2026-11-06T10:44:29.920+08:00  INFO 19736 --- [agentscope-agent-server] [tomcat-handler-0] io.agentscope.core.skill.SkillBox        : Registered skill 'livelihood-query_filesystem-agent_01_skills'
+2026-11-06T10:44:29.921+08:00  INFO 19736 --- [agentscope-agent-server] [tomcat-handler-0] io.agentscope.core.skill.SkillBox        : Registered skill 'weekly-report_filesystem-agent_01_skills'
+2026-11-06T10:44:29.922+08:00  INFO 19736 --- [agentscope-agent-server] [tomcat-handler-0] io.agentscope.core.skill.SkillBox        : Created upload directory: C:\Users\A\AppData\Local\Temp\agentscope-skill-workdir-7639302620943430582\b9dc8c81f5e6937c20a84f4cd3cf860023a63306bd8bf7f3c3b303a37b915633-7711875485775651896\skills
+2026-11-06T10:44:29.923+08:00  INFO 19736 --- [agentscope-agent-server] [tomcat-handler-0] io.agentscope.core.skill.SkillBox        : Uploaded 0 skill files to: C:\Users\A\AppData\Local\Temp\agentscope-skill-workdir-7639302620943430582\b9dc8c81f5e6937c20a84f4cd3cf860023a63306bd8bf7f3c3b303a37b915633-7711875485775651896\skills
+2026-11-06T10:44:57.150+08:00  INFO 19736 --- [agentscope-agent-server] [tomcat-handler-2] com.demo.agent.web.ChatController        : [context] session=mcp-verify-3 自动注入文档目录 (fp=5ee02bc6aa741857)
+2026-11-06T11:32:33.883+08:00  INFO 24496 --- [agentscope-agent-server] [main] com.demo.agent.AgentApplication          : Starting AgentApplication v1.0.0-SNAPSHOT using Java 21.0.9 with PID 24496 (D:\demo\agent_01\target\agent.jar started by A in D:\demo\agent_01)
+2026-11-06T11:32:33.886+08:00  INFO 24496 --- [agentscope-agent-server] [main] com.demo.agent.AgentApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-11-06T11:32:34.828+08:00  INFO 24496 --- [agentscope-agent-server] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-11-06T11:32:34.839+08:00  INFO 24496 --- [agentscope-agent-server] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-06T11:32:34.840+08:00  INFO 24496 --- [agentscope-agent-server] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2026-11-06T11:32:34.876+08:00  INFO 24496 --- [agentscope-agent-server] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-11-06T11:32:34.876+08:00  INFO 24496 --- [agentscope-agent-server] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 908 ms
+2026-11-06T11:32:35.349+08:00  INFO 24496 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'get_workspace_info' in group 'ungrouped'
+2026-11-06T11:32:35.413+08:00  INFO 24496 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'calc_text_stats' in group 'ungrouped'
+2026-11-06T11:32:35.414+08:00  INFO 24496 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'get_current_time' in group 'ungrouped'
+2026-11-06T11:32:35.954+08:00  INFO 24496 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'read_document' in group 'ungrouped'
+2026-11-06T11:32:35.954+08:00  INFO 24496 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'list_context_files' in group 'ungrouped'
+2026-11-06T11:32:35.957+08:00  INFO 24496 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'query_weather' in group 'ungrouped'
+2026-11-06T11:32:35.959+08:00  INFO 24496 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'query_express' in group 'ungrouped'
+2026-11-06T11:32:36.117+08:00  INFO 24496 --- [agentscope-agent-server] [main] i.agentscope.core.tool.McpClientManager  : Registering MCP client: filesystem
+2026-11-06T11:32:36.117+08:00  INFO 24496 --- [agentscope-agent-server] [main] i.a.core.tool.mcp.McpAsyncClientWrapper  : Initializing MCP async client: filesystem
+2026-11-06T11:32:36.140+08:00  INFO 24496 --- [agentscope-agent-server] [loomBoundedElastic-1] i.m.c.transport.StdioClientTransport     : MCP server starting.
+2026-11-06T11:32:36.178+08:00  INFO 24496 --- [agentscope-agent-server] [loomBoundedElastic-1] i.m.c.transport.StdioClientTransport     : MCP server started
+2026-11-06T11:32:38.242+08:00  INFO 24496 --- [agentscope-agent-server] [pool-5-thread-1] i.m.c.transport.StdioClientTransport     : STDERR Message received: npm notice run npx
+2026-11-06T11:32:38.242+08:00  INFO 24496 --- [agentscope-agent-server] [pool-5-thread-1] i.m.c.transport.StdioClientTransport     : STDERR Message received: npm notice run mcp-server-filesystem D:\demo\agent_01\workspace
+2026-11-06T11:32:38.927+08:00  INFO 24496 --- [agentscope-agent-server] [pool-5-thread-1] i.m.c.transport.StdioClientTransport     : STDERR Message received: Secure MCP Filesystem Server running on stdio
+2026-11-06T11:32:38.962+08:00  INFO 24496 --- [agentscope-agent-server] [pool-2-thread-1] i.m.client.LifecycleInitializer          : Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental=null, logging=null, prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], Info: Implementation[name=secure-filesystem-server, title=null, version=0.2.0] and Instructions null
+2026-11-06T11:32:38.971+08:00  INFO 24496 --- [agentscope-agent-server] [pool-5-thread-1] i.m.c.transport.StdioClientTransport     : STDERR Message received: Client does not support MCP Roots, using allowed directories set from server args: [ 'D:\\demo\\agent_01\\workspace' ]
+2026-11-06T11:32:38.997+08:00  INFO 24496 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'read_file' in group 'ungrouped'
+2026-11-06T11:32:38.997+08:00  INFO 24496 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'read_text_file' in group 'ungrouped'
+2026-11-06T11:32:38.997+08:00  INFO 24496 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'read_media_file' in group 'ungrouped'
+2026-11-06T11:32:38.997+08:00  INFO 24496 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'read_multiple_files' in group 'ungrouped'
+2026-11-06T11:32:38.997+08:00  INFO 24496 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'write_file' in group 'ungrouped'
+2026-11-06T11:32:38.998+08:00  INFO 24496 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'edit_file' in group 'ungrouped'
+2026-11-06T11:32:38.998+08:00  INFO 24496 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'create_directory' in group 'ungrouped'
+2026-11-06T11:32:38.998+08:00  INFO 24496 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'list_directory' in group 'ungrouped'
+2026-11-06T11:32:38.998+08:00  INFO 24496 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'list_directory_with_sizes' in group 'ungrouped'
+2026-11-06T11:32:38.998+08:00  INFO 24496 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'directory_tree' in group 'ungrouped'
+2026-11-06T11:32:38.998+08:00  INFO 24496 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'move_file' in group 'ungrouped'
+2026-11-06T11:32:38.999+08:00  INFO 24496 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'search_files' in group 'ungrouped'
+2026-11-06T11:32:38.999+08:00  INFO 24496 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'get_file_info' in group 'ungrouped'
+2026-11-06T11:32:38.999+08:00  INFO 24496 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'list_allowed_directories' in group 'ungrouped'
+2026-11-06T11:32:38.999+08:00  INFO 24496 --- [agentscope-agent-server] [pool-2-thread-1] i.agentscope.core.tool.McpClientManager  : MCP client 'filesystem' registered successfully
+2026-11-06T11:32:39.005+08:00  INFO 24496 --- [agentscope-agent-server] [main] i.agentscope.core.tool.McpClientManager  : Registering MCP client: agent-mcp
+2026-11-06T11:32:39.006+08:00  INFO 24496 --- [agentscope-agent-server] [main] i.a.core.tool.mcp.McpAsyncClientWrapper  : Initializing MCP async client: agent-mcp
+2026-11-06T11:32:39.072+08:00  INFO 24496 --- [agentscope-agent-server] [HttpClient-3-Worker-2] i.m.client.LifecycleInitializer          : Server response with Protocol: 2025-06-18, Capabilities: ServerCapabilities[completions=null, experimental=null, logging=LoggingCapabilities[], prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], Info: Implementation[name=agent-mcp, title=null, version=1.0.0] and Instructions 数据库只读查询(MySQL/PostgreSQL)与 Qdrant 向量库工具。写操作前必须先向用户确认。
+2026-11-06T11:32:39.099+08:00  INFO 24496 --- [agentscope-agent-server] [HttpClient-3-Worker-2] io.agentscope.core.tool.Toolkit          : Registered tool 'db_list_tables' in group 'ungrouped'
+2026-11-06T11:32:39.099+08:00  INFO 24496 --- [agentscope-agent-server] [HttpClient-3-Worker-2] io.agentscope.core.tool.Toolkit          : Registered tool 'db_describe_table' in group 'ungrouped'
+2026-11-06T11:32:39.099+08:00  INFO 24496 --- [agentscope-agent-server] [HttpClient-3-Worker-2] io.agentscope.core.tool.Toolkit          : Registered tool 'db_query' in group 'ungrouped'
+2026-11-06T11:32:39.099+08:00  INFO 24496 --- [agentscope-agent-server] [HttpClient-3-Worker-2] io.agentscope.core.tool.Toolkit          : Registered tool 'qdrant_list_collections' in group 'ungrouped'
+2026-11-06T11:32:39.099+08:00  INFO 24496 --- [agentscope-agent-server] [HttpClient-3-Worker-2] io.agentscope.core.tool.Toolkit          : Registered tool 'qdrant_collection_info' in group 'ungrouped'
+2026-11-06T11:32:39.099+08:00  INFO 24496 --- [agentscope-agent-server] [HttpClient-3-Worker-2] io.agentscope.core.tool.Toolkit          : Registered tool 'qdrant_search' in group 'ungrouped'
+2026-11-06T11:32:39.099+08:00  INFO 24496 --- [agentscope-agent-server] [HttpClient-3-Worker-2] io.agentscope.core.tool.Toolkit          : Registered tool 'qdrant_upsert' in group 'ungrouped'
+2026-11-06T11:32:39.099+08:00  INFO 24496 --- [agentscope-agent-server] [HttpClient-3-Worker-2] io.agentscope.core.tool.Toolkit          : Registered tool 'qdrant_scroll' in group 'ungrouped'
+2026-11-06T11:32:39.100+08:00  INFO 24496 --- [agentscope-agent-server] [HttpClient-3-Worker-2] i.agentscope.core.tool.McpClientManager  : MCP client 'agent-mcp' registered successfully
+2026-11-06T11:32:39.134+08:00  INFO 24496 --- [agentscope-agent-server] [main] i.a.c.s.r.FileSystemSkillRepository      : FileSystemSkillRepository initialized [baseDir=D:\demo\agent_01\skills, lazy=false]
+2026-11-06T11:32:39.139+08:00  INFO 24496 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'load_skill_through_path' in group 'ungrouped'
+2026-11-06T11:32:39.143+08:00  INFO 24496 --- [agentscope-agent-server] [main] com.demo.agent.agent.AgentRegistry       : [agent] 构建完成: default (model=ollama:qwen3:14b, workspace=D:\demo\agent_01\workspace)
+2026-11-06T11:32:39.143+08:00  INFO 24496 --- [agentscope-agent-server] [main] com.demo.agent.agent.AgentRegistry       : [agent] 就绪,共 1 个: [default]
+2026-11-06T11:32:39.406+08:00  INFO 24496 --- [agentscope-agent-server] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-11-06T11:32:39.420+08:00  INFO 24496 --- [agentscope-agent-server] [main] com.demo.agent.AgentApplication          : Started AgentApplication in 5.996 seconds (process running for 6.489)
+2026-11-06T11:32:51.863+08:00  INFO 24496 --- [agentscope-agent-server] [tomcat-handler-0] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-06T11:32:51.864+08:00  INFO 24496 --- [agentscope-agent-server] [tomcat-handler-0] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-06T11:32:51.864+08:00  INFO 24496 --- [agentscope-agent-server] [tomcat-handler-0] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-11-06T11:32:52.098+08:00  INFO 24496 --- [agentscope-agent-server] [tomcat-handler-0] io.agentscope.core.skill.SkillBox        : Registered skill 'livelihood-query_filesystem-agent_01_skills'
+2026-11-06T11:32:52.098+08:00  INFO 24496 --- [agentscope-agent-server] [tomcat-handler-0] io.agentscope.core.skill.SkillBox        : Registered skill 'weekly-report_filesystem-agent_01_skills'
+2026-11-06T11:32:52.100+08:00  INFO 24496 --- [agentscope-agent-server] [tomcat-handler-0] io.agentscope.core.skill.SkillBox        : Created upload directory: C:\Users\A\AppData\Local\Temp\agentscope-skill-workdir-10195933571276344986\b9dc8c81f5e6937c20a84f4cd3cf860023a63306bd8bf7f3c3b303a37b915633-4653244687337691268\skills
+2026-11-06T11:32:52.100+08:00  INFO 24496 --- [agentscope-agent-server] [tomcat-handler-0] io.agentscope.core.skill.SkillBox        : Uploaded 0 skill files to: C:\Users\A\AppData\Local\Temp\agentscope-skill-workdir-10195933571276344986\b9dc8c81f5e6937c20a84f4cd3cf860023a63306bd8bf7f3c3b303a37b915633-4653244687337691268\skills
+2026-11-06T11:40:11.437+08:00  WARN 24496 --- [agentscope-agent-server] [loomBoundedElastic-44] io.agentscope.core.ReActAgent            : Final response has no visible content (empty reply), model: qwen3:14b, iter: 1
+2026-11-06T11:49:38.255+08:00  INFO 56380 --- [agentscope-agent-server] [main] com.demo.agent.AgentApplication          : Starting AgentApplication v1.0.0-SNAPSHOT using Java 21.0.9 with PID 56380 (D:\demo\agent_01\target\agent.jar started by A in D:\demo\agent_01)
+2026-11-06T11:49:38.258+08:00  INFO 56380 --- [agentscope-agent-server] [main] com.demo.agent.AgentApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-11-06T11:49:39.206+08:00  INFO 56380 --- [agentscope-agent-server] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-11-06T11:49:39.218+08:00  INFO 56380 --- [agentscope-agent-server] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-06T11:49:39.218+08:00  INFO 56380 --- [agentscope-agent-server] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2026-11-06T11:49:39.247+08:00  INFO 56380 --- [agentscope-agent-server] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-11-06T11:49:39.247+08:00  INFO 56380 --- [agentscope-agent-server] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 942 ms
+2026-11-06T11:49:39.765+08:00  INFO 56380 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'get_current_time' in group 'ungrouped'
+2026-11-06T11:49:39.767+08:00  INFO 56380 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'get_workspace_info' in group 'ungrouped'
+2026-11-06T11:49:39.768+08:00  INFO 56380 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'calc_text_stats' in group 'ungrouped'
+2026-11-06T11:49:40.251+08:00  INFO 56380 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'list_context_files' in group 'ungrouped'
+2026-11-06T11:49:40.253+08:00  INFO 56380 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'read_document' in group 'ungrouped'
+2026-11-06T11:49:40.256+08:00  INFO 56380 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'query_weather' in group 'ungrouped'
+2026-11-06T11:49:40.259+08:00  INFO 56380 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'query_express' in group 'ungrouped'
+2026-11-06T11:49:40.394+08:00  INFO 56380 --- [agentscope-agent-server] [main] i.agentscope.core.tool.McpClientManager  : Registering MCP client: filesystem
+2026-11-06T11:49:40.394+08:00  INFO 56380 --- [agentscope-agent-server] [main] i.a.core.tool.mcp.McpAsyncClientWrapper  : Initializing MCP async client: filesystem
+2026-11-06T11:49:40.417+08:00  INFO 56380 --- [agentscope-agent-server] [loomBoundedElastic-1] i.m.c.transport.StdioClientTransport     : MCP server starting.
+2026-11-06T11:49:40.438+08:00  INFO 56380 --- [agentscope-agent-server] [loomBoundedElastic-1] i.m.c.transport.StdioClientTransport     : MCP server started
+2026-11-06T11:49:41.271+08:00  INFO 56380 --- [agentscope-agent-server] [pool-5-thread-1] i.m.c.transport.StdioClientTransport     : STDERR Message received: npm notice run npx
+2026-11-06T11:49:41.271+08:00  INFO 56380 --- [agentscope-agent-server] [pool-5-thread-1] i.m.c.transport.StdioClientTransport     : STDERR Message received: npm notice run mcp-server-filesystem D:\demo\agent_01\workspace
+2026-11-06T11:49:41.602+08:00  INFO 56380 --- [agentscope-agent-server] [pool-5-thread-1] i.m.c.transport.StdioClientTransport     : STDERR Message received: Secure MCP Filesystem Server running on stdio
+2026-11-06T11:49:41.642+08:00  INFO 56380 --- [agentscope-agent-server] [pool-2-thread-1] i.m.client.LifecycleInitializer          : Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental=null, logging=null, prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], Info: Implementation[name=secure-filesystem-server, title=null, version=0.2.0] and Instructions null
+2026-11-06T11:49:41.651+08:00  INFO 56380 --- [agentscope-agent-server] [pool-5-thread-1] i.m.c.transport.StdioClientTransport     : STDERR Message received: Client does not support MCP Roots, using allowed directories set from server args: [ 'D:\\demo\\agent_01\\workspace' ]
+2026-11-06T11:49:41.675+08:00  INFO 56380 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'read_file' in group 'ungrouped'
+2026-11-06T11:49:41.675+08:00  INFO 56380 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'read_text_file' in group 'ungrouped'
+2026-11-06T11:49:41.676+08:00  INFO 56380 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'read_media_file' in group 'ungrouped'
+2026-11-06T11:49:41.676+08:00  INFO 56380 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'read_multiple_files' in group 'ungrouped'
+2026-11-06T11:49:41.676+08:00  INFO 56380 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'write_file' in group 'ungrouped'
+2026-11-06T11:49:41.676+08:00  INFO 56380 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'edit_file' in group 'ungrouped'
+2026-11-06T11:49:41.677+08:00  INFO 56380 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'create_directory' in group 'ungrouped'
+2026-11-06T11:49:41.677+08:00  INFO 56380 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'list_directory' in group 'ungrouped'
+2026-11-06T11:49:41.677+08:00  INFO 56380 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'list_directory_with_sizes' in group 'ungrouped'
+2026-11-06T11:49:41.677+08:00  INFO 56380 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'directory_tree' in group 'ungrouped'
+2026-11-06T11:49:41.677+08:00  INFO 56380 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'move_file' in group 'ungrouped'
+2026-11-06T11:49:41.677+08:00  INFO 56380 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'search_files' in group 'ungrouped'
+2026-11-06T11:49:41.678+08:00  INFO 56380 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'get_file_info' in group 'ungrouped'
+2026-11-06T11:49:41.678+08:00  INFO 56380 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'list_allowed_directories' in group 'ungrouped'
+2026-11-06T11:49:41.678+08:00  INFO 56380 --- [agentscope-agent-server] [pool-2-thread-1] i.agentscope.core.tool.McpClientManager  : MCP client 'filesystem' registered successfully
+2026-11-06T11:49:41.684+08:00  INFO 56380 --- [agentscope-agent-server] [main] i.agentscope.core.tool.McpClientManager  : Registering MCP client: agent-mcp
+2026-11-06T11:49:41.685+08:00  INFO 56380 --- [agentscope-agent-server] [main] i.a.core.tool.mcp.McpAsyncClientWrapper  : Initializing MCP async client: agent-mcp
+2026-11-06T11:49:41.706+08:00  INFO 56380 --- [agentscope-agent-server] [HttpClient-3-Worker-2] i.m.client.LifecycleInitializer          : Server response with Protocol: 2025-06-18, Capabilities: ServerCapabilities[completions=null, experimental=null, logging=LoggingCapabilities[], prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], Info: Implementation[name=agent-mcp, title=null, version=1.0.0] and Instructions 数据库只读查询(MySQL/PostgreSQL)与 Qdrant 向量库工具。写操作前必须先向用户确认。
+2026-11-06T11:49:41.726+08:00  INFO 56380 --- [agentscope-agent-server] [HttpClient-3-Worker-3] io.agentscope.core.tool.Toolkit          : Registered tool 'db_list_tables' in group 'ungrouped'
+2026-11-06T11:49:41.727+08:00  INFO 56380 --- [agentscope-agent-server] [HttpClient-3-Worker-3] io.agentscope.core.tool.Toolkit          : Registered tool 'db_describe_table' in group 'ungrouped'
+2026-11-06T11:49:41.727+08:00  INFO 56380 --- [agentscope-agent-server] [HttpClient-3-Worker-3] io.agentscope.core.tool.Toolkit          : Registered tool 'db_query' in group 'ungrouped'
+2026-11-06T11:49:41.727+08:00  INFO 56380 --- [agentscope-agent-server] [HttpClient-3-Worker-3] io.agentscope.core.tool.Toolkit          : Registered tool 'qdrant_list_collections' in group 'ungrouped'
+2026-11-06T11:49:41.727+08:00  INFO 56380 --- [agentscope-agent-server] [HttpClient-3-Worker-3] io.agentscope.core.tool.Toolkit          : Registered tool 'qdrant_collection_info' in group 'ungrouped'
+2026-11-06T11:49:41.728+08:00  INFO 56380 --- [agentscope-agent-server] [HttpClient-3-Worker-3] io.agentscope.core.tool.Toolkit          : Registered tool 'qdrant_search' in group 'ungrouped'
+2026-11-06T11:49:41.728+08:00  INFO 56380 --- [agentscope-agent-server] [HttpClient-3-Worker-3] io.agentscope.core.tool.Toolkit          : Registered tool 'qdrant_upsert' in group 'ungrouped'
+2026-11-06T11:49:41.728+08:00  INFO 56380 --- [agentscope-agent-server] [HttpClient-3-Worker-3] io.agentscope.core.tool.Toolkit          : Registered tool 'qdrant_scroll' in group 'ungrouped'
+2026-11-06T11:49:41.728+08:00  INFO 56380 --- [agentscope-agent-server] [HttpClient-3-Worker-3] i.agentscope.core.tool.McpClientManager  : MCP client 'agent-mcp' registered successfully
+2026-11-06T11:49:41.761+08:00  INFO 56380 --- [agentscope-agent-server] [main] com.demo.agent.agent.AgentRegistry       : [agent] 构建完成: default (model=ollama:qwen3:14b, workspace=D:\demo\agent_01\workspace)
+2026-11-06T11:49:41.762+08:00  INFO 56380 --- [agentscope-agent-server] [main] com.demo.agent.agent.AgentRegistry       : [agent] 就绪,共 1 个: [default]
+2026-11-06T11:49:42.014+08:00  INFO 56380 --- [agentscope-agent-server] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-11-06T11:49:42.027+08:00  INFO 56380 --- [agentscope-agent-server] [main] com.demo.agent.AgentApplication          : Started AgentApplication in 4.259 seconds (process running for 4.737)
+2026-11-06T11:49:51.329+08:00  INFO 56380 --- [agentscope-agent-server] [tomcat-handler-0] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-06T11:49:51.329+08:00  INFO 56380 --- [agentscope-agent-server] [tomcat-handler-0] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-06T11:49:51.330+08:00  INFO 56380 --- [agentscope-agent-server] [tomcat-handler-0] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-11-06T11:50:23.316+08:00  INFO 11336 --- [agentscope-agent-server] [main] com.demo.agent.AgentApplication          : Starting AgentApplication v1.0.0-SNAPSHOT using Java 21.0.9 with PID 11336 (D:\demo\agent_01\target\agent.jar started by A in D:\demo\agent_01)
+2026-11-06T11:50:23.318+08:00  INFO 11336 --- [agentscope-agent-server] [main] com.demo.agent.AgentApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-11-06T11:50:24.347+08:00  INFO 11336 --- [agentscope-agent-server] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-11-06T11:50:24.363+08:00  INFO 11336 --- [agentscope-agent-server] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-06T11:50:24.364+08:00  INFO 11336 --- [agentscope-agent-server] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2026-11-06T11:50:24.413+08:00  INFO 11336 --- [agentscope-agent-server] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-11-06T11:50:24.413+08:00  INFO 11336 --- [agentscope-agent-server] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 998 ms
+2026-11-06T11:50:24.955+08:00  INFO 11336 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'get_current_time' in group 'ungrouped'
+2026-11-06T11:50:24.957+08:00  INFO 11336 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'get_workspace_info' in group 'ungrouped'
+2026-11-06T11:50:24.958+08:00  INFO 11336 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'calc_text_stats' in group 'ungrouped'
+2026-11-06T11:50:25.501+08:00  INFO 11336 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'list_context_files' in group 'ungrouped'
+2026-11-06T11:50:25.502+08:00  INFO 11336 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'read_document' in group 'ungrouped'
+2026-11-06T11:50:25.505+08:00  INFO 11336 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'query_express' in group 'ungrouped'
+2026-11-06T11:50:25.507+08:00  INFO 11336 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'query_weather' in group 'ungrouped'
+2026-11-06T11:50:25.651+08:00  INFO 11336 --- [agentscope-agent-server] [main] i.agentscope.core.tool.McpClientManager  : Registering MCP client: filesystem
+2026-11-06T11:50:25.651+08:00  INFO 11336 --- [agentscope-agent-server] [main] i.a.core.tool.mcp.McpAsyncClientWrapper  : Initializing MCP async client: filesystem
+2026-11-06T11:50:25.675+08:00  INFO 11336 --- [agentscope-agent-server] [loomBoundedElastic-1] i.m.c.transport.StdioClientTransport     : MCP server starting.
+2026-11-06T11:50:25.714+08:00  INFO 11336 --- [agentscope-agent-server] [loomBoundedElastic-1] i.m.c.transport.StdioClientTransport     : MCP server started
+2026-11-06T11:50:27.710+08:00  INFO 11336 --- [agentscope-agent-server] [pool-5-thread-1] i.m.c.transport.StdioClientTransport     : STDERR Message received: npm notice run npx
+2026-11-06T11:50:27.711+08:00  INFO 11336 --- [agentscope-agent-server] [pool-5-thread-1] i.m.c.transport.StdioClientTransport     : STDERR Message received: npm notice run mcp-server-filesystem D:\demo\agent_01\workspace
+2026-11-06T11:50:28.564+08:00  INFO 11336 --- [agentscope-agent-server] [pool-5-thread-1] i.m.c.transport.StdioClientTransport     : STDERR Message received: Secure MCP Filesystem Server running on stdio
+2026-11-06T11:50:28.602+08:00  INFO 11336 --- [agentscope-agent-server] [pool-2-thread-1] i.m.client.LifecycleInitializer          : Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental=null, logging=null, prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], Info: Implementation[name=secure-filesystem-server, title=null, version=0.2.0] and Instructions null
+2026-11-06T11:50:28.612+08:00  INFO 11336 --- [agentscope-agent-server] [pool-5-thread-1] i.m.c.transport.StdioClientTransport     : STDERR Message received: Client does not support MCP Roots, using allowed directories set from server args: [ 'D:\\demo\\agent_01\\workspace' ]
+2026-11-06T11:50:28.638+08:00  INFO 11336 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'read_file' in group 'ungrouped'
+2026-11-06T11:50:28.638+08:00  INFO 11336 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'read_text_file' in group 'ungrouped'
+2026-11-06T11:50:28.638+08:00  INFO 11336 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'read_media_file' in group 'ungrouped'
+2026-11-06T11:50:28.638+08:00  INFO 11336 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'read_multiple_files' in group 'ungrouped'
+2026-11-06T11:50:28.638+08:00  INFO 11336 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'write_file' in group 'ungrouped'
+2026-11-06T11:50:28.638+08:00  INFO 11336 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'edit_file' in group 'ungrouped'
+2026-11-06T11:50:28.638+08:00  INFO 11336 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'create_directory' in group 'ungrouped'
+2026-11-06T11:50:28.639+08:00  INFO 11336 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'list_directory' in group 'ungrouped'
+2026-11-06T11:50:28.639+08:00  INFO 11336 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'list_directory_with_sizes' in group 'ungrouped'
+2026-11-06T11:50:28.639+08:00  INFO 11336 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'directory_tree' in group 'ungrouped'
+2026-11-06T11:50:28.639+08:00  INFO 11336 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'move_file' in group 'ungrouped'
+2026-11-06T11:50:28.639+08:00  INFO 11336 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'search_files' in group 'ungrouped'
+2026-11-06T11:50:28.639+08:00  INFO 11336 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'get_file_info' in group 'ungrouped'
+2026-11-06T11:50:28.639+08:00  INFO 11336 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'list_allowed_directories' in group 'ungrouped'
+2026-11-06T11:50:28.639+08:00  INFO 11336 --- [agentscope-agent-server] [pool-2-thread-1] i.agentscope.core.tool.McpClientManager  : MCP client 'filesystem' registered successfully
+2026-11-06T11:50:28.646+08:00  INFO 11336 --- [agentscope-agent-server] [main] i.agentscope.core.tool.McpClientManager  : Registering MCP client: agent-mcp
+2026-11-06T11:50:28.646+08:00  INFO 11336 --- [agentscope-agent-server] [main] i.a.core.tool.mcp.McpAsyncClientWrapper  : Initializing MCP async client: agent-mcp
+2026-11-06T11:50:28.670+08:00  INFO 11336 --- [agentscope-agent-server] [HttpClient-3-Worker-2] i.m.client.LifecycleInitializer          : Server response with Protocol: 2025-06-18, Capabilities: ServerCapabilities[completions=null, experimental=null, logging=LoggingCapabilities[], prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], Info: Implementation[name=agent-mcp, title=null, version=1.0.0] and Instructions 数据库只读查询(MySQL/PostgreSQL)与 Qdrant 向量库工具。写操作前必须先向用户确认。
+2026-11-06T11:50:28.691+08:00  INFO 11336 --- [agentscope-agent-server] [HttpClient-3-Worker-2] io.agentscope.core.tool.Toolkit          : Registered tool 'db_list_tables' in group 'ungrouped'
+2026-11-06T11:50:28.691+08:00  INFO 11336 --- [agentscope-agent-server] [HttpClient-3-Worker-2] io.agentscope.core.tool.Toolkit          : Registered tool 'db_describe_table' in group 'ungrouped'
+2026-11-06T11:50:28.691+08:00  INFO 11336 --- [agentscope-agent-server] [HttpClient-3-Worker-2] io.agentscope.core.tool.Toolkit          : Registered tool 'db_query' in group 'ungrouped'
+2026-11-06T11:50:28.691+08:00  INFO 11336 --- [agentscope-agent-server] [HttpClient-3-Worker-2] io.agentscope.core.tool.Toolkit          : Registered tool 'qdrant_list_collections' in group 'ungrouped'
+2026-11-06T11:50:28.691+08:00  INFO 11336 --- [agentscope-agent-server] [HttpClient-3-Worker-2] io.agentscope.core.tool.Toolkit          : Registered tool 'qdrant_collection_info' in group 'ungrouped'
+2026-11-06T11:50:28.691+08:00  INFO 11336 --- [agentscope-agent-server] [HttpClient-3-Worker-2] io.agentscope.core.tool.Toolkit          : Registered tool 'qdrant_search' in group 'ungrouped'
+2026-11-06T11:50:28.692+08:00  INFO 11336 --- [agentscope-agent-server] [HttpClient-3-Worker-2] io.agentscope.core.tool.Toolkit          : Registered tool 'qdrant_upsert' in group 'ungrouped'
+2026-11-06T11:50:28.692+08:00  INFO 11336 --- [agentscope-agent-server] [HttpClient-3-Worker-2] io.agentscope.core.tool.Toolkit          : Registered tool 'qdrant_scroll' in group 'ungrouped'
+2026-11-06T11:50:28.692+08:00  INFO 11336 --- [agentscope-agent-server] [HttpClient-3-Worker-2] i.agentscope.core.tool.McpClientManager  : MCP client 'agent-mcp' registered successfully
+2026-11-06T11:50:28.729+08:00  INFO 11336 --- [agentscope-agent-server] [main] com.demo.agent.agent.AgentRegistry       : [agent] 构建完成: default (model=ollama:qwen3:14b, workspace=D:\demo\agent_01\workspace)
+2026-11-06T11:50:28.729+08:00  INFO 11336 --- [agentscope-agent-server] [main] com.demo.agent.agent.AgentRegistry       : [agent] 就绪,共 1 个: [default]
+2026-11-06T11:50:29.024+08:00  INFO 11336 --- [agentscope-agent-server] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-11-06T11:50:29.041+08:00  INFO 11336 --- [agentscope-agent-server] [main] com.demo.agent.AgentApplication          : Started AgentApplication in 6.179 seconds (process running for 6.701)
+2026-11-06T11:50:40.705+08:00  INFO 11336 --- [agentscope-agent-server] [tomcat-handler-0] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-06T11:50:40.705+08:00  INFO 11336 --- [agentscope-agent-server] [tomcat-handler-0] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-06T11:50:40.706+08:00  INFO 11336 --- [agentscope-agent-server] [tomcat-handler-0] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-11-06T11:51:53.022+08:00  INFO 54680 --- [agentscope-agent-server] [main] com.demo.agent.AgentApplication          : Starting AgentApplication v1.0.0-SNAPSHOT using Java 21.0.9 with PID 54680 (D:\demo\agent_01\target\agent.jar started by A in D:\demo\agent_01)
+2026-11-06T11:51:53.025+08:00  INFO 54680 --- [agentscope-agent-server] [main] com.demo.agent.AgentApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-11-06T11:51:53.974+08:00  INFO 54680 --- [agentscope-agent-server] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-11-06T11:51:53.989+08:00  INFO 54680 --- [agentscope-agent-server] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-06T11:51:53.989+08:00  INFO 54680 --- [agentscope-agent-server] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2026-11-06T11:51:54.027+08:00  INFO 54680 --- [agentscope-agent-server] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-11-06T11:51:54.028+08:00  INFO 54680 --- [agentscope-agent-server] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 957 ms
+2026-11-06T11:51:54.565+08:00  INFO 54680 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'get_current_time' in group 'ungrouped'
+2026-11-06T11:51:54.567+08:00  INFO 54680 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'get_workspace_info' in group 'ungrouped'
+2026-11-06T11:51:54.568+08:00  INFO 54680 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'calc_text_stats' in group 'ungrouped'
+2026-11-06T11:51:55.079+08:00  INFO 54680 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'read_document' in group 'ungrouped'
+2026-11-06T11:51:55.080+08:00  INFO 54680 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'list_context_files' in group 'ungrouped'
+2026-11-06T11:51:55.082+08:00  INFO 54680 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'query_express' in group 'ungrouped'
+2026-11-06T11:51:55.084+08:00  INFO 54680 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'query_weather' in group 'ungrouped'
+2026-11-06T11:51:55.218+08:00  INFO 54680 --- [agentscope-agent-server] [main] i.agentscope.core.tool.McpClientManager  : Registering MCP client: filesystem
+2026-11-06T11:51:55.218+08:00  INFO 54680 --- [agentscope-agent-server] [main] i.a.core.tool.mcp.McpAsyncClientWrapper  : Initializing MCP async client: filesystem
+2026-11-06T11:51:55.240+08:00  INFO 54680 --- [agentscope-agent-server] [loomBoundedElastic-1] i.m.c.transport.StdioClientTransport     : MCP server starting.
+2026-11-06T11:51:55.280+08:00  INFO 54680 --- [agentscope-agent-server] [loomBoundedElastic-1] i.m.c.transport.StdioClientTransport     : MCP server started
+2026-11-06T11:51:57.385+08:00  INFO 54680 --- [agentscope-agent-server] [pool-5-thread-1] i.m.c.transport.StdioClientTransport     : STDERR Message received: npm notice run npx
+2026-11-06T11:51:57.385+08:00  INFO 54680 --- [agentscope-agent-server] [pool-5-thread-1] i.m.c.transport.StdioClientTransport     : STDERR Message received: npm notice run mcp-server-filesystem D:\demo\agent_01\workspace
+2026-11-06T11:51:58.085+08:00  INFO 54680 --- [agentscope-agent-server] [pool-5-thread-1] i.m.c.transport.StdioClientTransport     : STDERR Message received: Secure MCP Filesystem Server running on stdio
+2026-11-06T11:51:58.123+08:00  INFO 54680 --- [agentscope-agent-server] [pool-2-thread-1] i.m.client.LifecycleInitializer          : Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental=null, logging=null, prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], Info: Implementation[name=secure-filesystem-server, title=null, version=0.2.0] and Instructions null
+2026-11-06T11:51:58.132+08:00  INFO 54680 --- [agentscope-agent-server] [pool-5-thread-1] i.m.c.transport.StdioClientTransport     : STDERR Message received: Client does not support MCP Roots, using allowed directories set from server args: [ 'D:\\demo\\agent_01\\workspace' ]
+2026-11-06T11:51:58.156+08:00  INFO 54680 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'read_file' in group 'ungrouped'
+2026-11-06T11:51:58.156+08:00  INFO 54680 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'read_text_file' in group 'ungrouped'
+2026-11-06T11:51:58.156+08:00  INFO 54680 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'read_media_file' in group 'ungrouped'
+2026-11-06T11:51:58.156+08:00  INFO 54680 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'read_multiple_files' in group 'ungrouped'
+2026-11-06T11:51:58.157+08:00  INFO 54680 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'write_file' in group 'ungrouped'
+2026-11-06T11:51:58.157+08:00  INFO 54680 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'edit_file' in group 'ungrouped'
+2026-11-06T11:51:58.157+08:00  INFO 54680 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'create_directory' in group 'ungrouped'
+2026-11-06T11:51:58.157+08:00  INFO 54680 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'list_directory' in group 'ungrouped'
+2026-11-06T11:51:58.157+08:00  INFO 54680 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'list_directory_with_sizes' in group 'ungrouped'
+2026-11-06T11:51:58.157+08:00  INFO 54680 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'directory_tree' in group 'ungrouped'
+2026-11-06T11:51:58.157+08:00  INFO 54680 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'move_file' in group 'ungrouped'
+2026-11-06T11:51:58.157+08:00  INFO 54680 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'search_files' in group 'ungrouped'
+2026-11-06T11:51:58.157+08:00  INFO 54680 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'get_file_info' in group 'ungrouped'
+2026-11-06T11:51:58.157+08:00  INFO 54680 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'list_allowed_directories' in group 'ungrouped'
+2026-11-06T11:51:58.157+08:00  INFO 54680 --- [agentscope-agent-server] [pool-2-thread-1] i.agentscope.core.tool.McpClientManager  : MCP client 'filesystem' registered successfully
+2026-11-06T11:51:58.164+08:00  INFO 54680 --- [agentscope-agent-server] [main] i.agentscope.core.tool.McpClientManager  : Registering MCP client: agent-mcp
+2026-11-06T11:51:58.164+08:00  INFO 54680 --- [agentscope-agent-server] [main] i.a.core.tool.mcp.McpAsyncClientWrapper  : Initializing MCP async client: agent-mcp
+2026-11-06T11:51:58.185+08:00  INFO 54680 --- [agentscope-agent-server] [HttpClient-3-Worker-2] i.m.client.LifecycleInitializer          : Server response with Protocol: 2025-06-18, Capabilities: ServerCapabilities[completions=null, experimental=null, logging=LoggingCapabilities[], prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], Info: Implementation[name=agent-mcp, title=null, version=1.0.0] and Instructions 数据库只读查询(MySQL/PostgreSQL)与 Qdrant 向量库工具。写操作前必须先向用户确认。
+2026-11-06T11:51:58.206+08:00  INFO 54680 --- [agentscope-agent-server] [HttpClient-3-Worker-3] io.agentscope.core.tool.Toolkit          : Registered tool 'db_list_tables' in group 'ungrouped'
+2026-11-06T11:51:58.206+08:00  INFO 54680 --- [agentscope-agent-server] [HttpClient-3-Worker-3] io.agentscope.core.tool.Toolkit          : Registered tool 'db_describe_table' in group 'ungrouped'
+2026-11-06T11:51:58.206+08:00  INFO 54680 --- [agentscope-agent-server] [HttpClient-3-Worker-3] io.agentscope.core.tool.Toolkit          : Registered tool 'db_query' in group 'ungrouped'
+2026-11-06T11:51:58.206+08:00  INFO 54680 --- [agentscope-agent-server] [HttpClient-3-Worker-3] io.agentscope.core.tool.Toolkit          : Registered tool 'qdrant_list_collections' in group 'ungrouped'
+2026-11-06T11:51:58.206+08:00  INFO 54680 --- [agentscope-agent-server] [HttpClient-3-Worker-3] io.agentscope.core.tool.Toolkit          : Registered tool 'qdrant_collection_info' in group 'ungrouped'
+2026-11-06T11:51:58.206+08:00  INFO 54680 --- [agentscope-agent-server] [HttpClient-3-Worker-3] io.agentscope.core.tool.Toolkit          : Registered tool 'qdrant_search' in group 'ungrouped'
+2026-11-06T11:51:58.206+08:00  INFO 54680 --- [agentscope-agent-server] [HttpClient-3-Worker-3] io.agentscope.core.tool.Toolkit          : Registered tool 'qdrant_upsert' in group 'ungrouped'
+2026-11-06T11:51:58.206+08:00  INFO 54680 --- [agentscope-agent-server] [HttpClient-3-Worker-3] io.agentscope.core.tool.Toolkit          : Registered tool 'qdrant_scroll' in group 'ungrouped'
+2026-11-06T11:51:58.206+08:00  INFO 54680 --- [agentscope-agent-server] [HttpClient-3-Worker-3] i.agentscope.core.tool.McpClientManager  : MCP client 'agent-mcp' registered successfully
+2026-11-06T11:51:58.236+08:00  INFO 54680 --- [agentscope-agent-server] [main] i.a.c.s.r.FileSystemSkillRepository      : FileSystemSkillRepository initialized [baseDir=D:\demo\agent_01\skills, lazy=false]
+2026-11-06T11:51:58.240+08:00  INFO 54680 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'load_skill_through_path' in group 'ungrouped'
+2026-11-06T11:51:58.244+08:00  INFO 54680 --- [agentscope-agent-server] [main] com.demo.agent.agent.AgentRegistry       : [agent] 构建完成: default (model=ollama:qwen3:14b, workspace=D:\demo\agent_01\workspace)
+2026-11-06T11:51:58.244+08:00  INFO 54680 --- [agentscope-agent-server] [main] com.demo.agent.agent.AgentRegistry       : [agent] 就绪,共 1 个: [default]
+2026-11-06T11:51:58.498+08:00  INFO 54680 --- [agentscope-agent-server] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-11-06T11:51:58.512+08:00  INFO 54680 --- [agentscope-agent-server] [main] com.demo.agent.AgentApplication          : Started AgentApplication in 5.942 seconds (process running for 6.447)
+2026-11-06T11:52:10.011+08:00  INFO 54680 --- [agentscope-agent-server] [tomcat-handler-0] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-06T11:52:10.012+08:00  INFO 54680 --- [agentscope-agent-server] [tomcat-handler-0] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-06T11:52:10.012+08:00  INFO 54680 --- [agentscope-agent-server] [tomcat-handler-0] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-11-06T11:52:10.237+08:00  INFO 54680 --- [agentscope-agent-server] [tomcat-handler-0] io.agentscope.core.skill.SkillBox        : Registered skill 'livelihood-query_filesystem-agent_01_skills'
+2026-11-06T11:52:10.238+08:00  INFO 54680 --- [agentscope-agent-server] [tomcat-handler-0] io.agentscope.core.skill.SkillBox        : Registered skill 'weekly-report_filesystem-agent_01_skills'
+2026-11-06T11:52:10.239+08:00  INFO 54680 --- [agentscope-agent-server] [tomcat-handler-0] io.agentscope.core.skill.SkillBox        : Created upload directory: C:\Users\A\AppData\Local\Temp\agentscope-skill-workdir-7734204325885637148\de39cce6d1d10bd471f1ba1b4d81b552797f844e8c014a068a27f9868677ed7c-12543459952488507500\skills
+2026-11-06T11:52:10.239+08:00  INFO 54680 --- [agentscope-agent-server] [tomcat-handler-0] io.agentscope.core.skill.SkillBox        : Uploaded 0 skill files to: C:\Users\A\AppData\Local\Temp\agentscope-skill-workdir-7734204325885637148\de39cce6d1d10bd471f1ba1b4d81b552797f844e8c014a068a27f9868677ed7c-12543459952488507500\skills
+2026-11-06T11:53:02.939+08:00  INFO 59116 --- [agentscope-agent-server] [main] com.demo.agent.AgentApplication          : Starting AgentApplication v1.0.0-SNAPSHOT using Java 21.0.9 with PID 59116 (D:\demo\agent_01\target\agent.jar started by A in D:\demo\agent_01)
+2026-11-06T11:53:02.941+08:00  INFO 59116 --- [agentscope-agent-server] [main] com.demo.agent.AgentApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-11-06T11:53:03.883+08:00  INFO 59116 --- [agentscope-agent-server] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-11-06T11:53:03.904+08:00  INFO 59116 --- [agentscope-agent-server] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-06T11:53:03.905+08:00  INFO 59116 --- [agentscope-agent-server] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2026-11-06T11:53:03.952+08:00  INFO 59116 --- [agentscope-agent-server] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-11-06T11:53:03.952+08:00  INFO 59116 --- [agentscope-agent-server] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 966 ms
+2026-11-06T11:53:04.482+08:00  INFO 59116 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'get_current_time' in group 'ungrouped'
+2026-11-06T11:53:04.484+08:00  INFO 59116 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'calc_text_stats' in group 'ungrouped'
+2026-11-06T11:53:04.485+08:00  INFO 59116 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'get_workspace_info' in group 'ungrouped'
+2026-11-06T11:53:05.016+08:00  INFO 59116 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'list_context_files' in group 'ungrouped'
+2026-11-06T11:53:05.018+08:00  INFO 59116 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'read_document' in group 'ungrouped'
+2026-11-06T11:53:05.021+08:00  INFO 59116 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'query_express' in group 'ungrouped'
+2026-11-06T11:53:05.023+08:00  INFO 59116 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'query_weather' in group 'ungrouped'
+2026-11-06T11:53:05.154+08:00  INFO 59116 --- [agentscope-agent-server] [main] i.agentscope.core.tool.McpClientManager  : Registering MCP client: filesystem
+2026-11-06T11:53:05.155+08:00  INFO 59116 --- [agentscope-agent-server] [main] i.a.core.tool.mcp.McpAsyncClientWrapper  : Initializing MCP async client: filesystem
+2026-11-06T11:53:05.179+08:00  INFO 59116 --- [agentscope-agent-server] [loomBoundedElastic-1] i.m.c.transport.StdioClientTransport     : MCP server starting.
+2026-11-06T11:53:05.234+08:00  INFO 59116 --- [agentscope-agent-server] [loomBoundedElastic-1] i.m.c.transport.StdioClientTransport     : MCP server started
+2026-11-06T11:53:07.357+08:00  INFO 59116 --- [agentscope-agent-server] [pool-5-thread-1] i.m.c.transport.StdioClientTransport     : STDERR Message received: npm notice run npx
+2026-11-06T11:53:07.357+08:00  INFO 59116 --- [agentscope-agent-server] [pool-5-thread-1] i.m.c.transport.StdioClientTransport     : STDERR Message received: npm notice run mcp-server-filesystem D:\demo\agent_01\workspace
+2026-11-06T11:53:08.126+08:00  INFO 59116 --- [agentscope-agent-server] [pool-5-thread-1] i.m.c.transport.StdioClientTransport     : STDERR Message received: Secure MCP Filesystem Server running on stdio
+2026-11-06T11:53:08.159+08:00  INFO 59116 --- [agentscope-agent-server] [pool-2-thread-1] i.m.client.LifecycleInitializer          : Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental=null, logging=null, prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], Info: Implementation[name=secure-filesystem-server, title=null, version=0.2.0] and Instructions null
+2026-11-06T11:53:08.168+08:00  INFO 59116 --- [agentscope-agent-server] [pool-5-thread-1] i.m.c.transport.StdioClientTransport     : STDERR Message received: Client does not support MCP Roots, using allowed directories set from server args: [ 'D:\\demo\\agent_01\\workspace' ]
+2026-11-06T11:53:08.191+08:00  INFO 59116 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'read_file' in group 'ungrouped'
+2026-11-06T11:53:08.192+08:00  INFO 59116 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'read_text_file' in group 'ungrouped'
+2026-11-06T11:53:08.192+08:00  INFO 59116 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'read_media_file' in group 'ungrouped'
+2026-11-06T11:53:08.192+08:00  INFO 59116 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'read_multiple_files' in group 'ungrouped'
+2026-11-06T11:53:08.192+08:00  INFO 59116 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'write_file' in group 'ungrouped'
+2026-11-06T11:53:08.192+08:00  INFO 59116 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'edit_file' in group 'ungrouped'
+2026-11-06T11:53:08.192+08:00  INFO 59116 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'create_directory' in group 'ungrouped'
+2026-11-06T11:53:08.192+08:00  INFO 59116 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'list_directory' in group 'ungrouped'
+2026-11-06T11:53:08.192+08:00  INFO 59116 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'list_directory_with_sizes' in group 'ungrouped'
+2026-11-06T11:53:08.192+08:00  INFO 59116 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'directory_tree' in group 'ungrouped'
+2026-11-06T11:53:08.192+08:00  INFO 59116 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'move_file' in group 'ungrouped'
+2026-11-06T11:53:08.192+08:00  INFO 59116 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'search_files' in group 'ungrouped'
+2026-11-06T11:53:08.193+08:00  INFO 59116 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'get_file_info' in group 'ungrouped'
+2026-11-06T11:53:08.193+08:00  INFO 59116 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'list_allowed_directories' in group 'ungrouped'
+2026-11-06T11:53:08.193+08:00  INFO 59116 --- [agentscope-agent-server] [pool-2-thread-1] i.agentscope.core.tool.McpClientManager  : MCP client 'filesystem' registered successfully
+2026-11-06T11:53:08.199+08:00  INFO 59116 --- [agentscope-agent-server] [main] i.agentscope.core.tool.McpClientManager  : Registering MCP client: agent-mcp
+2026-11-06T11:53:08.200+08:00  INFO 59116 --- [agentscope-agent-server] [main] i.a.core.tool.mcp.McpAsyncClientWrapper  : Initializing MCP async client: agent-mcp
+2026-11-06T11:53:08.221+08:00  INFO 59116 --- [agentscope-agent-server] [HttpClient-3-Worker-2] i.m.client.LifecycleInitializer          : Server response with Protocol: 2025-06-18, Capabilities: ServerCapabilities[completions=null, experimental=null, logging=LoggingCapabilities[], prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], Info: Implementation[name=agent-mcp, title=null, version=1.0.0] and Instructions 数据库只读查询(MySQL/PostgreSQL)与 Qdrant 向量库工具。写操作前必须先向用户确认。
+2026-11-06T11:53:08.240+08:00  INFO 59116 --- [agentscope-agent-server] [HttpClient-3-Worker-3] io.agentscope.core.tool.Toolkit          : Registered tool 'db_list_tables' in group 'ungrouped'
+2026-11-06T11:53:08.241+08:00  INFO 59116 --- [agentscope-agent-server] [HttpClient-3-Worker-3] io.agentscope.core.tool.Toolkit          : Registered tool 'db_describe_table' in group 'ungrouped'
+2026-11-06T11:53:08.241+08:00  INFO 59116 --- [agentscope-agent-server] [HttpClient-3-Worker-3] io.agentscope.core.tool.Toolkit          : Registered tool 'db_query' in group 'ungrouped'
+2026-11-06T11:53:08.241+08:00  INFO 59116 --- [agentscope-agent-server] [HttpClient-3-Worker-3] io.agentscope.core.tool.Toolkit          : Registered tool 'qdrant_list_collections' in group 'ungrouped'
+2026-11-06T11:53:08.241+08:00  INFO 59116 --- [agentscope-agent-server] [HttpClient-3-Worker-3] io.agentscope.core.tool.Toolkit          : Registered tool 'qdrant_collection_info' in group 'ungrouped'
+2026-11-06T11:53:08.241+08:00  INFO 59116 --- [agentscope-agent-server] [HttpClient-3-Worker-3] io.agentscope.core.tool.Toolkit          : Registered tool 'qdrant_search' in group 'ungrouped'
+2026-11-06T11:53:08.241+08:00  INFO 59116 --- [agentscope-agent-server] [HttpClient-3-Worker-3] io.agentscope.core.tool.Toolkit          : Registered tool 'qdrant_upsert' in group 'ungrouped'
+2026-11-06T11:53:08.241+08:00  INFO 59116 --- [agentscope-agent-server] [HttpClient-3-Worker-3] io.agentscope.core.tool.Toolkit          : Registered tool 'qdrant_scroll' in group 'ungrouped'
+2026-11-06T11:53:08.241+08:00  INFO 59116 --- [agentscope-agent-server] [HttpClient-3-Worker-3] i.agentscope.core.tool.McpClientManager  : MCP client 'agent-mcp' registered successfully
+2026-11-06T11:53:08.276+08:00  INFO 59116 --- [agentscope-agent-server] [main] com.demo.agent.agent.AgentRegistry       : [agent] 构建完成: default (model=ollama:qwen3:14b, workspace=D:\demo\agent_01\workspace)
+2026-11-06T11:53:08.276+08:00  INFO 59116 --- [agentscope-agent-server] [main] com.demo.agent.agent.AgentRegistry       : [agent] 就绪,共 1 个: [default]
+2026-11-06T11:53:08.545+08:00  INFO 59116 --- [agentscope-agent-server] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-11-06T11:53:08.560+08:00  INFO 59116 --- [agentscope-agent-server] [main] com.demo.agent.AgentApplication          : Started AgentApplication in 6.081 seconds (process running for 6.645)
+2026-11-06T11:53:12.661+08:00  INFO 59116 --- [agentscope-agent-server] [tomcat-handler-0] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-06T11:53:12.661+08:00  INFO 59116 --- [agentscope-agent-server] [tomcat-handler-0] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-06T11:53:12.662+08:00  INFO 59116 --- [agentscope-agent-server] [tomcat-handler-0] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-11-06T14:14:11.557+08:00  WARN 59116 --- [agentscope-agent-server] [ForkJoinPool.commonPool-worker-3] i.m.client.LifecycleInitializer          : Handling exception
+
+java.net.ConnectException: null
+	at java.net.http/jdk.internal.net.http.common.Utils.toConnectException(Utils.java:1065) ~[java.net.http:na]
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:227) ~[java.net.http:na]
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.checkRetryConnect(PlainHttpConnection.java:280) ~[java.net.http:na]
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$2(PlainHttpConnection.java:238) ~[java.net.http:na]
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1773) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+Caused by: java.nio.channels.ClosedChannelException: null
+	at java.base/sun.nio.ch.SocketChannelImpl.ensureOpen(SocketChannelImpl.java:202) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.beginConnect(SocketChannelImpl.java:786) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:874) ~[na:na]
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$1(PlainHttpConnection.java:210) ~[java.net.http:na]
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571) ~[na:na]
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:212) ~[java.net.http:na]
+	... 9 common frames omitted
+
+2026-11-06T14:14:50.950+08:00  INFO 45620 --- [agentscope-agent-server] [main] com.demo.agent.AgentApplication          : Starting AgentApplication using Java 21.0.12.1 with PID 45620 (D:\demo\agent_01\target\classes started by A in D:\demo\agent_01)
+2026-11-06T14:14:50.952+08:00  INFO 45620 --- [agentscope-agent-server] [main] com.demo.agent.AgentApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-11-06T14:14:50.972+08:00  INFO 48288 --- [agentscope-agent-server] [main] com.demo.agent.AgentApplication          : Starting AgentApplication using Java 21.0.12.1 with PID 48288 (D:\demo\agent_01\target\classes started by A in D:\demo\agent_01)
+2026-11-06T14:14:50.975+08:00  INFO 48288 --- [agentscope-agent-server] [main] com.demo.agent.AgentApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-11-06T14:14:52.123+08:00  INFO 45620 --- [agentscope-agent-server] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-11-06T14:14:52.129+08:00  INFO 48288 --- [agentscope-agent-server] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-11-06T14:14:52.135+08:00  INFO 45620 --- [agentscope-agent-server] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-06T14:14:52.135+08:00  INFO 45620 --- [agentscope-agent-server] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2026-11-06T14:14:52.141+08:00  INFO 48288 --- [agentscope-agent-server] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-06T14:14:52.142+08:00  INFO 48288 --- [agentscope-agent-server] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2026-11-06T14:14:52.257+08:00  INFO 48288 --- [agentscope-agent-server] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-11-06T14:14:52.258+08:00  INFO 48288 --- [agentscope-agent-server] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1232 ms
+2026-11-06T14:14:52.269+08:00  INFO 45620 --- [agentscope-agent-server] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-11-06T14:14:52.270+08:00  INFO 45620 --- [agentscope-agent-server] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1265 ms
+2026-11-06T14:14:52.872+08:00  INFO 45620 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'get_current_time' in group 'ungrouped'
+2026-11-06T14:14:52.873+08:00  INFO 45620 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'get_workspace_info' in group 'ungrouped'
+2026-11-06T14:14:52.875+08:00  INFO 45620 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'calc_text_stats' in group 'ungrouped'
+2026-11-06T14:14:52.875+08:00  INFO 48288 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'get_current_time' in group 'ungrouped'
+2026-11-06T14:14:52.878+08:00  INFO 48288 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'calc_text_stats' in group 'ungrouped'
+2026-11-06T14:14:52.879+08:00  INFO 48288 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'get_workspace_info' in group 'ungrouped'
+2026-11-06T14:14:53.428+08:00  INFO 48288 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'read_document' in group 'ungrouped'
+2026-11-06T14:14:53.429+08:00  INFO 48288 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'list_context_files' in group 'ungrouped'
+2026-11-06T14:14:53.433+08:00  INFO 48288 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'query_express' in group 'ungrouped'
+2026-11-06T14:14:53.435+08:00  INFO 45620 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'list_context_files' in group 'ungrouped'
+2026-11-06T14:14:53.437+08:00  INFO 45620 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'read_document' in group 'ungrouped'
+2026-11-06T14:14:53.437+08:00  INFO 48288 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'query_weather' in group 'ungrouped'
+2026-11-06T14:14:53.441+08:00  INFO 45620 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'query_express' in group 'ungrouped'
+2026-11-06T14:14:53.445+08:00  INFO 45620 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'query_weather' in group 'ungrouped'
+2026-11-06T14:14:53.606+08:00  INFO 48288 --- [agentscope-agent-server] [main] i.agentscope.core.tool.McpClientManager  : Registering MCP client: filesystem
+2026-11-06T14:14:53.607+08:00  INFO 48288 --- [agentscope-agent-server] [main] i.a.core.tool.mcp.McpAsyncClientWrapper  : Initializing MCP async client: filesystem
+2026-11-06T14:14:53.618+08:00  INFO 45620 --- [agentscope-agent-server] [main] i.agentscope.core.tool.McpClientManager  : Registering MCP client: filesystem
+2026-11-06T14:14:53.618+08:00  INFO 45620 --- [agentscope-agent-server] [main] i.a.core.tool.mcp.McpAsyncClientWrapper  : Initializing MCP async client: filesystem
+2026-11-06T14:14:53.630+08:00  INFO 48288 --- [agentscope-agent-server] [loomBoundedElastic-1] i.m.c.transport.StdioClientTransport     : MCP server starting.
+2026-11-06T14:14:53.641+08:00  INFO 45620 --- [agentscope-agent-server] [loomBoundedElastic-1] i.m.c.transport.StdioClientTransport     : MCP server starting.
+2026-11-06T14:14:53.652+08:00  INFO 48288 --- [agentscope-agent-server] [loomBoundedElastic-1] i.m.c.transport.StdioClientTransport     : MCP server started
+2026-11-06T14:14:53.667+08:00  INFO 45620 --- [agentscope-agent-server] [loomBoundedElastic-1] i.m.c.transport.StdioClientTransport     : MCP server started
+2026-11-06T14:15:05.999+08:00  INFO 48288 --- [agentscope-agent-server] [pool-5-thread-1] i.m.c.transport.StdioClientTransport     : STDERR Message received: npm notice run npx
+2026-11-06T14:15:05.999+08:00  INFO 48288 --- [agentscope-agent-server] [pool-5-thread-1] i.m.c.transport.StdioClientTransport     : STDERR Message received: npm notice run mcp-server-filesystem D:\demo\agent_01\workspace
+2026-11-06T14:15:06.106+08:00  INFO 45620 --- [agentscope-agent-server] [pool-5-thread-1] i.m.c.transport.StdioClientTransport     : STDERR Message received: npm notice run npx
+2026-11-06T14:15:06.107+08:00  INFO 45620 --- [agentscope-agent-server] [pool-5-thread-1] i.m.c.transport.StdioClientTransport     : STDERR Message received: npm notice run mcp-server-filesystem D:\demo\agent_01\workspace
+2026-11-06T14:15:09.923+08:00  INFO 48288 --- [agentscope-agent-server] [pool-5-thread-1] i.m.c.transport.StdioClientTransport     : STDERR Message received: Secure MCP Filesystem Server running on stdio
+2026-11-06T14:15:09.964+08:00  INFO 48288 --- [agentscope-agent-server] [pool-2-thread-1] i.m.client.LifecycleInitializer          : Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental=null, logging=null, prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], Info: Implementation[name=secure-filesystem-server, title=null, version=0.2.0] and Instructions null
+2026-11-06T14:15:09.978+08:00  INFO 48288 --- [agentscope-agent-server] [pool-5-thread-1] i.m.c.transport.StdioClientTransport     : STDERR Message received: Client does not support MCP Roots, using allowed directories set from server args: [ 'D:\\demo\\agent_01\\workspace' ]
+2026-11-06T14:15:10.005+08:00  INFO 48288 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'read_file' in group 'ungrouped'
+2026-11-06T14:15:10.005+08:00  INFO 48288 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'read_text_file' in group 'ungrouped'
+2026-11-06T14:15:10.006+08:00  INFO 48288 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'read_media_file' in group 'ungrouped'
+2026-11-06T14:15:10.006+08:00  INFO 48288 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'read_multiple_files' in group 'ungrouped'
+2026-11-06T14:15:10.007+08:00  INFO 48288 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'write_file' in group 'ungrouped'
+2026-11-06T14:15:10.007+08:00  INFO 48288 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'edit_file' in group 'ungrouped'
+2026-11-06T14:15:10.008+08:00  INFO 48288 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'create_directory' in group 'ungrouped'
+2026-11-06T14:15:10.008+08:00  INFO 48288 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'list_directory' in group 'ungrouped'
+2026-11-06T14:15:10.008+08:00  INFO 48288 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'list_directory_with_sizes' in group 'ungrouped'
+2026-11-06T14:15:10.008+08:00  INFO 48288 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'directory_tree' in group 'ungrouped'
+2026-11-06T14:15:10.009+08:00  INFO 48288 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'move_file' in group 'ungrouped'
+2026-11-06T14:15:10.009+08:00  INFO 48288 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'search_files' in group 'ungrouped'
+2026-11-06T14:15:10.009+08:00  INFO 48288 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'get_file_info' in group 'ungrouped'
+2026-11-06T14:15:10.010+08:00  INFO 48288 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'list_allowed_directories' in group 'ungrouped'
+2026-11-06T14:15:10.010+08:00  INFO 48288 --- [agentscope-agent-server] [pool-2-thread-1] i.agentscope.core.tool.McpClientManager  : MCP client 'filesystem' registered successfully
+2026-11-06T14:15:10.017+08:00  INFO 48288 --- [agentscope-agent-server] [main] i.agentscope.core.tool.McpClientManager  : Registering MCP client: agent-mcp
+2026-11-06T14:15:10.017+08:00  INFO 48288 --- [agentscope-agent-server] [main] i.a.core.tool.mcp.McpAsyncClientWrapper  : Initializing MCP async client: agent-mcp
+2026-11-06T14:15:10.031+08:00  WARN 48288 --- [agentscope-agent-server] [ForkJoinPool.commonPool-worker-1] i.m.client.LifecycleInitializer          : Handling exception
+
+java.net.ConnectException: null
+	at java.net.http/jdk.internal.net.http.common.Utils.toConnectException(Unknown Source) ~[java.net.http:na]
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(Unknown Source) ~[java.net.http:na]
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.checkRetryConnect(Unknown Source) ~[java.net.http:na]
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$2(Unknown Source) ~[java.net.http:na]
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[na:na]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+Caused by: java.nio.channels.ClosedChannelException: null
+	at java.base/sun.nio.ch.SocketChannelImpl.ensureOpen(Unknown Source) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.beginConnect(Unknown Source) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.connect(Unknown Source) ~[na:na]
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$1(Unknown Source) ~[java.net.http:na]
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source) ~[na:na]
+	... 10 common frames omitted
+
+2026-11-06T14:15:10.035+08:00 ERROR 48288 --- [agentscope-agent-server] [ForkJoinPool.commonPool-worker-1] i.a.core.tool.mcp.McpAsyncClientWrapper  : Failed to initialize MCP client: agent-mcp
+
+java.lang.RuntimeException: Client failed to initialize by explicit API call
+	at io.modelcontextprotocol.client.LifecycleInitializer.lambda$withInitialization$2(LifecycleInitializer.java:288) ~[mcp-core-0.17.2.jar:0.17.2]
+	at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onError(FluxOnErrorResume.java:94) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.SerializedSubscriber.onError(SerializedSubscriber.java:124) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.FluxTimeout$TimeoutMainSubscriber.onError(FluxTimeout.java:220) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.FluxMap$MapSubscriber.onError(FluxMap.java:134) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onError(FluxOnErrorResume.java:106) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.Operators.error(Operators.java:198) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.MonoError.subscribe(MonoError.java:53) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4576) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onError(FluxOnErrorResume.java:103) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onError(FluxPeekFuseable.java:234) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onError(MonoFlatMap.java:180) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onError(MonoFlatMap.java:180) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.FluxHandle$HandleSubscriber.onError(FluxHandle.java:213) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.SerializedSubscriber.onError(SerializedSubscriber.java:124) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.FluxTimeout$TimeoutMainSubscriber.onError(FluxTimeout.java:220) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.MonoCreate$DefaultMonoSink.error(MonoCreate.java:205) ~[reactor-core-3.7.11.jar:3.7.11]
+	at io.modelcontextprotocol.spec.McpClientSession.lambda$sendRequest$9(McpClientSession.java:274) ~[mcp-core-0.17.2.jar:0.17.2]
+	at reactor.core.publisher.LambdaMonoSubscriber.doError(LambdaMonoSubscriber.java:155) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.LambdaMonoSubscriber.onError(LambdaMonoSubscriber.java:150) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onError(FluxContextWrite.java:121) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.MonoCreate$DefaultMonoSink.error(MonoCreate.java:205) ~[reactor-core-3.7.11.jar:3.7.11]
+	at io.modelcontextprotocol.client.transport.HttpClientStreamableHttpTransport.lambda$sendMessage$31(HttpClientStreamableHttpTransport.java:593) ~[mcp-core-0.17.2.jar:0.17.2]
+	at reactor.core.publisher.FluxOnErrorReturn$ReturnSubscriber.onError(FluxOnErrorReturn.java:175) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onError(FluxOnErrorResume.java:106) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.Operators.error(Operators.java:198) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.MonoError.subscribe(MonoError.java:53) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4576) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onError(FluxOnErrorResume.java:103) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.checkTerminated(FluxFlatMap.java:846) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.drainLoop(FluxFlatMap.java:612) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.drain(FluxFlatMap.java:592) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.onError(FluxFlatMap.java:455) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.checkTerminated(FluxFlatMap.java:846) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.drainLoop(FluxFlatMap.java:612) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.drain(FluxFlatMap.java:592) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.onError(FluxFlatMap.java:455) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.MonoFlatMapMany$FlatMapManyInner.onError(MonoFlatMapMany.java:256) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.FluxCreate$BaseSink.error(FluxCreate.java:479) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.FluxCreate$BufferAsyncSink.drain(FluxCreate.java:868) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.FluxCreate$BufferAsyncSink.error(FluxCreate.java:813) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.drainLoop(FluxCreate.java:239) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.drain(FluxCreate.java:215) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.error(FluxCreate.java:191) ~[reactor-core-3.7.11.jar:3.7.11]
+	at io.modelcontextprotocol.client.transport.HttpClientStreamableHttpTransport.lambda$sendMessage$22(HttpClientStreamableHttpTransport.java:461) ~[mcp-core-0.17.2.jar:0.17.2]
+	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture.postFire(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture$Completion.exec(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinPool.scan(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source) ~[na:na]
+Caused by: java.net.ConnectException: null
+	at java.net.http/jdk.internal.net.http.common.Utils.toConnectException(Unknown Source) ~[java.net.http:na]
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(Unknown Source) ~[java.net.http:na]
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.checkRetryConnect(Unknown Source) ~[java.net.http:na]
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$2(Unknown Source) ~[java.net.http:na]
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[na:na]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+Caused by: java.nio.channels.ClosedChannelException: null
+	at java.base/sun.nio.ch.SocketChannelImpl.ensureOpen(Unknown Source) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.beginConnect(Unknown Source) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.connect(Unknown Source) ~[na:na]
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$1(Unknown Source) ~[java.net.http:na]
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source) ~[na:na]
+	... 10 common frames omitted
+
+2026-11-06T14:15:10.044+08:00 ERROR 48288 --- [agentscope-agent-server] [ForkJoinPool.commonPool-worker-1] i.agentscope.core.tool.McpClientManager  : Failed to register MCP client: agent-mcp
+
+java.lang.RuntimeException: Client failed to initialize by explicit API call
+	at io.modelcontextprotocol.client.LifecycleInitializer.lambda$withInitialization$2(LifecycleInitializer.java:288) ~[mcp-core-0.17.2.jar:0.17.2]
+	at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onError(FluxOnErrorResume.java:94) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.SerializedSubscriber.onError(SerializedSubscriber.java:124) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.FluxTimeout$TimeoutMainSubscriber.onError(FluxTimeout.java:220) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.FluxMap$MapSubscriber.onError(FluxMap.java:134) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onError(FluxOnErrorResume.java:106) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.Operators.error(Operators.java:198) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.MonoError.subscribe(MonoError.java:53) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4576) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onError(FluxOnErrorResume.java:103) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onError(FluxPeekFuseable.java:234) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onError(MonoFlatMap.java:180) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onError(MonoFlatMap.java:180) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.FluxHandle$HandleSubscriber.onError(FluxHandle.java:213) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.SerializedSubscriber.onError(SerializedSubscriber.java:124) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.FluxTimeout$TimeoutMainSubscriber.onError(FluxTimeout.java:220) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.MonoCreate$DefaultMonoSink.error(MonoCreate.java:205) ~[reactor-core-3.7.11.jar:3.7.11]
+	at io.modelcontextprotocol.spec.McpClientSession.lambda$sendRequest$9(McpClientSession.java:274) ~[mcp-core-0.17.2.jar:0.17.2]
+	at reactor.core.publisher.LambdaMonoSubscriber.doError(LambdaMonoSubscriber.java:155) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.LambdaMonoSubscriber.onError(LambdaMonoSubscriber.java:150) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onError(FluxContextWrite.java:121) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.MonoCreate$DefaultMonoSink.error(MonoCreate.java:205) ~[reactor-core-3.7.11.jar:3.7.11]
+	at io.modelcontextprotocol.client.transport.HttpClientStreamableHttpTransport.lambda$sendMessage$31(HttpClientStreamableHttpTransport.java:593) ~[mcp-core-0.17.2.jar:0.17.2]
+	at reactor.core.publisher.FluxOnErrorReturn$ReturnSubscriber.onError(FluxOnErrorReturn.java:175) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onError(FluxOnErrorResume.java:106) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.Operators.error(Operators.java:198) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.MonoError.subscribe(MonoError.java:53) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4576) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onError(FluxOnErrorResume.java:103) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.checkTerminated(FluxFlatMap.java:846) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.drainLoop(FluxFlatMap.java:612) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.drain(FluxFlatMap.java:592) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.onError(FluxFlatMap.java:455) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.checkTerminated(FluxFlatMap.java:846) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.drainLoop(FluxFlatMap.java:612) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.drain(FluxFlatMap.java:592) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.onError(FluxFlatMap.java:455) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.MonoFlatMapMany$FlatMapManyInner.onError(MonoFlatMapMany.java:256) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.FluxCreate$BaseSink.error(FluxCreate.java:479) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.FluxCreate$BufferAsyncSink.drain(FluxCreate.java:868) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.FluxCreate$BufferAsyncSink.error(FluxCreate.java:813) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.drainLoop(FluxCreate.java:239) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.drain(FluxCreate.java:215) ~[reactor-core-3.7.11.jar:3.7.11]
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.error(FluxCreate.java:191) ~[reactor-core-3.7.11.jar:3.7.11]
+	at io.modelcontextprotocol.client.transport.HttpClientStreamableHttpTransport.lambda$sendMessage$22(HttpClientStreamableHttpTransport.java:461) ~[mcp-core-0.17.2.jar:0.17.2]
+	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture.postFire(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture$Completion.exec(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinPool.scan(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source) ~[na:na]
+Caused by: java.net.ConnectException: null
+	at java.net.http/jdk.internal.net.http.common.Utils.toConnectException(Unknown Source) ~[java.net.http:na]
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(Unknown Source) ~[java.net.http:na]
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.checkRetryConnect(Unknown Source) ~[java.net.http:na]
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$2(Unknown Source) ~[java.net.http:na]
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[na:na]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+Caused by: java.nio.channels.ClosedChannelException: null
+	at java.base/sun.nio.ch.SocketChannelImpl.ensureOpen(Unknown Source) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.beginConnect(Unknown Source) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.connect(Unknown Source) ~[na:na]
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$1(Unknown Source) ~[java.net.http:na]
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source) ~[na:na]
+	... 10 common frames omitted
+
+2026-11-06T14:15:10.053+08:00  INFO 48288 --- [agentscope-agent-server] [ForkJoinPool.commonPool-worker-1] i.a.core.tool.mcp.McpAsyncClientWrapper  : Closing MCP async client: agent-mcp
+2026-11-06T14:15:10.091+08:00  INFO 48288 --- [agentscope-agent-server] [main] com.demo.agent.agent.AgentRegistry       : [agent] 构建完成: default (model=ollama:qwen3:14b, workspace=D:\demo\agent_01\workspace)
+2026-11-06T14:15:10.092+08:00  INFO 48288 --- [agentscope-agent-server] [main] com.demo.agent.agent.AgentRegistry       : [agent] 就绪,共 1 个: [default]
+2026-11-06T14:15:10.396+08:00  INFO 48288 --- [agentscope-agent-server] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-11-06T14:15:10.402+08:00  INFO 48288 --- [agentscope-agent-server] [main] com.demo.agent.AgentApplication          : Started AgentApplication in 19.891 seconds (process running for 20.447)
+2026-11-06T14:15:12.913+08:00  INFO 48288 --- [agentscope-agent-server] [tomcat-handler-0] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-06T14:15:12.914+08:00  INFO 48288 --- [agentscope-agent-server] [tomcat-handler-0] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-06T14:15:12.915+08:00  INFO 48288 --- [agentscope-agent-server] [tomcat-handler-0] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-11-06T14:15:12.934+08:00 ERROR 48288 --- [agentscope-agent-server] [tomcat-handler-0] com.demo.agent.web.ApiExceptionHandler   : [500] 未处理异常
+
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource .
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.46.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.46.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1776) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at java.base/java.lang.VirtualThread.run(Unknown Source) ~[na:na]
+
+2026-11-06T14:15:13.155+08:00 ERROR 48288 --- [agentscope-agent-server] [tomcat-handler-1] com.demo.agent.web.ApiExceptionHandler   : [500] 未处理异常
+
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource @vite/client.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.46.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.46.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1776) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at java.base/java.lang.VirtualThread.run(Unknown Source) ~[na:na]
+
+2026-11-06T14:19:30.814+08:00  WARN 48288 --- [agentscope-agent-server] [loomBoundedElastic-18] io.agentscope.core.ReActAgent            : Final response has no visible content (empty reply), model: qwen3:14b, iter: 0
+2026-11-06T14:19:36.999+08:00  WARN 48288 --- [agentscope-agent-server] [loomBoundedElastic-19] io.agentscope.core.ReActAgent            : Final response has no visible content (empty reply), model: qwen3:14b, iter: 1
+2026-11-06T14:22:11.445+08:00  INFO 22184 --- [agentscope-agent-server] [main] com.demo.agent.AgentApplication          : Starting AgentApplication using Java 21.0.12.1 with PID 22184 (D:\demo\agent_01\target\classes started by A in D:\demo\agent_01)
+2026-11-06T14:22:11.448+08:00  INFO 22184 --- [agentscope-agent-server] [main] com.demo.agent.AgentApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-11-06T14:22:12.249+08:00  INFO 22184 --- [agentscope-agent-server] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-11-06T14:22:12.260+08:00  INFO 22184 --- [agentscope-agent-server] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-06T14:22:12.260+08:00  INFO 22184 --- [agentscope-agent-server] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2026-11-06T14:22:12.313+08:00  INFO 22184 --- [agentscope-agent-server] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-11-06T14:22:12.314+08:00  INFO 22184 --- [agentscope-agent-server] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 818 ms
+2026-11-06T14:22:12.763+08:00  INFO 22184 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'get_workspace_info' in group 'ungrouped'
+2026-11-06T14:22:12.818+08:00  INFO 22184 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'calc_text_stats' in group 'ungrouped'
+2026-11-06T14:22:12.820+08:00  INFO 22184 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'get_current_time' in group 'ungrouped'
+2026-11-06T14:22:13.206+08:00  INFO 22184 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'read_document' in group 'ungrouped'
+2026-11-06T14:22:13.207+08:00  INFO 22184 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'list_context_files' in group 'ungrouped'
+2026-11-06T14:22:13.210+08:00  INFO 22184 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'query_weather' in group 'ungrouped'
+2026-11-06T14:22:13.212+08:00  INFO 22184 --- [agentscope-agent-server] [main] io.agentscope.core.tool.Toolkit          : Registered tool 'query_express' in group 'ungrouped'
+2026-11-06T14:22:13.338+08:00  INFO 22184 --- [agentscope-agent-server] [main] i.agentscope.core.tool.McpClientManager  : Registering MCP client: filesystem
+2026-11-06T14:22:13.339+08:00  INFO 22184 --- [agentscope-agent-server] [main] i.a.core.tool.mcp.McpAsyncClientWrapper  : Initializing MCP async client: filesystem
+2026-11-06T14:22:13.362+08:00  INFO 22184 --- [agentscope-agent-server] [loomBoundedElastic-1] i.m.c.transport.StdioClientTransport     : MCP server starting.
+2026-11-06T14:22:13.382+08:00  INFO 22184 --- [agentscope-agent-server] [loomBoundedElastic-1] i.m.c.transport.StdioClientTransport     : MCP server started
+2026-11-06T14:22:14.241+08:00  INFO 22184 --- [agentscope-agent-server] [pool-5-thread-1] i.m.c.transport.StdioClientTransport     : STDERR Message received: npm notice run npx
+2026-11-06T14:22:14.242+08:00  INFO 22184 --- [agentscope-agent-server] [pool-5-thread-1] i.m.c.transport.StdioClientTransport     : STDERR Message received: npm notice run mcp-server-filesystem D:\demo\agent_01\workspace
+2026-11-06T14:22:14.506+08:00  INFO 22184 --- [agentscope-agent-server] [pool-5-thread-1] i.m.c.transport.StdioClientTransport     : STDERR Message received: Secure MCP Filesystem Server running on stdio
+2026-11-06T14:22:14.540+08:00  INFO 22184 --- [agentscope-agent-server] [pool-2-thread-1] i.m.client.LifecycleInitializer          : Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental=null, logging=null, prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], Info: Implementation[name=secure-filesystem-server, title=null, version=0.2.0] and Instructions null
+2026-11-06T14:22:14.552+08:00  INFO 22184 --- [agentscope-agent-server] [pool-5-thread-1] i.m.c.transport.StdioClientTransport     : STDERR Message received: Client does not support MCP Roots, using allowed directories set from server args: [ 'D:\\demo\\agent_01\\workspace' ]
+2026-11-06T14:22:14.581+08:00  INFO 22184 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'read_file' in group 'ungrouped'
+2026-11-06T14:22:14.582+08:00  INFO 22184 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'read_text_file' in group 'ungrouped'
+2026-11-06T14:22:14.582+08:00  INFO 22184 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'read_media_file' in group 'ungrouped'
+2026-11-06T14:22:14.582+08:00  INFO 22184 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'read_multiple_files' in group 'ungrouped'
+2026-11-06T14:22:14.583+08:00  INFO 22184 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'write_file' in group 'ungrouped'
+2026-11-06T14:22:14.583+08:00  INFO 22184 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'edit_file' in group 'ungrouped'
+2026-11-06T14:22:14.583+08:00  INFO 22184 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'create_directory' in group 'ungrouped'
+2026-11-06T14:22:14.584+08:00  INFO 22184 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'list_directory' in group 'ungrouped'
+2026-11-06T14:22:14.584+08:00  INFO 22184 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'list_directory_with_sizes' in group 'ungrouped'
+2026-11-06T14:22:14.584+08:00  INFO 22184 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'directory_tree' in group 'ungrouped'
+2026-11-06T14:22:14.584+08:00  INFO 22184 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'move_file' in group 'ungrouped'
+2026-11-06T14:22:14.585+08:00  INFO 22184 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'search_files' in group 'ungrouped'
+2026-11-06T14:22:14.585+08:00  INFO 22184 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'get_file_info' in group 'ungrouped'
+2026-11-06T14:22:14.585+08:00  INFO 22184 --- [agentscope-agent-server] [pool-2-thread-1] io.agentscope.core.tool.Toolkit          : Registered tool 'list_allowed_directories' in group 'ungrouped'
+2026-11-06T14:22:14.585+08:00  INFO 22184 --- [agentscope-agent-server] [pool-2-thread-1] i.agentscope.core.tool.McpClientManager  : MCP client 'filesystem' registered successfully
+2026-11-06T14:22:14.593+08:00  INFO 22184 --- [agentscope-agent-server] [main] i.agentscope.core.tool.McpClientManager  : Registering MCP client: agent-mcp
+2026-11-06T14:22:14.594+08:00  INFO 22184 --- [agentscope-agent-server] [main] i.a.core.tool.mcp.McpAsyncClientWrapper  : Initializing MCP async client: agent-mcp
+2026-11-06T14:22:14.759+08:00  INFO 22184 --- [agentscope-agent-server] [HttpClient-3-Worker-2] i.m.client.LifecycleInitializer          : Server response with Protocol: 2025-06-18, Capabilities: ServerCapabilities[completions=null, experimental=null, logging=LoggingCapabilities[], prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], Info: Implementation[name=agent-mcp, title=null, version=1.0.0] and Instructions 数据库只读查询(MySQL/PostgreSQL)与 Qdrant 向量库工具。写操作前必须先向用户确认。
+2026-11-06T14:22:14.800+08:00  INFO 22184 --- [agentscope-agent-server] [HttpClient-3-Worker-2] io.agentscope.core.tool.Toolkit          : Registered tool 'db_list_tables' in group 'ungrouped'
+2026-11-06T14:22:14.800+08:00  INFO 22184 --- [agentscope-agent-server] [HttpClient-3-Worker-2] io.agentscope.core.tool.Toolkit          : Registered tool 'db_describe_table' in group 'ungrouped'
+2026-11-06T14:22:14.801+08:00  INFO 22184 --- [agentscope-agent-server] [HttpClient-3-Worker-2] io.agentscope.core.tool.Toolkit          : Registered tool 'db_query' in group 'ungrouped'
+2026-11-06T14:22:14.801+08:00  INFO 22184 --- [agentscope-agent-server] [HttpClient-3-Worker-2] io.agentscope.core.tool.Toolkit          : Registered tool 'qdrant_list_collections' in group 'ungrouped'
+2026-11-06T14:22:14.801+08:00  INFO 22184 --- [agentscope-agent-server] [HttpClient-3-Worker-2] io.agentscope.core.tool.Toolkit          : Registered tool 'qdrant_collection_info' in group 'ungrouped'
+2026-11-06T14:22:14.801+08:00  INFO 22184 --- [agentscope-agent-server] [HttpClient-3-Worker-2] io.agentscope.core.tool.Toolkit          : Registered tool 'qdrant_search' in group 'ungrouped'
+2026-11-06T14:22:14.802+08:00  INFO 22184 --- [agentscope-agent-server] [HttpClient-3-Worker-2] io.agentscope.core.tool.Toolkit          : Registered tool 'qdrant_upsert' in group 'ungrouped'
+2026-11-06T14:22:14.802+08:00  INFO 22184 --- [agentscope-agent-server] [HttpClient-3-Worker-2] io.agentscope.core.tool.Toolkit          : Registered tool 'qdrant_scroll' in group 'ungrouped'
+2026-11-06T14:22:14.802+08:00  INFO 22184 --- [agentscope-agent-server] [HttpClient-3-Worker-2] i.agentscope.core.tool.McpClientManager  : MCP client 'agent-mcp' registered successfully
+2026-11-06T14:22:14.831+08:00  INFO 22184 --- [agentscope-agent-server] [main] com.demo.agent.agent.AgentRegistry       : [agent] 构建完成: default (model=ollama:qwen3:14b, workspace=D:\demo\agent_01\workspace)
+2026-11-06T14:22:14.832+08:00  INFO 22184 --- [agentscope-agent-server] [main] com.demo.agent.agent.AgentRegistry       : [agent] 就绪,共 1 个: [default]
+2026-11-06T14:22:15.067+08:00  INFO 22184 --- [agentscope-agent-server] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-11-06T14:22:15.073+08:00  INFO 22184 --- [agentscope-agent-server] [main] com.demo.agent.AgentApplication          : Started AgentApplication in 3.987 seconds (process running for 4.526)
+2026-11-06T14:22:29.662+08:00  INFO 22184 --- [agentscope-agent-server] [tomcat-handler-0] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-06T14:22:29.663+08:00  INFO 22184 --- [agentscope-agent-server] [tomcat-handler-0] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-06T14:22:29.664+08:00  INFO 22184 --- [agentscope-agent-server] [tomcat-handler-0] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms

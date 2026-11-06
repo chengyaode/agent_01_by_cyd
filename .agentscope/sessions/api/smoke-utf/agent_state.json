@@ -1,0 +1,80 @@
+{
+  "session_id" : "smoke-utf",
+  "user_id" : "api",
+  "summary" : "",
+  "context" : [ {
+    "id" : "b136ce72-96ff-4c64-8074-ce042c6a580a",
+    "name" : null,
+    "content" : [ {
+      "type" : "text",
+      "text" : "???????:??"
+    } ],
+    "metadata" : { },
+    "timestamp" : "2026-11-04 09:32:12.924",
+    "usage" : null,
+    "role" : "USER"
+  }, {
+    "id" : "93d6e621-a8c2-448f-a2e4-26b991ec3cde",
+    "name" : "default",
+    "content" : [ {
+      "type" : "text",
+      "text" : "您好！请问您需要我帮您做什么呢？例如，生成周报、查看文件内容或进行其他操作。请告诉我详细的需求。"
+    } ],
+    "metadata" : {
+      "_chat_usage" : {
+        "inputTokens" : 2257,
+        "outputTokens" : 31,
+        "cachedTokens" : 0,
+        "cacheCreationTokens" : 0,
+        "reasoningTokens" : 0,
+        "toolUsePromptTokens" : 0,
+        "time" : 0.461254658,
+        "totalTokens" : 2288
+      },
+      "prompt_eval_duration" : 19017951,
+      "load_duration" : 176272551,
+      "total_duration" : 461254658,
+      "prompt_eval_count" : 2257,
+      "eval_count" : 31,
+      "eval_duration" : 179514870,
+      "created_at" : "2026-11-04T01:32:11.723529337Z",
+      "model" : "qwen2.5:7b",
+      "done" : true
+    },
+    "timestamp" : "2026-11-04 09:32:13.394",
+    "usage" : {
+      "inputTokens" : 2257,
+      "outputTokens" : 31,
+      "cachedTokens" : 0,
+      "cacheCreationTokens" : 0,
+      "reasoningTokens" : 0,
+      "toolUsePromptTokens" : 0,
+      "time" : 0.461254658,
+      "totalTokens" : 2288
+    },
+    "role" : "ASSISTANT"
+  } ],
+  "reply_id" : "568c75f48e7d44d1962373fdce29ae88",
+  "cur_iter" : 0,
+  "shutdown_interrupted" : false,
+  "permission_context" : {
+    "mode" : "default",
+    "working_directories" : { },
+    "allow_rules" : { },
+    "deny_rules" : { },
+    "ask_rules" : { }
+  },
+  "tool_context" : {
+    "max_cache_files" : 100,
+    "max_cache_bytes" : 25000.0,
+    "activated_groups" : [ ],
+    "spawn_registry" : { }
+  },
+  "tasks_context" : {
+    "tasks" : [ ]
+  },
+  "plan_mode_context" : {
+    "plan_active" : false,
+    "current_plan_file" : null
+  }
+}

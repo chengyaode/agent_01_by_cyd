@@ -1,0 +1,11 @@
+com\demo\mcp\McpServerApplication.class
+com\demo\mcp\config\McpProperties.class
+com\demo\mcp\tool\DbTools.class
+com\demo\mcp\tool\QdrantTools.class
+com\demo\mcp\web\HealthController.class
+com\demo\mcp\service\DbService.class
+com\demo\mcp\config\McpProperties$Db.class
+com\demo\mcp\config\McpServerConfig.class
+com\demo\mcp\service\QdrantService.class
+com\demo\mcp\config\McpProperties$Qdrant.class
+com\demo\mcp\tool\ToolSupport.class

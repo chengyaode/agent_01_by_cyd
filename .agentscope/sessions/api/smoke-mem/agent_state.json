@@ -1,0 +1,131 @@
+{
+  "session_id" : "smoke-mem",
+  "user_id" : "api",
+  "summary" : "",
+  "context" : [ {
+    "id" : "bb6197eb-d471-48ad-86f4-3aabdb649a0e",
+    "name" : null,
+    "content" : [ {
+      "type" : "text",
+      "text" : "????????8,???"
+    } ],
+    "metadata" : { },
+    "timestamp" : "2026-11-04 09:32:13.442",
+    "usage" : null,
+    "role" : "USER"
+  }, {
+    "id" : "1d3849ed-0fee-4ff9-b69a-ac67e30d5e35",
+    "name" : "default",
+    "content" : [ {
+      "type" : "text",
+      "text" : "看起来您输入的指令不太清晰。请您明确一下需要我执行什么操作，比如生成周报、编辑文件还是查询某个目录下的内容？这样我可以更好地帮助您。"
+    } ],
+    "metadata" : {
+      "_chat_usage" : {
+        "inputTokens" : 2258,
+        "outputTokens" : 38,
+        "cachedTokens" : 0,
+        "cacheCreationTokens" : 0,
+        "reasoningTokens" : 0,
+        "toolUsePromptTokens" : 0,
+        "time" : 0.52196005,
+        "totalTokens" : 2296
+      },
+      "prompt_eval_duration" : 10547417,
+      "load_duration" : 169879549,
+      "total_duration" : 521960050,
+      "prompt_eval_count" : 2258,
+      "eval_count" : 38,
+      "eval_duration" : 217724844,
+      "created_at" : "2026-11-04T01:32:12.298004784Z",
+      "model" : "qwen2.5:7b",
+      "done" : true
+    },
+    "timestamp" : "2026-11-04 09:32:13.968",
+    "usage" : {
+      "inputTokens" : 2258,
+      "outputTokens" : 38,
+      "cachedTokens" : 0,
+      "cacheCreationTokens" : 0,
+      "reasoningTokens" : 0,
+      "toolUsePromptTokens" : 0,
+      "time" : 0.52196005,
+      "totalTokens" : 2296
+    },
+    "role" : "ASSISTANT"
+  }, {
+    "id" : "947a88c8-75cf-4e6a-a1ad-c43616708ee7",
+    "name" : null,
+    "content" : [ {
+      "type" : "text",
+      "text" : "???????????????"
+    } ],
+    "metadata" : { },
+    "timestamp" : "2026-11-04 09:32:13.996",
+    "usage" : null,
+    "role" : "USER"
+  }, {
+    "id" : "4a6af7a4-439c-4f51-b1e3-828a58e04be7",
+    "name" : "default",
+    "content" : [ {
+      "type" : "text",
+      "text" : "请使用简体中文输入您的需求，例如您想要生成周报、查看某个文件的内容，或者进行其他操作，请明确说明。我将根据您的要求提供相应的帮助。"
+    } ],
+    "metadata" : {
+      "_chat_usage" : {
+        "inputTokens" : 2309,
+        "outputTokens" : 39,
+        "cachedTokens" : 0,
+        "cacheCreationTokens" : 0,
+        "reasoningTokens" : 0,
+        "toolUsePromptTokens" : 0,
+        "time" : 0.527581468,
+        "totalTokens" : 2348
+      },
+      "prompt_eval_duration" : 10720913,
+      "load_duration" : 156711404,
+      "total_duration" : 527581468,
+      "prompt_eval_count" : 2309,
+      "eval_count" : 39,
+      "eval_duration" : 223149390,
+      "created_at" : "2026-11-04T01:32:12.858529348Z",
+      "model" : "qwen2.5:7b",
+      "done" : true
+    },
+    "timestamp" : "2026-11-04 09:32:14.529",
+    "usage" : {
+      "inputTokens" : 2309,
+      "outputTokens" : 39,
+      "cachedTokens" : 0,
+      "cacheCreationTokens" : 0,
+      "reasoningTokens" : 0,
+      "toolUsePromptTokens" : 0,
+      "time" : 0.527581468,
+      "totalTokens" : 2348
+    },
+    "role" : "ASSISTANT"
+  } ],
+  "reply_id" : "2ecda24d6919405b9734cda8aa144bc4",
+  "cur_iter" : 0,
+  "shutdown_interrupted" : false,
+  "permission_context" : {
+    "mode" : "default",
+    "working_directories" : { },
+    "allow_rules" : { },
+    "deny_rules" : { },
+    "ask_rules" : { }
+  },
+  "tool_context" : {
+    "max_cache_files" : 100,
+    "max_cache_bytes" : 25000.0,
+    "activated_groups" : [ ],
+    "spawn_registry" : { }
+  },
+  "tasks_context" : {
+    "tasks" : [ ]
+  },
+  "plan_mode_context" : {
+    "plan_active" : false,
+    "current_plan_file" : null
+  }
+}

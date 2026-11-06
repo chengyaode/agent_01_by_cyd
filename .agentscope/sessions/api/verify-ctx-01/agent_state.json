@@ -1,0 +1,34 @@
+{
+  "session_id" : "verify-ctx-01",
+  "user_id" : "api",
+  "summary" : "",
+  "context" : [ ],
+  "reply_id" : "772a45397089498ea62dd3cd276fb14a",
+  "cur_iter" : 0,
+  "shutdown_interrupted" : false,
+  "permission_context" : {
+    "mode" : "bypass",
+    "working_directories" : {
+      "D:\\demo\\agent_01\\workspace" : {
+        "path" : "D:\\demo\\agent_01\\workspace",
+        "source" : "userSettings"
+      }
+    },
+    "allow_rules" : { },
+    "deny_rules" : { },
+    "ask_rules" : { }
+  },
+  "tool_context" : {
+    "max_cache_files" : 100,
+    "max_cache_bytes" : 25000.0,
+    "activated_groups" : [ ],
+    "spawn_registry" : { }
+  },
+  "tasks_context" : {
+    "tasks" : [ ]
+  },
+  "plan_mode_context" : {
+    "plan_active" : false,
+    "current_plan_file" : null
+  }
+}

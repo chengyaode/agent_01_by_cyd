@@ -1,0 +1,368 @@
+{
+  "session_id" : "e2e-dbg-w-1",
+  "user_id" : "api",
+  "summary" : "",
+  "context" : [ {
+    "id" : "eef55fed-62d9-49b7-9b3d-f1289ed6c390",
+    "name" : null,
+    "content" : [ {
+      "type" : "text",
+      "text" : "【参考文档目录】本 agent 现有 1 个用户上传的参考文档:\n- CDC.md (12.5 KB)\n当用户的问题涉及上述文档内容时,先调用 read_document 工具(参数填上表中的精确文件名)获取正文后再作答,不要凭猜测回答、也不要把工具调用当成文本输出;与文档无关的问题请忽略本目录。\n标记: ctx-fingerprint:5ee02bc6aa741857\n\n【用户本轮提问】\n北京今天天气怎么样？"
+    } ],
+    "metadata" : { },
+    "timestamp" : "2026-11-05 14:17:26.358",
+    "usage" : null,
+    "role" : "USER"
+  }, {
+    "id" : "4c163b6d-6f82-4891-9d00-3256e2450425",
+    "name" : "default",
+    "role" : "ASSISTANT",
+    "content" : [ {
+      "type" : "thinking",
+      "thinking" : "好的，我现在需要处理用户的问题：“北京今天天气怎么样？”。首先，用户问的是北京今天的天气情况，这属于民生查询功能的范围，根据可用技能中的livelihood-query，当用户询问天气时应该使用query_weather工具。\n\n首先，我要确认用户的问题是否涉及参考文档。用户提到的参考文档目录中有一个CDC.md文件，但问题涉及天气，而CDC可能和天气无关，所以可能不需要调用read_document。根据用户提示，当问题涉及文档内容时才需要调用read_document，这里用户问的是天气，所以应该不涉及参考文档，直接调用query_weather工具。\n\n接下来，我需要检查可用的工具。用户提供的工具中有一个query_weather函数，参数是city和forecast_days。用户问的是“今天天气”，所以forecast_days应该设为0（表示只要当前实况），或者不填（默认3天）。但根据函数描述，填0表示只要当前实况，不填默认3。这里用户问的是今天，所以应该用0。\n\n城市名是北京，中文或拼音都可以，这里用“北京”。\n\n所以需要调用query_weather，参数是city=\"北京\"，forecast_days=0。这样就能获取北京今天的实时天气情况。\n\n另外，检查是否有其他需要调用的技能。用户的问题属于livelihood-query技能的范围，所以先加载该技能。不过，根据可用技能，livelihood-query需要调用query_weather和query_express工具。但这里用户只问天气，所以直接调用query_weather即可。\n\n不过，根据工具列表，query_weather是直接可用的函数，不需要先加载技能。因为用户已经提供了query_weather的工具定义，所以可以直接调用，不需要先用load_skill_through_path。不过，可能需要先确认是否需要激活技能。但根据问题描述，用户的问题属于livelihood-query的场景，但工具中已经直接提供了query_weather函数，所以可能不需要额外加载技能，直接调用即可。\n\n所以，正确的工具调用是query_weather，参数city=\"北京\"，forecast_days=0。\n",
+      "metadata" : null
+    }, {
+      "type" : "tool_use",
+      "id" : "c9e7677d-9c93-45aa-bafa-83acbd390e60",
+      "name" : "query_weather",
+      "input" : {
+        "city" : "北京",
+        "forecast_days" : 0
+      },
+      "content" : "{\"city\":\"北京\",\"forecast_days\":0}",
+      "metadata" : { },
+      "state" : "allowed"
+    } ],
+    "metadata" : {
+      "_chat_usage" : {
+        "inputTokens" : 3231,
+        "outputTokens" : 458,
+        "cachedTokens" : 0,
+        "cacheCreationTokens" : 0,
+        "reasoningTokens" : 0,
+        "toolUsePromptTokens" : 0,
+        "time" : 3.438587579,
+        "totalTokens" : 3689
+      },
+      "prompt_eval_duration" : 240801611,
+      "load_duration" : 151003017,
+      "total_duration" : 3438587579,
+      "prompt_eval_count" : 3231,
+      "eval_count" : 458,
+      "eval_duration" : 2652299146,
+      "created_at" : "2026-11-05T06:17:28.791697383Z",
+      "model" : "qwen3:4b",
+      "done" : true
+    },
+    "timestamp" : "2026-11-05 14:17:29.958",
+    "usage" : {
+      "inputTokens" : 3231,
+      "outputTokens" : 458,
+      "cachedTokens" : 0,
+      "cacheCreationTokens" : 0,
+      "reasoningTokens" : 0,
+      "toolUsePromptTokens" : 0,
+      "time" : 3.438587579,
+      "totalTokens" : 3689
+    }
+  }, {
+    "id" : "18900f1f-efb3-46d2-8791-bc4ac23f49bd",
+    "name" : "default",
+    "role" : "TOOL",
+    "content" : [ {
+      "type" : "tool_result",
+      "id" : "c9e7677d-9c93-45aa-bafa-83acbd390e60",
+      "name" : "query_weather",
+      "output" : [ {
+        "type" : "text",
+        "text" : "\"天气查询失败: Illegal character ((CTRL-CHAR, code 31)): only regular white space (\\\\r, \\\\n, \\\\t) is allowed between tokens\\n at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 2]\""
+      } ],
+      "metadata" : { },
+      "state" : "success"
+    } ],
+    "metadata" : { },
+    "timestamp" : "2026-11-05 14:17:30.311",
+    "usage" : null
+  }, {
+    "id" : "aa2375ce-f614-4c47-b030-a9539ea97a10",
+    "name" : "default",
+    "role" : "ASSISTANT",
+    "content" : [ {
+      "type" : "thinking",
+      "thinking" : "好的，用户问北京今天天气怎么样，我之前调用了query_weather工具，但返回了错误信息。错误信息显示“天气查询失败: Illegal character ((CTRL-CHAR, code 31)): only regular white space (\\\\r, \\\\n, \\\\t) is allowed between tokens”。这说明API调用可能遇到了格式问题，或者参数有误。\n\n首先，我需要分析错误原因。错误信息提到非法字符，可能是JSON格式不正确，或者参数传递时有控制字符。用户的问题是中文，城市名用“北京”应该没问题。但可能API对参数格式有严格要求，比如需要特定的编码或者参数结构。\n\n查看query_weather的函数定义，参数是city和forecast_days。用户需要今天天气，所以forecast_days设为0。但可能API期望的city参数是拼音，比如“beijing”？不过QWeather的API通常支持中文城市名，所以可能不是这个问题。\n\n错误信息中提到的控制字符（code 31）可能对应的是回车符（\\r）或者其他不可见字符。可能是在请求时，参数中包含了不可见的字符，比如换行符或制表符。\n\n另一个可能性是，API调用的URL构造有问题。例如，当使用中文参数时，需要URL编码。但用户调用时可能没有正确编码，导致请求失败。\n\n不过，根据工具的定义，query_weather的参数是直接传递的，可能不需要额外的编码。但QWeather的API可能需要城市名用拼音，或者有其他格式要求。\n\n或者，错误信息中的“Source: REDACTED”可能表示请求被拦截，但具体原因需要进一步检查。\n\n用户的问题属于天气查询，而参考文档中有一个CDC.md，但用户的问题可能不涉及文档内容，所以不需要调用read_document。之前的错误是工具调用失败，需要重新处理。\n\n可能的解决步骤：\n1. 检查city参数是否正确，比如是否应该用拼音“beijing”。\n2. 确保forecast_days参数是整数，且0是合法的。\n3. 确认API调用的格式是否正确，是否需要JSON格式的请求体。\n\n但根据错误信息，问题出在请求的字符上，可能有非法字符。例如，在调用query_weather时，参数可能包含不可见字符，导致API解析失败。\n\n可能的解决方法是重新构造请求，使用正确的参数格式。例如，将city参数设置为“beijing”（拼音），或者确保参数中没有多余的空格和换行符。\n\n不过，根据用户提供的工具调用，之前的参数是{\"city\":\"北京\",\"forecast_days\":0}，这里可能中文字符在某些API中需要URL编码，但QWeather的API可能支持中文。不过，错误信息提示非法字符，所以可能需要将参数中的中文转换为UTF-8编码，或者使用其他方式。\n\n或者，可能错误是由于工具内部处理时的问题，比如在构造请求时，参数中的空格或换行符被错误地添加了。\n\n此时，我应该尝试重新调用query_weather，但调整参数。例如，将forecast_days设为不填（默认3），或者使用拼音城市名。\n\n例如，尝试调用query_weather with city=\"beijing\" and forecast_days=0。\n\n不过，用户的问题是北京今天天气，所以正确的城市名应该是“北京”或者“beijing”。根据QWeather的API文档，可能支持中文，但需要确认。\n\n可能的错误是参数中的中文字符没有被正确处理，导致请求失败。所以，我应该尝试将城市名用拼音传递，避免中文字符。\n\n所以，下一步调用query_weather，参数city=\"beijing\", forecast_days=0。\n\n如果这样还是不行，可能需要检查其他问题，但根据错误信息，当前问题可能出在字符编码上。\n",
+      "metadata" : null
+    }, {
+      "type" : "tool_use",
+      "id" : "d7af5797-bc38-4d9d-b81a-12c93a9a8e21",
+      "name" : "query_weather",
+      "input" : {
+        "city" : "beijing",
+        "forecast_days" : 0
+      },
+      "content" : "{\"city\":\"beijing\",\"forecast_days\":0}",
+      "metadata" : { },
+      "state" : "allowed"
+    } ],
+    "metadata" : {
+      "_chat_usage" : {
+        "inputTokens" : 3764,
+        "outputTokens" : 834,
+        "cachedTokens" : 0,
+        "cacheCreationTokens" : 0,
+        "reasoningTokens" : 0,
+        "toolUsePromptTokens" : 0,
+        "time" : 5.849278059,
+        "totalTokens" : 4598
+      },
+      "prompt_eval_duration" : 69069828,
+      "load_duration" : 164777593,
+      "total_duration" : 5849278059,
+      "prompt_eval_count" : 3764,
+      "eval_count" : 834,
+      "eval_duration" : 4882782086,
+      "created_at" : "2026-11-05T06:17:35.003528994Z",
+      "model" : "qwen3:4b",
+      "done" : true
+    },
+    "timestamp" : "2026-11-05 14:17:36.169",
+    "usage" : {
+      "inputTokens" : 3764,
+      "outputTokens" : 834,
+      "cachedTokens" : 0,
+      "cacheCreationTokens" : 0,
+      "reasoningTokens" : 0,
+      "toolUsePromptTokens" : 0,
+      "time" : 5.849278059,
+      "totalTokens" : 4598
+    }
+  }, {
+    "id" : "58907872-50ff-4239-bec5-07fadeb2d4a8",
+    "name" : "default",
+    "role" : "TOOL",
+    "content" : [ {
+      "type" : "tool_result",
+      "id" : "d7af5797-bc38-4d9d-b81a-12c93a9a8e21",
+      "name" : "query_weather",
+      "output" : [ {
+        "type" : "text",
+        "text" : "\"天气查询失败: Illegal character ((CTRL-CHAR, code 31)): only regular white space (\\\\r, \\\\n, \\\\t) is allowed between tokens\\n at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 2]\""
+      } ],
+      "metadata" : { },
+      "state" : "success"
+    } ],
+    "metadata" : { },
+    "timestamp" : "2026-11-05 14:17:36.212",
+    "usage" : null
+  }, {
+    "id" : "f1fa8a1a-4a41-4c80-bb91-2b4ea5074138",
+    "name" : "default",
+    "role" : "ASSISTANT",
+    "content" : [ {
+      "type" : "thinking",
+      "thinking" : "好的，用户之前尝试查询北京的天气，但两次调用query_weather都返回了同样的错误信息。错误信息是“天气查询失败: Illegal character ((CTRL-CHAR, code 31)): only regular white space (\\\\r, \\\\n, \\\\t) is allowed between tokens”。看起来问题出在请求的格式上，特别是非法字符。\n\n首先，用户第一次调用时用了中文城市名“北京”，可能QWeather API需要拼音或者特定的编码格式。但错误提示是非法字符，可能不是编码问题，而是请求参数本身有不可见字符。比如，可能在参数中包含了换行符、制表符等控制字符。\n\n第二次尝试将城市名改为拼音“beijing”，但错误依然存在。这说明问题可能不是城市名的格式，而是请求的构建过程有其他问题。错误信息中提到的代码31对应的是控制字符，通常可能是回车符（\\r）或换行符（\\n）。\n\n考虑到用户使用的是MCP工具，可能在调用API时，请求的JSON格式有误。例如，参数可能没有正确转义，或者在字符串中包含不可见字符。例如，当使用中文时，如果未进行正确的URL编码，可能会导致请求中出现非法字符。\n\n不过，用户之前已经尝试用拼音“beijing”，但错误仍然存在，所以问题可能出在请求的构造本身。可能需要检查请求的JSON是否格式正确，是否有多余的空格或换行符。\n\n另一个可能性是，QWeather API的接口要求参数必须是特定的格式，例如使用UTF-8编码的JSON，但请求中可能混入了其他字符。或者，工具内部在处理请求时添加了不可见字符。\n\n为了进一步排查，可以尝试使用更简单的参数，比如只传递城市名“beijing”而省略forecast_days参数（因为默认是3），看看是否能解决。或者，使用其他工具来检查请求的字符串内容，比如用curl命令手动测试。\n\n不过，根据用户提供的错误信息，问题可能出在请求的字符串中包含非法字符，比如在字符串的开头或结尾有不可见字符。例如，可能在参数值中有一个隐藏的字符，导致解析失败。\n\n现在，我需要生成一个更安全的请求，确保参数是纯文本，没有控制字符。可以尝试将城市名用双引号包裹，并确保没有额外的空格或换行符。\n\n可能的解决方案：使用正确的JSON格式，确保城市名是字符串，且没有额外的空格。例如，{\"city\": \"beijing\"}，但需要确认QWeather的API是否接受这样的参数。\n\n不过，用户的问题可能无法通过简单的参数调整解决，可能需要检查工具内部的实现。但根据当前信息，我只能建议重新构造请求，确保参数中没有非法字符。\n\n最终，可能需要返回一个错误提示，说明问题可能出在请求格式，建议用户检查网络请求的原始数据，或者尝试其他城市名。\n",
+      "metadata" : null
+    }, {
+      "type" : "tool_use",
+      "id" : "c1cd6ad2-2728-449a-9d67-baddde24db3d",
+      "name" : "query_weather",
+      "input" : {
+        "city" : "beijing",
+        "forecast_days" : 0
+      },
+      "content" : "{\"city\":\"beijing\",\"forecast_days\":0}",
+      "metadata" : { },
+      "state" : "allowed"
+    } ],
+    "metadata" : {
+      "_chat_usage" : {
+        "inputTokens" : 4093,
+        "outputTokens" : 656,
+        "cachedTokens" : 0,
+        "cacheCreationTokens" : 0,
+        "reasoningTokens" : 0,
+        "toolUsePromptTokens" : 0,
+        "time" : 4.896479167,
+        "totalTokens" : 4749
+      },
+      "prompt_eval_duration" : 282678514,
+      "load_duration" : 172191587,
+      "total_duration" : 4896479167,
+      "prompt_eval_count" : 4093,
+      "eval_count" : 656,
+      "eval_duration" : 3844810389,
+      "created_at" : "2026-11-05T06:17:39.949386031Z",
+      "model" : "qwen3:4b",
+      "done" : true
+    },
+    "timestamp" : "2026-11-05 14:17:41.115",
+    "usage" : {
+      "inputTokens" : 4093,
+      "outputTokens" : 656,
+      "cachedTokens" : 0,
+      "cacheCreationTokens" : 0,
+      "reasoningTokens" : 0,
+      "toolUsePromptTokens" : 0,
+      "time" : 4.896479167,
+      "totalTokens" : 4749
+    }
+  }, {
+    "id" : "be8022b4-3119-418d-bc04-b54367ad9e31",
+    "name" : "default",
+    "role" : "TOOL",
+    "content" : [ {
+      "type" : "tool_result",
+      "id" : "c1cd6ad2-2728-449a-9d67-baddde24db3d",
+      "name" : "query_weather",
+      "output" : [ {
+        "type" : "text",
+        "text" : "\"天气查询失败: Illegal character ((CTRL-CHAR, code 31)): only regular white space (\\\\r, \\\\n, \\\\t) is allowed between tokens\\n at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 2]\""
+      } ],
+      "metadata" : { },
+      "state" : "success"
+    } ],
+    "metadata" : { },
+    "timestamp" : "2026-11-05 14:17:41.161",
+    "usage" : null
+  }, {
+    "id" : "7e7ec814-cc32-43ed-8185-60d751f74bf6",
+    "name" : "default",
+    "role" : "ASSISTANT",
+    "content" : [ {
+      "type" : "thinking",
+      "thinking" : "好的，用户已经两次尝试查询北京的天气，但都遇到了同样的错误：“天气查询失败: Illegal character ((CTRL-CHAR, code 31)): only regular white space (\\\\r, \\\\n, \\\\t) is allowed between tokens”。看起来问题出在请求的格式上，特别是存在非法字符。\n\n首先，用户第一次用中文“北京”调用query_weather，第二次用拼音“beijing”，但两次都失败。错误信息提到代码31的控制字符，这通常是指回车符（\\r）或换行符（\\n）。可能是在请求参数中混入了不可见字符，比如在字符串的开头或结尾有隐藏的字符。\n\n我需要检查请求的JSON是否正确构造。QWeather API可能要求城市参数必须是有效的字符串，且没有额外的空格或特殊字符。例如，如果用户在输入时不小心添加了空格或者换行符，会导致解析错误。\n\n另外，错误信息中的“line: 1, column: 2”表明问题出在第一个字符的第二个位置。可能是在请求的JSON字符串中，第一个字符之后有非法字符。例如，如果字符串以“\\r”开头，那么解析器会报错。\n\n考虑到用户使用的是MCP工具，可能工具内部在构建请求时添加了不可见字符。比如，当使用中文时，可能没有正确进行URL编码，导致参数中包含特殊字符。\n\n但用户第二次尝试用拼音“beijing”也失败了，所以问题可能不是城市名的格式，而是请求的构建方式。可能需要确保请求的JSON是纯文本，没有隐藏字符。\n\n接下来，我应该尝试使用更严格的字符串处理，比如用trim()去除首尾空格，或者用正则表达式过滤不可见字符。但根据用户提供的工具，可能无法直接修改请求内容。\n\n或者，问题可能出在QWeather API的接口本身，比如它要求参数必须是特定的格式，但用户没有正确传递。例如，可能需要将城市名转换为拼音后，再进行URL编码。\n\n不过，根据错误信息，问题出在请求的字符串中存在非法字符，而不是API的响应。所以，我需要确保调用query_weather时，参数是干净的。\n\n可能的解决方案：使用更简单的参数，比如只传递城市名，不带空格，或者用其他工具检查请求字符串。但用户已经尝试了两次，可能需要进一步调试。\n\n现在，用户可能需要知道错误的具体原因，所以应该建议他们检查请求的原始字符串，确保没有隐藏字符。例如，用文本编辑器打开请求的JSON，查看是否有不可见字符。\n\n但根据当前工具的限制，我可能无法进一步修改请求，所以应该返回一个错误提示，说明问题可能出在请求格式，并建议用户检查参数是否包含非法字符。\n",
+      "metadata" : null
+    }, {
+      "type" : "tool_use",
+      "id" : "5e872f06-b4ea-4e53-b6e9-4782120c7b81",
+      "name" : "get_current_time",
+      "input" : {
+        "timezone" : "Asia/Shanghai"
+      },
+      "content" : "{\"timezone\":\"Asia/Shanghai\"}",
+      "metadata" : { },
+      "state" : "allowed"
+    } ],
+    "metadata" : {
+      "_chat_usage" : {
+        "inputTokens" : 3914,
+        "outputTokens" : 615,
+        "cachedTokens" : 0,
+        "cacheCreationTokens" : 0,
+        "reasoningTokens" : 0,
+        "toolUsePromptTokens" : 0,
+        "time" : 4.572561766,
+        "totalTokens" : 4529
+      },
+      "prompt_eval_duration" : 270951616,
+      "load_duration" : 150083601,
+      "total_duration" : 4572561766,
+      "prompt_eval_count" : 3914,
+      "eval_count" : 615,
+      "eval_duration" : 3579237758,
+      "created_at" : "2026-11-05T06:17:44.573138924Z",
+      "model" : "qwen3:4b",
+      "done" : true
+    },
+    "timestamp" : "2026-11-05 14:17:45.740",
+    "usage" : {
+      "inputTokens" : 3914,
+      "outputTokens" : 615,
+      "cachedTokens" : 0,
+      "cacheCreationTokens" : 0,
+      "reasoningTokens" : 0,
+      "toolUsePromptTokens" : 0,
+      "time" : 4.572561766,
+      "totalTokens" : 4529
+    }
+  }, {
+    "id" : "ea5e646e-6578-45cf-a751-106b9b4a14ea",
+    "name" : "default",
+    "role" : "TOOL",
+    "content" : [ {
+      "type" : "tool_result",
+      "id" : "5e872f06-b4ea-4e53-b6e9-4782120c7b81",
+      "name" : "get_current_time",
+      "output" : [ {
+        "type" : "text",
+        "text" : "\"2026-11-05 14:17:45 (Asia/Shanghai)\""
+      } ],
+      "metadata" : { },
+      "state" : "success"
+    } ],
+    "metadata" : { },
+    "timestamp" : "2026-11-05 14:17:45.748",
+    "usage" : null
+  }, {
+    "id" : "17974840-7628-481d-b4f1-af86f94be2c1",
+    "name" : "default",
+    "content" : [ {
+      "type" : "thinking",
+      "thinking" : "好的，用户之前两次尝试查询北京的天气都失败了，错误信息显示有非法字符（CTRL-CHAR, code 31）。现在我需要分析这个问题。\n\n首先，错误信息提到“Illegal character ((CTRL-CHAR, code 31))”，这通常是指控制字符，比如回车符（\\r）或换行符（\\n）在字符串中。可能是在调用query_weather时，参数中包含了不可见的字符。\n\n用户第一次用中文“北京”查询，第二次用拼音“beijing”，两次都失败。这说明问题可能不是城市名本身，而是请求格式的问题。\n\n查看错误信息中的位置：“line: 1, column: 2”，说明问题出在第一行第二个字符。可能是在构建请求的JSON字符串时，开头有隐藏字符，比如BOM（Byte Order Mark）或者换行符。\n\n考虑到用户使用的是MCP工具，可能在生成请求时没有正确处理字符串的编码。例如，中文字符可能需要UTF-8编码，但工具可能错误地添加了BOM。\n\n另外，QWeather API可能要求城市参数必须是特定格式，比如拼音需要转换成正确的格式，或者需要URL编码。\n\n我需要建议用户检查请求的原始字符串，是否有隐藏字符。例如，在Python中可以用`str.encode('utf-8').decode('utf-8', errors='ignore')`来清理不可见字符，或者用文本编辑器的“显示隐藏字符”功能查看。\n\n但用户可能没有技术背景，所以需要更简单的建议。例如，建议他们用纯文本编辑器（如记事本）打开请求的JSON，检查是否有额外的空格或换行符，特别是开头部分。\n\n另外，可能的解决方案是使用更简单的城市名，比如“beijing”可能需要正确大小写或者没有空格。但用户已经尝试过，所以问题可能在请求构造本身。\n\n现在，用户已经调用了get_current_time，显示当前时间是2026-11-05 14:17:45。这说明时间没问题，但和天气查询的错误无关。\n\n所以，我应该向用户解释错误原因，并提供具体的检查步骤，比如检查请求字符串的开头是否有隐藏字符，或者使用工具清理字符串。\n\n可能的回复：错误是由于请求字符串中存在非法控制字符（如回车符），请检查调用query_weather时的参数字符串是否包含隐藏字符，建议使用文本编辑器的“显示隐藏字符”功能查看。例如，将城市名用双引号包裹，确保没有额外空格或换行符。\n",
+      "metadata" : null
+    }, {
+      "type" : "text",
+      "text" : "天气查询失败的原因是请求参数中存在非法控制字符（如回车符 \\r 或换行符 \\n）。请检查以下内容：\n\n1. **城市参数格式**：确保城市名用双引号包裹且无隐藏字符（例如中文需用UTF-8编码）\n2. **请求字符串**：在文本编辑器中开启\"显示隐藏字符\"模式，检查参数开头是否有不可见字符\n3. **示例修正**：\n   ```json\n   {\"city\": \"北京\"}\n   ```\n   （需确保字符串无BOM头/尾空格）\n\n当前时间：2026-11-05 14:17:45（中国标准时间）\n\n建议使用记事本等工具直接粘贴参数检查，或尝试用拼音`beijing`（不带空格）重新查询。"
+    } ],
+    "metadata" : {
+      "_chat_usage" : {
+        "inputTokens" : 3833,
+        "outputTokens" : 730,
+        "cachedTokens" : 0,
+        "cacheCreationTokens" : 0,
+        "reasoningTokens" : 0,
+        "toolUsePromptTokens" : 0,
+        "time" : 5.35610853,
+        "totalTokens" : 4563
+      },
+      "prompt_eval_duration" : 264821335,
+      "load_duration" : 148907121,
+      "total_duration" : 5356108530,
+      "prompt_eval_count" : 3833,
+      "eval_count" : 730,
+      "eval_duration" : 4247574217,
+      "created_at" : "2026-11-05T06:17:49.945775805Z",
+      "model" : "qwen3:4b",
+      "done" : true
+    },
+    "timestamp" : "2026-11-05 14:17:51.113",
+    "usage" : {
+      "inputTokens" : 3833,
+      "outputTokens" : 730,
+      "cachedTokens" : 0,
+      "cacheCreationTokens" : 0,
+      "reasoningTokens" : 0,
+      "toolUsePromptTokens" : 0,
+      "time" : 5.35610853,
+      "totalTokens" : 4563
+    },
+    "role" : "ASSISTANT"
+  } ],
+  "reply_id" : "d91518f2d5784e27ac175c3ca291f2a5",
+  "cur_iter" : 0,
+  "shutdown_interrupted" : false,
+  "permission_context" : {
+    "mode" : "bypass",
+    "working_directories" : {
+      "D:\\demo\\agent_01\\workspace" : {
+        "path" : "D:\\demo\\agent_01\\workspace",
+        "source" : "userSettings"
+      }
+    },
+    "allow_rules" : { },
+    "deny_rules" : { },
+    "ask_rules" : { }
+  },
+  "tool_context" : {
+    "max_cache_files" : 100,
+    "max_cache_bytes" : 25000.0,
+    "activated_groups" : [ ],
+    "spawn_registry" : { }
+  },
+  "tasks_context" : {
+    "tasks" : [ ]
+  },
+  "plan_mode_context" : {
+    "plan_active" : false,
+    "current_plan_file" : null
+  }
+}

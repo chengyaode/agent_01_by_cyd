@@ -1,0 +1,284 @@
+{
+  "session_id" : "s1",
+  "user_id" : "api",
+  "summary" : "",
+  "context" : [ {
+    "id" : "84b688cd-a47a-4e1e-a9ac-391d8a6869a3",
+    "name" : null,
+    "content" : [ {
+      "type" : "text",
+      "text" : "你好"
+    } ],
+    "metadata" : { },
+    "timestamp" : "2026-11-04 10:11:54.084",
+    "usage" : null,
+    "role" : "USER"
+  }, {
+    "id" : "87dd8e71-735b-4459-ad28-cea888883049",
+    "name" : "default",
+    "content" : [ {
+      "type" : "text",
+      "text" : "你好！有什么可以帮助你的吗？你可以告诉我需要生成周报，还是有其他问题需要解决呢？"
+    } ],
+    "metadata" : {
+      "_chat_usage" : {
+        "inputTokens" : 2254,
+        "outputTokens" : 23,
+        "cachedTokens" : 0,
+        "cacheCreationTokens" : 0,
+        "reasoningTokens" : 0,
+        "toolUsePromptTokens" : 0,
+        "time" : 0.618430449,
+        "totalTokens" : 2277
+      },
+      "prompt_eval_duration" : 214680913,
+      "load_duration" : 184745523,
+      "total_duration" : 618430449,
+      "prompt_eval_count" : 2254,
+      "eval_count" : 23,
+      "eval_duration" : 138621972,
+      "created_at" : "2026-11-04T02:11:53.037954963Z",
+      "model" : "qwen2.5:7b",
+      "done" : true
+    },
+    "timestamp" : "2026-11-04 10:11:54.711",
+    "usage" : {
+      "inputTokens" : 2254,
+      "outputTokens" : 23,
+      "cachedTokens" : 0,
+      "cacheCreationTokens" : 0,
+      "reasoningTokens" : 0,
+      "toolUsePromptTokens" : 0,
+      "time" : 0.618430449,
+      "totalTokens" : 2277
+    },
+    "role" : "ASSISTANT"
+  }, {
+    "id" : "f05f6348-9ac2-4560-bca9-92fc2860bda6",
+    "name" : null,
+    "content" : [ {
+      "type" : "text",
+      "text" : "你是谁，能帮助我做什么呢"
+    } ],
+    "metadata" : { },
+    "timestamp" : "2026-11-04 10:12:16.871",
+    "usage" : null,
+    "role" : "USER"
+  }, {
+    "id" : "fdaa57d1-077e-4f54-8b5d-d627c1b8eaaf",
+    "name" : "default",
+    "content" : [ {
+      "type" : "text",
+      "text" : "我是你的智能助手，可以帮你完成各种任务。比如，我可以帮助你生成工作周报、整理文件、编辑文本、查看或修改文件内容等。如果你有任何具体需求，请告诉我！"
+    } ],
+    "metadata" : {
+      "_chat_usage" : {
+        "inputTokens" : 2294,
+        "outputTokens" : 42,
+        "cachedTokens" : 0,
+        "cacheCreationTokens" : 0,
+        "reasoningTokens" : 0,
+        "toolUsePromptTokens" : 0,
+        "time" : 0.587734282,
+        "totalTokens" : 2336
+      },
+      "prompt_eval_duration" : 32675808,
+      "load_duration" : 174411155,
+      "total_duration" : 587734282,
+      "prompt_eval_count" : 2294,
+      "eval_count" : 42,
+      "eval_duration" : 244826132,
+      "created_at" : "2026-11-04T02:12:15.791049274Z",
+      "model" : "qwen2.5:7b",
+      "done" : true
+    },
+    "timestamp" : "2026-11-04 10:12:17.464",
+    "usage" : {
+      "inputTokens" : 2294,
+      "outputTokens" : 42,
+      "cachedTokens" : 0,
+      "cacheCreationTokens" : 0,
+      "reasoningTokens" : 0,
+      "toolUsePromptTokens" : 0,
+      "time" : 0.587734282,
+      "totalTokens" : 2336
+    },
+    "role" : "ASSISTANT"
+  }, {
+    "id" : "99a07600-9fc8-4025-86b6-9c0fe10bb679",
+    "name" : null,
+    "content" : [ {
+      "type" : "text",
+      "text" : "你是谁，能帮助我做什么呢"
+    } ],
+    "metadata" : { },
+    "timestamp" : "2026-11-04 10:13:05.930",
+    "usage" : null,
+    "role" : "USER"
+  }, {
+    "id" : "d559cb8a-bde5-4e59-a4a8-c5ddb2eb4ebd",
+    "name" : "default",
+    "content" : [ {
+      "type" : "text",
+      "text" : "我是你的智能助手，能够帮助你处理多种任务，例如：\n\n1. **生成周报**：根据工作区内的日志或笔记文件，汇总并生成结构化的中文周报。\n2. **整理和编辑文件**：帮助你查看、修改或创建文本文件。\n3. **读取和写入文件**：读取文件内容或将新内容写入文件。\n4. **目录操作**：列出目录中的文件和子目录，移动或重命名文件等。\n\n如果你有具体的需求，请告诉我，我会尽力帮助你！"
+    } ],
+    "metadata" : {
+      "_chat_usage" : {
+        "inputTokens" : 2353,
+        "outputTokens" : 118,
+        "cachedTokens" : 0,
+        "cacheCreationTokens" : 0,
+        "reasoningTokens" : 0,
+        "toolUsePromptTokens" : 0,
+        "time" : 1.197391559,
+        "totalTokens" : 2471
+      },
+      "prompt_eval_duration" : 19509288,
+      "load_duration" : 175718694,
+      "total_duration" : 1197391559,
+      "prompt_eval_count" : 2353,
+      "eval_count" : 118,
+      "eval_duration" : 703357201,
+      "created_at" : "2026-11-04T02:13:05.463013325Z",
+      "model" : "qwen2.5:7b",
+      "done" : true
+    },
+    "timestamp" : "2026-11-04 10:13:07.136",
+    "usage" : {
+      "inputTokens" : 2353,
+      "outputTokens" : 118,
+      "cachedTokens" : 0,
+      "cacheCreationTokens" : 0,
+      "reasoningTokens" : 0,
+      "toolUsePromptTokens" : 0,
+      "time" : 1.197391559,
+      "totalTokens" : 2471
+    },
+    "role" : "ASSISTANT"
+  }, {
+    "id" : "a07ef5e4-215c-4bbd-8203-3f50e92d6f59",
+    "name" : null,
+    "content" : [ {
+      "type" : "text",
+      "text" : "你是谁，能帮助我做什么呢"
+    } ],
+    "metadata" : { },
+    "timestamp" : "2026-11-04 14:35:40.002",
+    "usage" : null,
+    "role" : "USER"
+  }, {
+    "id" : "82ddb4c2-1fa8-44c5-992c-4db8d2d94d4a",
+    "name" : "default",
+    "content" : [ {
+      "type" : "text",
+      "text" : "我是你的智能助手，能够帮助你完成以下任务：\n\n1. **生成周报**：根据工作区内的日志或笔记文件，汇总并生成结构化的中文周报。\n2. **整理和编辑文件**：\n   - 查看文件内容\n   - 修改文本文件中的特定内容\n   - 创建新文件或完全覆盖现有文件\n3. **目录操作**：\n   - 列出目录中的文件和子目录\n   - 移动或重命名文件\n4. **读取和写入文件**：\n   - 读取文件内容\n   - 写入新的文本内容到文件\n\n如果你有任何具体需求，比如需要生成周报、整理某个项目文件夹或者修改某些文件，请告诉我详细信息，我会尽力帮助你！"
+    } ],
+    "metadata" : {
+      "_chat_usage" : {
+        "inputTokens" : 2487,
+        "outputTokens" : 165,
+        "cachedTokens" : 0,
+        "cacheCreationTokens" : 0,
+        "reasoningTokens" : 0,
+        "toolUsePromptTokens" : 0,
+        "time" : 1.643184929,
+        "totalTokens" : 2652
+      },
+      "prompt_eval_duration" : 25130303,
+      "load_duration" : 188086636,
+      "total_duration" : 1643184929,
+      "prompt_eval_count" : 2487,
+      "eval_count" : 165,
+      "eval_duration" : 1020373321,
+      "created_at" : "2026-11-04T06:35:41.627151887Z",
+      "model" : "qwen2.5:7b",
+      "done" : true
+    },
+    "timestamp" : "2026-11-04 14:35:41.688",
+    "usage" : {
+      "inputTokens" : 2487,
+      "outputTokens" : 165,
+      "cachedTokens" : 0,
+      "cacheCreationTokens" : 0,
+      "reasoningTokens" : 0,
+      "toolUsePromptTokens" : 0,
+      "time" : 1.643184929,
+      "totalTokens" : 2652
+    },
+    "role" : "ASSISTANT"
+  }, {
+    "id" : "4a2d02e1-c5c3-46ac-9a50-55cc1ece038e",
+    "name" : null,
+    "content" : [ {
+      "type" : "text",
+      "text" : "你是谁，能帮助我做什么呢"
+    } ],
+    "metadata" : { },
+    "timestamp" : "2026-11-04 14:40:05.320",
+    "usage" : null,
+    "role" : "USER"
+  }, {
+    "id" : "74f034e3-0d20-403c-b862-0db31a302b1c",
+    "name" : "default",
+    "content" : [ {
+      "type" : "text",
+      "text" : "我是你的智能助手，可以帮你完成多种任务。具体来说：\n\n1. **生成周报**：根据工作区内的日志或笔记文件，汇总并生成结构化的中文周报。\n2. **整理和编辑文件**：\n   - 查看文件内容\n   - 修改文本文件中的特定内容\n   - 创建新文件或完全覆盖现有文件\n3. **目录操作**：\n   - 列出目录中的文件和子目录\n   - 移动或重命名文件\n4. **读取和写入文件**：\n   - 读取文件内容\n   - 写入新的文本内容到文件\n\n如果你有任何具体需求，比如需要生成周报、整理某个项目文件夹或者修改某些文件，请告诉我详细信息，我会尽力帮助你！\n\n例如，如果你想生成一份周报，只需要说“请帮我生成一份工作周报”，我可以根据你的工作日志或笔记为你生成一份详细的周报。"
+    } ],
+    "metadata" : {
+      "_chat_usage" : {
+        "inputTokens" : 2669,
+        "outputTokens" : 201,
+        "cachedTokens" : 0,
+        "cacheCreationTokens" : 0,
+        "reasoningTokens" : 0,
+        "toolUsePromptTokens" : 0,
+        "time" : 1.925606061,
+        "totalTokens" : 2870
+      },
+      "prompt_eval_duration" : 19783858,
+      "load_duration" : 189320520,
+      "total_duration" : 1925606061,
+      "prompt_eval_count" : 2669,
+      "eval_count" : 201,
+      "eval_duration" : 1202520896,
+      "created_at" : "2026-11-04T06:40:07.202702881Z",
+      "model" : "qwen2.5:7b",
+      "done" : true
+    },
+    "timestamp" : "2026-11-04 14:40:07.260",
+    "usage" : {
+      "inputTokens" : 2669,
+      "outputTokens" : 201,
+      "cachedTokens" : 0,
+      "cacheCreationTokens" : 0,
+      "reasoningTokens" : 0,
+      "toolUsePromptTokens" : 0,
+      "time" : 1.925606061,
+      "totalTokens" : 2870
+    },
+    "role" : "ASSISTANT"
+  } ],
+  "reply_id" : "d32576f52d594cc298baa24798684ffa",
+  "cur_iter" : 0,
+  "shutdown_interrupted" : false,
+  "permission_context" : {
+    "mode" : "default",
+    "working_directories" : { },
+    "allow_rules" : { },
+    "deny_rules" : { },
+    "ask_rules" : { }
+  },
+  "tool_context" : {
+    "max_cache_files" : 100,
+    "max_cache_bytes" : 25000.0,
+    "activated_groups" : [ ],
+    "spawn_registry" : { }
+  },
+  "tasks_context" : {
+    "tasks" : [ ]
+  },
+  "plan_mode_context" : {
+    "plan_active" : false,
+    "current_plan_file" : null
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "session_id" : "smoke-sse",
+  "user_id" : "api",
+  "summary" : "",
+  "context" : [ {
+    "id" : "09603157-56fc-49a1-9430-7031fea6cd6e",
+    "name" : null,
+    "content" : [ {
+      "type" : "text",
+      "text" : "用一句话介绍你自己"
+    } ],
+    "metadata" : { },
+    "timestamp" : "2026-11-04 09:33:08.976",
+    "usage" : null,
+    "role" : "USER"
+  }, {
+    "id" : "b7292f68-55dd-483a-aab1-2248009ee862",
+    "name" : "default",
+    "content" : [ {
+      "type" : "text",
+      "text" : "我是能够调用各种工具帮助你完成任务的智能助手。"
+    } ],
+    "metadata" : {
+      "_chat_usage" : {
+        "inputTokens" : 2257,
+        "outputTokens" : 15,
+        "cachedTokens" : 0,
+        "cacheCreationTokens" : 0,
+        "reasoningTokens" : 0,
+        "toolUsePromptTokens" : 0,
+        "time" : 0.340722232,
+        "totalTokens" : 2272
+      },
+      "prompt_eval_duration" : 19303246,
+      "load_duration" : 172884832,
+      "total_duration" : 340722232,
+      "prompt_eval_count" : 2257,
+      "eval_count" : 15,
+      "eval_duration" : 84552680,
+      "created_at" : "2026-11-04T01:33:07.653579536Z",
+      "model" : "qwen2.5:7b",
+      "done" : true
+    },
+    "timestamp" : "2026-11-04 09:33:09.324",
+    "usage" : {
+      "inputTokens" : 2257,
+      "outputTokens" : 15,
+      "cachedTokens" : 0,
+      "cacheCreationTokens" : 0,
+      "reasoningTokens" : 0,
+      "toolUsePromptTokens" : 0,
+      "time" : 0.340722232,
+      "totalTokens" : 2272
+    },
+    "role" : "ASSISTANT"
+  } ],
+  "reply_id" : "cd34107ade6448cf84d7406fa50e920e",
+  "cur_iter" : 0,
+  "shutdown_interrupted" : false,
+  "permission_context" : {
+    "mode" : "default",
+    "working_directories" : { },
+    "allow_rules" : { },
+    "deny_rules" : { },
+    "ask_rules" : { }
+  },
+  "tool_context" : {
+    "max_cache_files" : 100,
+    "max_cache_bytes" : 25000.0,
+    "activated_groups" : [ ],
+    "spawn_registry" : { }
+  },
+  "tasks_context" : {
+    "tasks" : [ ]
+  },
+  "plan_mode_context" : {
+    "plan_active" : false,
+    "current_plan_file" : null
+  }
+}

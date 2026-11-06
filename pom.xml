@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- Spring Boot 官方 parent:统一管理 Web/Jackson/日志等依赖版本 -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.5.6</version>
+        <relativePath/>
+    </parent>
+
+    <groupId>com.demo</groupId>
+    <artifactId>agentscope-java-agent</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>agentscope-java-agent</name>
+    <description>基于 AgentScope Java 2.x 的多 Agent 服务:HTTP/SSE 接口 + MCP + Skill,配置驱动、可扩展</description>
+
+    <properties>
+        <java.version>17</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- AgentScope 版本,可在 https://repo1.maven.org/maven2/io/agentscope/agentscope-core/ 查看新版 -->
+        <agentscope.version>2.0.4</agentscope.version>
+    </properties>
+
+    <dependencies>
+        <!-- Web 接口层:内嵌 Tomcat + Jackson + 日志(Lombok 不需要) -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <!-- 请求参数校验(@NotBlank 等) -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
+
+        <!-- AgentScope 核心:ReActAgent / Toolkit / MCP / Skill -->
+        <dependency>
+            <groupId>io.agentscope</groupId>
+            <artifactId>agentscope-core</artifactId>
+            <version>${agentscope.version}</version>
+        </dependency>
+
+        <!-- 模型扩展:默认 Ollama(本地/内网)。按需增删其它 provider 即可扩展 -->
+        <dependency>
+            <groupId>io.agentscope</groupId>
+            <artifactId>agentscope-extensions-model-ollama</artifactId>
+            <version>${agentscope.version}</version>
+        </dependency>
+        <!-- 预留:OpenAI 兼容接口(OpenAI/DeepSeek/vLLM 等),取消注释即可启用
+        <dependency>
+            <groupId>io.agentscope</groupId>
+            <artifactId>agentscope-extensions-model-openai</artifactId>
+            <version>${agentscope.version}</version>
+        </dependency>
+        -->
+        <!-- 预留:DashScope 通义千问
+        <dependency>
+            <groupId>io.agentscope</groupId>
+            <artifactId>agentscope-extensions-model-dashscope</artifactId>
+            <version>${agentscope.version}</version>
+        </dependency>
+        -->
+
+        <!-- 文档解析:支持 pdf/doc/docx/pptx/xlsx/txt/md/csv/html/图片 OCR 等
+             解析失败或格式不识别时返回友好错误,不影响主链路 -->
+        <dependency>
+            <groupId>org.apache.tika</groupId>
+            <artifactId>tika-core</artifactId>
+            <version>2.9.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tika</groupId>
+            <artifactId>tika-parsers-standard-package</artifactId>
+            <version>2.9.2</version>
+        </dependency>
+        <!-- 显式锁定 commons-io 版本:Tika 2.9.2 运行时需要 ChecksumInputStream(2.16+ 才有),
+             但依赖图里其它组件带入的 2.15.1 因"最近优先"规则胜出,导致解析文档时 NoClassDefFoundError -->
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.16.1</version>
+        </dependency>
+    </dependencies>
+
+    <repositories>
+        <repository>
+            <id>aliyun</id>
+            <url>https://maven.aliyun.com/repository/public</url>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>aliyun-plugin</id>
+            <url>https://maven.aliyun.com/repository/public</url>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <build>
+        <finalName>agent</finalName>
+        <plugins>
+            <!-- mvn package 生成可执行 fat-jar:java -jar target/agent.jar(启动为 HTTP 服务) -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>com.demo.agent.AgentApplication</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
